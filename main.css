@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --cor-primeira: white; /*#00eaff*/
+  --fonte-principal: "Inter", sans serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(255, 123, 123);
+  height: 11vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 25vw;
+  font-family: var(--fonte-principal);
+
+  h1 {
+    color: white;
+    font-size: 150%;
+  }
+
+  ul {
+    display: flex;
+    gap: 7vw;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  button {
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 90%;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  button {
+    padding: 4px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-primeira);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  button:hover::after {
+    width: 100%;
+  }
+
+  button:hover {
+    color: var(--cor-primeira);
+  }
+}
+
+.home {
+  background-color: rgb(137, 202, 137);
+  height: 89vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .nome {
+    position: relative;
+    display: inline-block;
+    font-family: var(--fonte-principal);
+    width: auto;
+    left: 50px;
+  }
+
+  h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 190%;
+  }
+
+  h3 {
+    color: var(--cor-primeira);
+    font-weight: 300;
+    font-size: 170%;
+  }
+
+  .logo-tec-home {
+    display: flex;
+    gap: 6px;
+  }
+
+  .circulo {
+    background-color: #ccc;
+    height: 40px;
+    width: 35px;
+    border-radius: 7px;
+  }
+
+  .foto {
+    height: 360px;
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: solid 4px var(--cor-primeira);
+  }
+
+  .circulo-GG {
+    background-color: #ccc;
+    width: 98%;
+    height: 98%;
+    border-radius: 100%;
+  }
+}
+
+.sobre {
+  background-color: rgb(246, 246, 121);
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: var(--fonte-principal);
+  overflow: hidden;
+
+  .texto-sobre {
+    background-color: blue;
+    width: 27%;
+  }
+
+  h1 {
+    color: var(--cor-primeira);
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: white;
+    font-size: 15px;
+  }
+
+  .formacao {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .linha-circ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 4px;
+    height: 300px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--cor-primeira) 16%,
+      var(--cor-primeira) 84%,
+      transparent
+    );
+    margin: 50px auto;
+    gap: 140px;
+
+    .bola1,
+    .bola2 {
+      width: 25px;
+      height: 25px;
+      background-color: var(--cor-primeira);
+      border-radius: 100%;
+    }
+  }
+
+  .content-formacao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+
+    h1 {
+      color: var(--cor-primeira);
+      margin-bottom: -8px;
+      margin-right: 15px;
+    }
+  }
+
+  .div-faculdade,
+  .div-cursos {
+    background-color: #ccc;
+    width: 35vw;
+    height: 20vh;
+    border-radius: 12px;
+    border: solid 3px var(--cor-primeira);
+  }
+}
+
+.skills {
+  background-color: rgb(107, 140, 240);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fonte-principal);
+  color: var(--cor-primeira);
+
+  h1 {
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+
+  .tecs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12%;
+  }
+
+  .divs-tec {
+    text-align: center;
+    gap: 10px;
+  }
+
+  .sub-divs-tec {
+    background-color: #ccc;
+    width: 18vw;
+    height: 60vh;
+    border-radius: 13px;
+  }
+}
+
+.projetos {
+  background-color: grey;
+  height: 100vh;
+}
+
+.contato {
+  background-color: purple;
+  height: 79vh;
+}
+
+footer {
+  background-color: orange;
+  height: 11vh;
+}
