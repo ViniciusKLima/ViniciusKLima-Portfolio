@@ -6,7 +6,7 @@
 }
 
 :root {
-  --cor-primeira: white; /*#00eaff*/
+  --cor-principal: white; /*#00eaff*/
   --fonte-principal: "Inter", sans serif;
 }
 
@@ -63,7 +63,7 @@ header {
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: var(--cor-primeira);
+    background-color: var(--cor-principal);
     transition: all 0.3s ease;
     transform: translateX(-50%);
   }
@@ -73,7 +73,7 @@ header {
   }
 
   button:hover {
-    color: var(--cor-primeira);
+    color: var(--cor-principal);
   }
 }
 
@@ -99,7 +99,7 @@ header {
   }
 
   h3 {
-    color: var(--cor-primeira);
+    color: var(--cor-principal);
     font-weight: 300;
     font-size: 170%;
   }
@@ -123,7 +123,7 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    border: solid 4px var(--cor-primeira);
+    border: solid 4px var(--cor-principal);
   }
 
   .circulo-GG {
@@ -149,7 +149,7 @@ header {
   }
 
   h1 {
-    color: var(--cor-primeira);
+    color: var(--cor-principal);
     margin-bottom: 5px;
   }
 
@@ -175,8 +175,8 @@ header {
     background: linear-gradient(
       to bottom,
       transparent 0%,
-      var(--cor-primeira) 16%,
-      var(--cor-primeira) 84%,
+      var(--cor-principal) 16%,
+      var(--cor-principal) 84%,
       transparent
     );
     margin: 50px auto;
@@ -186,7 +186,7 @@ header {
     .bola2 {
       width: 25px;
       height: 25px;
-      background-color: var(--cor-primeira);
+      background-color: var(--cor-principal);
       border-radius: 100%;
     }
   }
@@ -198,7 +198,7 @@ header {
     align-items: end;
 
     h1 {
-      color: var(--cor-primeira);
+      color: var(--cor-principal);
       margin-bottom: -8px;
       margin-right: 15px;
     }
@@ -210,7 +210,7 @@ header {
     width: 35vw;
     height: 20vh;
     border-radius: 12px;
-    border: solid 3px var(--cor-primeira);
+    border: solid 3px var(--cor-principal);
   }
 }
 
@@ -222,7 +222,7 @@ header {
   justify-content: center;
   align-items: center;
   font-family: var(--fonte-principal);
-  color: var(--cor-primeira);
+  color: var(--cor-principal);
 
   h1 {
     margin-bottom: 60px;
@@ -256,6 +256,23 @@ header {
 .projetos {
   background-color: grey;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-block: 60px;
+
+  h1{
+    font-family: var(--fonte-principal);
+    color: var(--cor-principal);
+    font-size: 180%;
+  }
+
+  .button-vermais{
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--cor-principal); 
+  }
 }
 
 .contato {
@@ -266,4 +283,10 @@ header {
 footer {
   background-color: orange;
   height: 11vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: var(--cor-principal);
 }

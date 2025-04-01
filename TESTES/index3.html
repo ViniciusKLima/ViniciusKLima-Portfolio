@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <style>
+        /* Estilos para o projeto */
+        .project-section {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 50px;
+            background-color: red;
+        }
+
+        .project-preview {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            animation: scroll 20s linear infinite;
+            scroll-snap-type: x mandatory;
+            overflow-x: scroll;
+            will-change: transform;
+            background-color: blue;
+        }
+
+        .project-item {
+            width: 250px;
+            height: 150px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .project-preview::-webkit-scrollbar {
+            display: block;
+            height: 8px;
+        }
+
+        /* Animação do movimento automático */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Estilos para as setas de navegação */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }
+
+        /* Estilos adicionais para o título e layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Meu Portfólio</h1>
+</header>
+
+<section class="project-section">
+    <div class="project-preview">
+        <div class="project-item">
+            <img src="https://via.placeholder.com/250x150">
+            <p>Projeto 1</p>
+        </div>
+        <div class="project-item">
+            <img src="https://via.placeholder.com/250x150">
+            <p>Projeto 2</p>
+        </div>
+        <div class="project-item">
+            <img src="https://via.placeholder.com/250x150">
+            <p>Projeto 3</p>
+        </div>
+        <div class="project-item">
+            <img src="https://via.placeholder.com/250x150">
+            <p>Projeto 4</p>
+        </div>
+        <div class="project-item">
+            <img src="https://via.placeholder.com/250x150">
+            <p>Projeto 5</p>
+        </div>
+        <div class="project-item">
+            <img src="https://via.placeholder.com/250x150">
+            <p>Projeto 6</p>
+        </div>
+    </div>
+
+    <!-- Setas de navegação -->
+    <button class="arrow arrow-left" onclick="moveSlide('left')">&#8592;</button>
+    <button class="arrow arrow-right" onclick="moveSlide('right')">&#8594;</button>
+</section>
+
+<script>
+    // Código para rolar os itens manualmente
+    const projectPreview = document.querySelector('.project-preview');
+    const projectItems = document.querySelectorAll('.project-item');
+    const projectWidth = projectItems[0].offsetWidth + 20; // largura de cada item + o gap
+
+    // Função para rolar os itens manualmente
+    function moveSlide(direction) {
+        const currentScrollPosition = projectPreview.scrollLeft;
+        
+        if (direction === 'left') {
+            projectPreview.scrollLeft = currentScrollPosition - projectWidth;
+        } else if (direction === 'right') {
+            projectPreview.scrollLeft = currentScrollPosition + projectWidth;
+        }
+    }
+
+    // Detectar a última div visível para parar a animação e reiniciar do início
+    let isAnimating = true;
+
+    function checkScrollEnd() {
+        if (projectPreview.scrollLeft >= (projectPreview.scrollWidth - projectPreview.clientWidth)) {
+            isAnimating = false; // Parar animação
+            setTimeout(() => {
+                isAnimating = true; // Reiniciar animação
+                projectPreview.scrollLeft = 0; // Voltar para o início
+            }, 1000); // Espera 1 segundo antes de reiniciar a animação
+        }
+    }
+
+    projectPreview.addEventListener('scroll', checkScrollEnd);
+
+    // Definir a animação de rolagem automática (sem parar no último item)
+    function autoScroll() {
+        if (isAnimating) {
+            projectPreview.scrollLeft += 2; // Velocidade de rolagem
+            if (projectPreview.scrollLeft >= (projectPreview.scrollWidth - projectPreview.clientWidth)) {
+                projectPreview.scrollLeft = 0; // Reiniciar ao chegar ao final
+            }
+        }
+        requestAnimationFrame(autoScroll);
+    }
+
+    autoScroll(); // Inicia a rolagem automática
+
+</script>
+
+</body>
+</html>

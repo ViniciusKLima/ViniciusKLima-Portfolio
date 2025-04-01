@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --cor-principal: white; /*#00eaff*/
+  --fonte-principal: "Inter", sans serif;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 360px;
+  }
+  section::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gradient{
+    background-color: red;
+    height: 340px;
+    width: 100px;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .gradient-left{
+    background: linear-gradient(to right, #3e3d3d 30%, transparent);
+  }
+
+  .gradient-right{
+    position: absolute;
+    right: 0;
+    background: linear-gradient(to left, #3e3d3d 30%, transparent);
+  }
+
+  .slide {
+    display: flex;
+    padding: 10px;
+    padding-left: 170px;
+    gap: 30px;
+    animation: slide 40s  linear infinite;
+  }
+
+  .slide:hover{
+    animation-play-state: paused;
+  }
+
+  .itens:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .itens {
+    background-color: #ccc;
+    border: solid 3px var(--cor-principal);
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    transition: transform 0.5s ease;
+    color: var(--cor-principal);
+  }
+  .foto {
+    background-color: #3e3d3d;
+    width: 100%;
+    height: 60%;
+    border-radius: 12px 12px 0 0;
+  }
+  @keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+    
+  }
