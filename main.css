@@ -14,6 +14,13 @@ body {
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3,
+p {
+  cursor: default;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -146,6 +153,8 @@ header {
   .texto-sobre {
     background-color: blue;
     width: 27%;
+    max-height: 70vh;
+    overflow: hidden;
   }
 
   h1 {
@@ -261,17 +270,21 @@ header {
   justify-content: space-around;
   padding-block: 60px;
 
-  h1{
+  h1 {
     font-family: var(--fonte-principal);
     color: var(--cor-principal);
     font-size: 180%;
   }
 
-  .button-vermais{
-    padding: 10px 25px;
+  .button-vermais {
+    padding: 15px 35px;
     border-radius: 10px;
     border: none;
-    background-color: var(--cor-principal); 
+    background-color: var(--cor-principal);
+    cursor: pointer;
+  }
+  .button-vermais:hover {
+    background-color: var(--cor-principal);
   }
 }
 

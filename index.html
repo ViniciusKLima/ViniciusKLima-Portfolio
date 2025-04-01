@@ -4,35 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev.Vinicius</title>
-    <link rel="stylesheet" href="main.css"/>
-    <link rel="stylesheet" href="carrossel.css"/>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="carrossel.css" />
   </head>
   <body>
     <header>
       <h1>LogoNome</h1>
       <nav>
-        <ul>
+        <ul id="navbar">
           <li class="button-home">
-            <button>Home</button>
+            <button onclick="scrollToId('section1')">Home</button>
           </li>
           <li class="button-sobre">
-            <button>Sobre</button>
+            <button onclick="scrollToId('section2')">Sobre</button>
           </li>
           <li class="button-skills">
-            <button>Skills</button>
+            <button onclick="scrollToId('section3')">Skills</button>
           </li>
           <li class="button-projetos">
-            <button>Projetos</button>
+            <button onclick="scrollToId('section4')">Projetos</button>
           </li>
           <li class="button-contato">
-            <button>Contato</button>
+            <button onclick="scrollToId('section5')">Contato</button>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="home">
+      <section id="section1" class="home">
         <div class="nome">
           <h2>Vinícius K. Lima</h2>
           <h3>Desenvolvedor FullStack</h3>
@@ -49,7 +49,7 @@
           <div class="circulo-GG"></div>
         </div>
       </section>
-      <section class="sobre">
+      <section id="section2" class="sobre">
         <div class="texto-sobre">
           <h1>Resumo Sobre</h1>
           <p>
@@ -87,7 +87,7 @@
           </div>
         </div>
       </section>
-      <section class="skills">
+      <section id="section3" class="skills">
         <h1>SKILLS</h1>
         <div class="tecs">
           <div class="frontend divs-tec">
@@ -104,7 +104,7 @@
           </div>
         </div>
       </section>
-      <section class="projetos">
+      <section id="section4" class="projetos">
         <h1>PROJETOS</h1>
         <section class="area-carrossel">
           <div class="gradient-left gradient"></div>
@@ -170,9 +170,11 @@
         </section>
         <button class="button-vermais">Ver mais</button>
       </section>
-      <section class="contato">6</section>
+      <section id="section5" class="contato">6</section>
     </main>
 
     <footer>© 2025 ViniciusKaua. Todos os direitos reservados.</footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
