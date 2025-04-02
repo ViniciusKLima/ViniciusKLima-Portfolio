@@ -289,8 +289,112 @@ header {
 }
 
 .contato {
+  display: flex;
+  justify-content: space-around;
   background-color: purple;
   height: 79vh;
+  font-family: var(--fonte-principal);
+
+  .mensagem {
+    position: relative;
+    left: -50px;
+
+    h1 {
+      color: var(--cor-principal);
+      text-align: center;
+    }
+
+    form {
+      width: 40vw;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      background-color: #865d5d;
+
+      label {
+        position: relative;
+        color: white;
+        left: 10px;
+      }
+
+      input {
+        background: none;
+        border: solid 2px white;
+        border-radius: 6px;
+        height: 35px;
+      }
+
+      input::placeholder {
+        text-align: start;
+      }
+
+      .divs-input {
+        display: flex;
+        flex-direction: column;
+      }
+
+      button,
+      .div-assunto,
+      .div-mensagem {
+        margin-top: 20px;
+      }
+
+      .div-nome-email {
+        display: flex;
+        justify-content: space-between;
+        width: 94%;
+        background-color: #ca6f6f;
+
+        .div-nome,
+        .div-email {
+          width: 45%;
+        }
+      }
+
+      .div-assunto {
+        width: 94%;
+      }
+
+      .div-mensagem {
+        width: 94%;
+
+        .texto-msg {
+          height: 140px;
+        }
+      }
+
+      button {
+        padding: 10px 90px;
+        background-color: var(--cor-principal);
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .entre-contato {
+    font-family: var(--fonte-principal);
+    position: relative;
+    right: 8%;
+
+    .div-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      .links {
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+        background: #ccc;
+        border-radius: 10%;
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
 }
 
 footer {
