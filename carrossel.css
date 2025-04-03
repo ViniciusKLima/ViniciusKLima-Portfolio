@@ -55,7 +55,7 @@ section::-webkit-scrollbar {
 
 .itens {
   background-color: #ccc;
-  border: solid 3px var(--cor-principal);
+  border: solid 0.5vh var(--cor-principal);
   width: 50vh;
   height: 55vh;
   border-radius: 3vh;

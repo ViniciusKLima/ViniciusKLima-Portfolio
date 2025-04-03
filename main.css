@@ -10,8 +10,10 @@
   --fonte-principal: "Inter", sans serif;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 h1,
@@ -22,11 +24,12 @@ p {
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   background-color: rgb(255, 123, 123);
   height: 11vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -35,7 +38,7 @@ header {
 
   h1 {
     color: white;
-    font-size: 150%;
+    font-size: 3.6vh;
   }
 
   ul {
@@ -45,14 +48,19 @@ header {
 
   li {
     list-style: none;
+    display: flex;
+    align-items: center;
   }
 
   button {
-    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    width: 11.5vh;
+    height: 5vh;
     border: none;
     background: none;
     color: white;
-    font-size: 90%;
+    font-size: 2vh;
     cursor: pointer;
     transition: color 0.3s ease;
   }
@@ -66,17 +74,16 @@ header {
   button::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
+    bottom: 1vh;
+    left: 35%;
+    height: 0.2vh;
     background-color: var(--cor-principal);
-    transition: all 0.3s ease;
     transform: translateX(-50%);
+    transition: all 0.3s ease;
   }
 
   button:hover::after {
-    width: 100%;
+    width: 70%;
   }
 
   button:hover {
@@ -88,6 +95,7 @@ header {
   background-color: rgb(137, 202, 137);
   height: 89vh;
   display: flex;
+  margin-top: 11vh;
   justify-content: space-around;
   align-items: center;
 
@@ -96,41 +104,41 @@ header {
     display: inline-block;
     font-family: var(--fonte-principal);
     width: auto;
-    left: 50px;
+    left: 5vh;
 
     h2 {
       color: white;
       font-weight: 600;
-      font-size: 190%;
+      font-size: 4vh;
     }
 
     h3 {
       color: var(--cor-principal);
       font-weight: 300;
-      font-size: 170%;
+      font-size: 3.9vh;
     }
   }
 
   .logo-tec-home {
     display: flex;
-    gap: 6px;
+    gap: 1vh;
 
     .circulo {
       background-color: #ccc;
-      height: 40px;
-      width: 35px;
-      border-radius: 7px;
+      height: 6vh;
+      width: 6vh;
+      border-radius: 1vh;
     }
   }
 
   .foto {
-    height: 360px;
-    width: 360px;
+    height: 60vh;
+    width: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    border: solid 4px var(--cor-principal);
+    border: solid 0.6vh var(--cor-principal);
 
     .circulo-GG {
       background-color: #ccc;
@@ -153,24 +161,24 @@ header {
   .texto-sobre {
     background-color: blue;
     width: 27%;
-    max-height: 70vh;
-    overflow: hidden;
+    height: 70vh;
   }
 
   h1 {
+    font-size: 3vh;
     color: var(--cor-principal);
-    margin-bottom: 5px;
+    margin-bottom: 0.6vh;
   }
 
   p {
     color: white;
-    font-size: 15px;
+    font-size: 1vw;
   }
 
   .formacao {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 7vh;
   }
 
   .linha-circ {
@@ -179,8 +187,8 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 4px;
-    height: 300px;
+    width: 0.35vh;
+    height: 36vh;
     background: linear-gradient(
       to bottom,
       transparent 0%,
@@ -188,13 +196,13 @@ header {
       var(--cor-principal) 84%,
       transparent
     );
-    margin: 50px auto;
-    gap: 140px;
+    margin: 7vh auto;
+    gap: 18vh;
 
     .bola1,
     .bola2 {
-      width: 25px;
-      height: 25px;
+      width: 3vh;
+      height: 3vh;
       background-color: var(--cor-principal);
       border-radius: 100%;
     }
@@ -203,57 +211,57 @@ header {
   .content-formacao {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2.2vh;
     align-items: end;
 
     h1 {
       color: var(--cor-principal);
-      margin-bottom: -8px;
-      margin-right: 15px;
+      margin-bottom: -0.5vh;
+      margin-right: 3vh;
     }
   }
 
   .div-faculdade,
   .div-cursos {
     background-color: #ccc;
-    width: 500px;
-    height: 100px;
-    border-radius: 12px;
-    border: solid 3px var(--cor-principal);
-    padding: 14px;
+    width: 70vh;
+    height: 15vh;
+    border-radius: 1.5vh;
+    border: solid 0.5vh var(--cor-principal);
+    padding: 1.4vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 1vh;
 
     h1 {
-      font-size: 20px;
+      font-size: 2.8vh;
     }
 
     h3 {
-      font-size: 15px;
+      font-size: 2vh;
       color: var(--cor-principal);
     }
 
     p {
-      font-size: small;
+      font-size: 1.8vh;
     }
   }
 
   a {
     position: relative;
     background-color: var(--cor-principal);
-    font-size: 12px;
-    width: 100px;
-    height: 40px;
+    font-size: 1.6vh;
+    width: 12vh;
+    height: 5vh;
     display: flex;
     text-decoration: none;
     color: inherit;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    top: -43px;
-    right: 40px;
+    border-radius: 1.2vh;
+    top: -4.9vh;
+    right: 4.5vh;
   }
 }
 
@@ -268,12 +276,13 @@ header {
   color: var(--cor-principal);
 
   h1 {
-    margin-bottom: 60px;
+    margin-bottom: 6vh;
+    font-size: 3.5vh;
   }
 
   h2 {
-    font-weight: 300;
-    margin-bottom: 5px;
+    font-size: 2.7vh;
+    margin-bottom: 0.6vh;
   }
 
   .tecs {
@@ -289,10 +298,11 @@ header {
   }
 
   .sub-divs-tec {
+    border: solid 0.4vh var(--cor-principal);
     background-color: #ccc;
     width: 18vw;
     height: 60vh;
-    border-radius: 13px;
+    border-radius: 2vh;
   }
 }
 
@@ -304,6 +314,7 @@ header {
   justify-content: space-around;
   padding-block: 60px;
   overflow-x: hidden;
+  gap: 2vh;
 
   h1 {
     font-family: var(--fonte-principal);
@@ -333,12 +344,13 @@ header {
 
   .mensagem {
     position: relative;
-    left: -50px;
+    left: -8vh;
 
     h1 {
+      font-size: 3vh;
       color: var(--cor-principal);
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 2.5vh;
     }
 
     form {
@@ -352,35 +364,37 @@ header {
       label {
         position: relative;
         color: white;
-        left: 10px;
+        left: 1vh;
+        font-size: 2vh;
+        margin-bottom: 0.5vh;
       }
 
       input,
       textarea {
         background: none;
-        border: solid 2px white;
-        border-radius: 6px;
-        height: 35px;
-        padding-inline: 10px;
+        border: solid 0.3vh white;
+        border-radius: 0.6vh;
+        height: 5vh;
+        padding-inline: 1vh;
         color: white;
-        font-size: 15px;
+        font-size: 1.7vh;
         caret-color: var(--cor-principal);
         resize: none;
         font-family: arial;
       }
 
       textarea {
-        padding-top: 10px;
+        padding-top: 1.2vh;
       }
 
       textarea::-webkit-scrollbar {
-        width: 5px;
+        width: 0.5vh;
       }
 
       textarea::-webkit-scrollbar-thumb {
         /* Cor*/
         background-color: var(--cor-principal);
-        border-radius: 4px;
+        border-radius: 0.4vh;
       }
 
       textarea::-webkit-scrollbar-thumb:hover {
@@ -407,7 +421,7 @@ header {
       button,
       .div-assunto,
       .div-mensagem {
-        margin-top: 20px;
+        margin-top: 2.4vh;
       }
 
       .div-nome-email {
@@ -429,16 +443,17 @@ header {
         width: 94%;
 
         .texto-msg {
-          height: 140px;
+          height: 20vh;
         }
       }
 
       button {
-        padding: 10px 90px;
+        padding: 1.8vh 10vh;
         background-color: var(--cor-principal);
         border: none;
-        border-radius: 5px;
+        border-radius: 0.7vh;
         cursor: pointer;
+        font-size: 2vh;
       }
 
       button:hover {
@@ -450,24 +465,25 @@ header {
   .entre-contato {
     font-family: var(--fonte-principal);
     position: relative;
-    right: 8%;
+    right: 7vh;
     text-align: center;
 
     h1 {
       color: var(--cor-principal);
+      font-size: 3.2vh;
     }
 
     .div-links {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 1.4vh;
 
       .links {
-        margin-top: 10px;
-        width: 53px;
-        height: 53px;
+        margin-top: 1.4vh;
+        width: 8vh;
+        height: 8vh;
         background: #ccc;
-        border-radius: 10%;
+        border-radius: 0.8vh;
         text-decoration: none;
         color: inherit;
       }
@@ -482,6 +498,6 @@ footer {
   justify-content: center;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 1.6vh;
   color: var(--cor-principal);
 }
