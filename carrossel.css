@@ -41,6 +41,7 @@ section::-webkit-scrollbar {
   padding-left: 170px;
   gap: 30px;
   animation: slide 40s linear infinite;
+  box-sizing: border-box;
 }
 
 .slide:hover {
