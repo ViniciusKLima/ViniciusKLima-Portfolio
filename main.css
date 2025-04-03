@@ -10,7 +10,7 @@
   --fonte-principal: "Inter", sans serif;
 }
 
-body {
+html, body {
   overflow-x: hidden;
 }
 
