@@ -17,8 +17,8 @@ section::-webkit-scrollbar {
 
 .gradient {
   background-color: red;
-  height: 340px;
-  width: 100px;
+  height: 65vh;
+  width: 10vh;
   position: absolute;
   z-index: 1000;
 }
@@ -39,7 +39,7 @@ section::-webkit-scrollbar {
   display: flex;
   padding: 10px;
   padding-left: 170px;
-  gap: 30px;
+  gap: 3.5vh;
   animation: slide 40s linear infinite;
   box-sizing: border-box;
 }
@@ -56,20 +56,24 @@ section::-webkit-scrollbar {
 .itens {
   background-color: #ccc;
   border: solid 3px var(--cor-principal);
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
+  width: 50vh;
+  height: 55vh;
+  border-radius: 3vh;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 1.3vh;
   transition: transform 0.5s ease;
   color: var(--cor-principal);
+
+  h4{
+    font-size: 3vh;
+  }
 }
 .foto {
   background-color: #3e3d3d;
   width: 100%;
   height: 60%;
-  border-radius: 12px 12px 0 0;
+  border-radius: 2vh 2vh 0 0;
 }
 @keyframes slide {
   0% {
