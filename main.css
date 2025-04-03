@@ -97,30 +97,30 @@ header {
     font-family: var(--fonte-principal);
     width: auto;
     left: 50px;
-  }
 
-  h2 {
-    color: white;
-    font-weight: 600;
-    font-size: 190%;
-  }
+    h2 {
+      color: white;
+      font-weight: 600;
+      font-size: 190%;
+    }
 
-  h3 {
-    color: var(--cor-principal);
-    font-weight: 300;
-    font-size: 170%;
+    h3 {
+      color: var(--cor-principal);
+      font-weight: 300;
+      font-size: 170%;
+    }
   }
 
   .logo-tec-home {
     display: flex;
     gap: 6px;
-  }
 
-  .circulo {
-    background-color: #ccc;
-    height: 40px;
-    width: 35px;
-    border-radius: 7px;
+    .circulo {
+      background-color: #ccc;
+      height: 40px;
+      width: 35px;
+      border-radius: 7px;
+    }
   }
 
   .foto {
@@ -131,13 +131,13 @@ header {
     align-items: center;
     border-radius: 100%;
     border: solid 4px var(--cor-principal);
-  }
 
-  .circulo-GG {
-    background-color: #ccc;
-    width: 98%;
-    height: 98%;
-    border-radius: 100%;
+    .circulo-GG {
+      background-color: #ccc;
+      width: 98%;
+      height: 98%;
+      border-radius: 100%;
+    }
   }
 }
 
@@ -216,10 +216,44 @@ header {
   .div-faculdade,
   .div-cursos {
     background-color: #ccc;
-    width: 35vw;
-    height: 20vh;
+    width: 500px;
+    height: 100px;
     border-radius: 12px;
     border: solid 3px var(--cor-principal);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 15px;
+      color: var(--cor-principal);
+    }
+
+    p {
+      font-size: small;
+    }
+  }
+
+  a {
+    position: relative;
+    background-color: var(--cor-principal);
+    font-size: 12px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    top: -43px;
+    right: 40px;
   }
 }
 
@@ -269,6 +303,7 @@ header {
   flex-direction: column;
   justify-content: space-around;
   padding-block: 60px;
+  overflow-x: hidden;
 
   h1 {
     font-family: var(--fonte-principal);
@@ -302,6 +337,7 @@ header {
     h1 {
       color: var(--cor-principal);
       text-align: center;
+      margin-bottom: 10px;
     }
 
     form {
@@ -311,7 +347,6 @@ header {
       flex-wrap: wrap;
       justify-content: center;
       align-content: center;
-      background-color: #865d5d;
 
       label {
         position: relative;
@@ -319,15 +354,48 @@ header {
         left: 10px;
       }
 
-      input {
+      input,
+      textarea {
         background: none;
         border: solid 2px white;
         border-radius: 6px;
         height: 35px;
+        padding-inline: 10px;
+        color: white;
+        font-size: 15px;
+        caret-color: var(--cor-principal);
+        resize: none;
+        font-family: arial;
       }
 
-      input::placeholder {
+      textarea {
+        padding-top: 10px;
+      }
+
+      textarea::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      textarea::-webkit-scrollbar-thumb {
+        /* Cor*/
+        background-color: var(--cor-principal);
+        border-radius: 4px;
+      }
+
+      textarea::-webkit-scrollbar-thumb:hover {
+        background-color: #02aebd;
+      }
+
+      textarea::-webkit-scrollbar-track {
+        /* Cor fundo */
+        background: none;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
         text-align: start;
+        color: #ccc;
+        font-family: arial;
       }
 
       .divs-input {
@@ -345,7 +413,6 @@ header {
         display: flex;
         justify-content: space-between;
         width: 94%;
-        background-color: #ca6f6f;
 
         .div-nome,
         .div-email {
@@ -370,6 +437,11 @@ header {
         background-color: var(--cor-principal);
         border: none;
         border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #02aebd;
       }
     }
   }
@@ -378,6 +450,11 @@ header {
     font-family: var(--fonte-principal);
     position: relative;
     right: 8%;
+    text-align: center;
+
+    h1 {
+      color: var(--cor-principal);
+    }
 
     .div-links {
       display: flex;
@@ -386,8 +463,8 @@ header {
 
       .links {
         margin-top: 10px;
-        width: 50px;
-        height: 50px;
+        width: 53px;
+        height: 53px;
         background: #ccc;
         border-radius: 10%;
         text-decoration: none;

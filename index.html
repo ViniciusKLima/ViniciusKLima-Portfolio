@@ -82,8 +82,17 @@
           </div>
           <div class="content-formacao">
             <h1>Formação</h1>
-            <div class="div-faculdade"></div>
-            <div class="div-cursos"></div>
+            <div class="div-faculdade">
+              <h1>Ciência da Computação</h1>
+              <h3>Estácio</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores mollitia molestiae ipsum consectetur, repellat placeat at iste quasi sit dolorum obcaecati rerum fuga.</p>
+            </div>
+            <div class="div-cursos">
+              <h1>Cursos Certificados</h1>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil in accusamus minus totam fugit exercitationem unde iusto magni possimus neque! Officia necessitatibus omnis eveniet accusamus deleniti et adipisci, unde doloribus.</p>
+              
+            </div>
+            <a href="google.com" class="certificados">Ver cursos</a>
           </div>
         </div>
       </section>
@@ -177,7 +186,7 @@
             <div class="div-nome-email">
               <div class="div-nome divs-input">
                 <label for="username">Nome</label>
-                <input class="nome-email" type="text" name="username" placeholder="Digite seu nome" required />
+                <input class="nome-email" type="text" name="username" placeholder="Digite seu nome" autocomplete="off" required />
               </div>
               <div class="div-email divs-input">
                 <label for="email">Email</label>
@@ -186,11 +195,11 @@
             </div>
             <div class="div-assunto divs-input">
               <label for="assunto">Assunto</label>
-              <input class="assunto" type="text" name="assunto" placeholder="Qual o assunto da mensagem?" required>
+              <input class="assunto" type="text" name="assunto" placeholder="Qual o assunto da mensagem?" autocomplete="off" required>
             </div>
             <div class="div-mensagem divs-input">
               <label for="mensagem">Mensagem</label>
-              <input class="texto-msg" type="text" name="mensagem" placeholder="Escreva a sua mensagem aqui...">
+              <textarea class="texto-msg" type="text" name="mensagem" autocomplete="off" placeholder="Escreva a sua mensagem aqui..."></textarea>
             </div>
             <button type="submit">Enviar</button>
           </form>
