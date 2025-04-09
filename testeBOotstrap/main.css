@@ -65,7 +65,7 @@ header {
   background-color: rgb(137, 202, 137);
   height: 89dvh;
   display: flex;
-  margin-top: 11dvh;
+  margin-top: 11vh;
   align-items: center;
   padding: 0;
 
@@ -93,13 +93,13 @@ header {
 
   .logo-tec-home {
     display: flex;
-    gap: 1dvh;
+    gap: 1vh;
 
     .circulo {
       background-color: #ccc;
-      height: 6dvh;
-      width: 6dvh;
-      border-radius: 1dvh;
+      height: 6vh;
+      width: 6vh;
+      border-radius: 1vh;
     }
   }
 
@@ -195,7 +195,7 @@ header {
     height: 20vh;
     border-radius: 1.5vh;
     border: solid 0.5vh var(--cor-principal);
-    padding: 1.4vh;
+    padding-inline: 1.4vh;
     gap: 1vh;
 
     h3 {
@@ -288,12 +288,7 @@ header {
 
   .div-faculdade,
   .div-cursos {
-    background-color: #ccc;
-    height: 19vh;
-    border-radius: 1.5dvh;
-    border: solid 0.5dvh var(--cor-principal);
-    padding: 1.4dvh;
-    justify-content: center;
+    height: 18vh;
 
     h3 {
       color: var(--cor-principal);
