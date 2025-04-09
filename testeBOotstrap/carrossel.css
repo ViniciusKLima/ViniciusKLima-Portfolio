@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 :root {
-  --cor-principal: white; /*#00eaff*/
+  --cor-principal: #00eaff; /*#00eaff*/
   --fonte-principal: "Inter", sans serif;
 }
 
@@ -24,14 +24,14 @@ section::-webkit-scrollbar {
 }
 
 .gradient-left {
-  background: linear-gradient(to right, grey 5%, transparent);
+  background: linear-gradient(to right, #04022a 5%, transparent);
   z-index: 100;
 }
 
 .gradient-right {
   position: absolute;
   right: 0;
-  background: linear-gradient(to left, grey 5%, transparent);
+  background: linear-gradient(to left, #040145 5%, transparent);
   z-index: 100;
 }
 
@@ -50,7 +50,6 @@ section::-webkit-scrollbar {
 }
 
 .itens {
-  background-color: #ccc;
   border: solid 0.5vh var(--cor-principal);
   width: 50vh;
   height: 55vh;

@@ -5,7 +5,7 @@
 }
 
 :root {
-  --cor-principal: white; /*#00eaff*/
+  --cor-principal: #00eaff; /*#00eaff*/
   --fonte-principal: "Inter", sans serif;
 }
 
@@ -28,7 +28,6 @@ header {
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(30px);
-
   height: 11vh;
 
   h1 {
@@ -117,6 +116,8 @@ header {
       width: 98%;
       height: 98%;
       border-radius: 50%;
+      display: flex;
+      overflow: hidden;
     }
   }
 }
