@@ -141,7 +141,7 @@ header {
 
   p {
     color: white;
-    font-size: clamp(0.7em, 1.5vw, 2em); 
+    font-size: clamp(0.7em, 1.5vw, 2em);
     margin: 0;
   }
 
@@ -190,19 +190,21 @@ header {
 
   .div-faculdade,
   .div-cursos {
+    display: flex;
     background-color: #ccc;
     height: 20vh;
     border-radius: 1.5vh;
     border: solid 0.5vh var(--cor-principal);
     padding: 1.4vh;
-    justify-content: center;
+    gap: 1vh;
 
     h3 {
+      margin: 0;
       color: var(--cor-principal);
     }
 
     p {
-      font-size: 1.8vh;
+      font-size: clamp(0.7em, 1vw, 1.5em);
     }
   }
 
@@ -267,107 +269,78 @@ header {
     .texto-sobre {
       background-color: rgb(255, 0, 0);
     }
-  
+
     .formacao {
       background-color: red;
-      width: 85vw;
-      margin: 0;
-    }
-  
-    .linha-circ {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      width: 0.35dvh;
-      height: 36dvh;
-      background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        var(--cor-principal) 16%,
-        var(--cor-principal) 84%,
-        transparent
-      );
-      margin: 7dvh auto;
-      gap: 18dvh;
-  
-      .bola1,
-      .bola2 {
-        width: 3dvh;
-        height: 3dvh;
-        background-color: var(--cor-principal);
-        border-radius: 100%;
-      }
-    }
-  
-    .content-formacao {
-      align-items: center;
-      h1 {
-        color: var(--cor-principal);
-        margin-bottom: -0.5dvh;
-        margin-right: 3dvh;
-      }
-    }
-  
-    .div-faculdade,
-    .div-cursos {
-      background-color: #ccc;
-      height: 20vh;
-      border-radius: 1.5dvh;
-      border: solid 0.5dvh var(--cor-principal);
-      padding: 1.4dvh;
-      justify-content: center;
-  
-      h3 {
-        color: var(--cor-principal);
-      }
-  
-      p {
-        font-size: 1.8dvh;
-      }
-    }
-  
-    a {
-      position: relative;
-      background-color: var(--cor-principal);
-      font-size: 1.6dvh;
-      width: 12dvh;
-      height: 5dvh;
-      display: flex;
-      text-decoration: none;
-      color: inherit;
-      justify-content: center;
-      align-items: center;
-      border-radius: 1.2dvh;
-      top: -4.9dvh;
-      right: 4.5dvh;
+      width: 80vw;
     }
   }
 
-  .skills {
-    h1{
-      margin-bottom: 3vh;
+  .content-formacao {
+    align-items: start;
+
+    h1 {
+      color: var(--cor-principal);
+      margin-bottom: -0.5dvh;
+      margin-right: 3dvh;
+    }
+  }
+
+  .div-faculdade,
+  .div-cursos {
+    background-color: #ccc;
+    height: 19vh;
+    border-radius: 1.5dvh;
+    border: solid 0.5dvh var(--cor-principal);
+    padding: 1.4dvh;
+    justify-content: center;
+
+    h3 {
+      color: var(--cor-principal);
     }
 
-    .tecs {
-      width: 80%;
-      flex-direction: column;
+    p {
+      font-size: 1.8dvh;
     }
-  
-    .divs-tec {
-      width: 100%;
-      flex-direction: column;
+  }
 
-    }
-  
-    .sub-divs-tec {
-      width: 100%;
-      height: 20vh;
-    }
+  a {
+    position: relative;
+    background-color: var(--cor-principal);
+    font-size: 1.6dvh;
+    width: 12dvh;
+    height: 5dvh;
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.2dvh;
+    top: -4.9dvh;
+    right: 4.5dvh;
   }
 }
 
+.skills {
+  h1 {
+    margin-bottom: 3vh;
+  }
+
+  .tecs {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .divs-tec {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .sub-divs-tec {
+    width: 100%;
+    height: 20vh;
+  }
+}
 
 .projetos {
   background-color: grey;
