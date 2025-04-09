@@ -44,10 +44,6 @@ section::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
-.slide:hover {
-  animation-play-state: paused;
-}
-
 .itens:hover {
   transform: scale(1.05);
   cursor: pointer;

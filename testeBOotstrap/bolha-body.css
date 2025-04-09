@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: rgb(1, 1, 43);
+}
+
+.bolhas-container {
+    position: fixed;
+    z-index: -99999;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.bolha {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(35, 1, 169, 0.6), rgba(15, 122, 216, 0.499));
+    filter: blur(80px);
+    border-radius: 50%;
+    animation: mover 10s infinite alternate ease-in-out;
+}
+
+.bolha:nth-child(2) {
+    background: radial-gradient(circle, rgba(2, 78, 120, 0.767), rgba(0, 255, 255, 0));
+    width: 250px;
+    height: 250px;
+    animation-duration: 12s;
+}
+
+.bolha:nth-child(3) {
+    background: radial-gradient(circle, rgba(2, 106, 71, 0.997), rgba(255, 255, 0, 0));
+    width: 350px;
+    height: 350px;
+    animation-duration: 15s;
+}
+
+.bolha:nth-child(4) {
+    background: radial-gradient(circle, rgb(3, 15, 102), rgba(0, 255, 0, 0));
+    width: 280px;
+    height: 280px;
+    animation-duration: 18s;
+}
+
+.bolha:nth-child(5) {
+    background: radial-gradient(circle, rgba(98, 3, 107, 0.6), rgba(0, 255, 255, 0));
+    width: 450px;
+    height: 450px;
+    animation-duration: 21s;
+}
+
+.bolha:nth-child(6) {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgb(255, 255, 255));
+    width: 10px;
+    height: 10px;
+    animation-duration: 21s;
+    filter: blur(3px);
+    animation: vaga 20s infinite alternate ease-in-out;
+    animation-duration: 60s;
+}
+
+@keyframes vaga {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10%{
+        transform: translate(10vw, 3vh);
+    }
+    20%{
+        transform: translate(3vw, 60vh);
+    }
+    30%{
+        transform: translate(10vw, 100vh);
+    }
+    20%{
+        transform: translate(400px, 100px);
+    }
+    50% {
+        transform: translate(100px, 150px);
+    }
+    20%{
+        transform: translate(400px, 100px);
+    }
+    20%{
+        transform: translate(400px, 100px);
+    }
+    20%{
+        transform: translate(400px, 100px);
+    }
+    20%{
+        transform: translate(400px, 100px);
+    }
+    100% {
+        transform: translate(-100px, -150px);
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(100px, 150px);
+    }
+    100% {
+        transform: translate(-100px, -150px);
+    }
+}
