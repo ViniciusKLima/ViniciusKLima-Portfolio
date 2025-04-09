@@ -306,12 +306,13 @@ header {
   }
 }
 
-@media (max-width: 668px) {
+@media (max-width: 668px) { 
   .sobre {
     flex-direction: column;
 
     .texto-sobre {
       width: 50%;
+      height: 40vh;
     }
 
     .linha-circ{
