@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -71,7 +69,6 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  background-color: #fff;
 
   .nome {
     background-color: red;
@@ -79,18 +76,19 @@ header {
     display: inline-block;
     font-family: var(--fonte-principal);
     width: auto;
-    
 
     h2 {
       color: white;
       font-weight: 600;
-      font-size: 4vh;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0;
     }
 
     h3 {
       color: var(--cor-principal);
       font-weight: 300;
-      font-size: 3.9vh;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0;
     }
   }
 
@@ -108,34 +106,20 @@ header {
 
   .foto {
     background: none;
-    height: 60vh;
-    width: 60vh;
+    width: clamp(300px, 35vw, 450px);
+    height: clamp(300px, 35vw, 450px);
+    border-radius: 50%;
+    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
     border: solid 0.6vh var(--cor-principal);
 
     .circulo-GG {
       background-color: #ccc;
       width: 98%;
       height: 98%;
-      border-radius: 100%;
-    }
-  }
-}
-
-@media (max-width: 668px) {
-  .home {
-    flex-direction: column-reverse;
-    justify-content: center;
-    gap: 3vh;
-
-    .nome {
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      border-radius: 50%;
     }
   }
 }
@@ -256,7 +240,7 @@ header {
   }
 }
 
-@media (max-width: 668px) { 
+@media (max-width: 668px) {
   .sobre {
     flex-direction: column;
 
@@ -265,7 +249,7 @@ header {
       height: 40vh;
     }
 
-    .linha-circ{
+    .linha-circ {
       display: none;
     }
   }
