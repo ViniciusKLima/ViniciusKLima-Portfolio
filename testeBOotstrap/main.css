@@ -67,7 +67,6 @@ header {
   display: flex;
   margin-top: 11dvh;
   align-items: center;
-  justify-content: space-between;
   padding: 0;
 
   .nome {
@@ -127,27 +126,20 @@ header {
 .sobre {
   background-color: rgb(246, 246, 121);
   height: 100dvh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   font-family: var(--fonte-principal);
-  overflow: hidden;
 
   .texto-sobre {
     background-color: blue;
-    width: 27%;
-    height: 70dvh;
   }
 
   h1 {
-    font-size: 3dvh;
     color: var(--cor-principal);
     margin-bottom: 0.6dvh;
   }
 
   p {
     color: white;
-    font-size: 1vw;
+    font-size: clamp(1px, 10px, 13.5px);
   }
 
   .formacao {
@@ -184,10 +176,7 @@ header {
   }
 
   .content-formacao {
-    display: flex;
-    flex-direction: column;
     gap: 2.2dvh;
-    align-items: end;
 
     h1 {
       color: var(--cor-principal);
@@ -199,19 +188,11 @@ header {
   .div-faculdade,
   .div-cursos {
     background-color: #ccc;
-    width: 70dvh;
-    height: 15dvh;
+    height: 20dvh;
     border-radius: 1.5dvh;
     border: solid 0.5dvh var(--cor-principal);
     padding: 1.4dvh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    gap: 1dvh;
-
-    h1 {
-      font-size: 2.8dvh;
-    }
 
     h3 {
       font-size: 2dvh;
@@ -237,21 +218,6 @@ header {
     border-radius: 1.2dvh;
     top: -4.9dvh;
     right: 4.5dvh;
-  }
-}
-
-@media (max-width: 668px) {
-  .sobre {
-    flex-direction: column;
-
-    .texto-sobre {
-      width: 50%;
-      height: 40vh;
-    }
-
-    .linha-circ {
-      display: none;
-    }
   }
 }
 
