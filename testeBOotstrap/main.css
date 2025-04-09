@@ -15,6 +15,7 @@ html,
 body {
   overflow-x: hidden;
   overflow-y: auto;
+  background: rgb(137, 202, 137);
 }
 
 h1,
@@ -31,18 +32,19 @@ header {
   z-index: 1000;
   background-color: rgb(255, 123, 123);
   height: 11vh;
-  padding: 0 5%;
 
   h1 {
     font-family: var(--fonte-principal);
     color: white;
     font-size: 1.4rem;
+    margin: 0;
   }
 
   ul {
     display: flex;
     gap: 4vw;
     list-style: none;
+    margin: 0;
   }
 
   button {
@@ -59,52 +61,6 @@ header {
   button:hover {
     color: var(--cor-principal);
   }
-
-  /* MENU RESPONSIVO */
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-
-  .menu-toggle div {
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 5px;
-    transition: 0.3s;
-  }
-}
-
-@media (max-width: 668px) {
-  header {
-    padding: 0 3%;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 9vh;
-    right: 0;
-    background: rgb(255, 123, 123);
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .menu-open nav {
-    display: flex;
-  }
 }
 
 .home {
@@ -112,8 +68,10 @@ header {
   height: 89vh;
   display: flex;
   margin-top: 11vh;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  background-color: #fff;
 
   .nome {
     background-color: red;
@@ -121,7 +79,7 @@ header {
     display: inline-block;
     font-family: var(--fonte-principal);
     width: auto;
-    left: 5vh;
+    
 
     h2 {
       color: white;
