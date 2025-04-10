@@ -393,17 +393,13 @@ header {
 
 .contato {
   height: 79vh;
-  font-family: var(--fonte-principal);
 
   .mensagem {
-    position: relative;
-    padding: 0;
-    margin: auto;
 
     h1 {
       font-size: 3vh;
       color: var(--cor-principal);
-      margin-bottom: 2.5vh;
+      margin-bottom: 2.7vh;
     }
 
     form {
@@ -418,26 +414,27 @@ header {
       input,
       textarea {
         background: none;
-        border: solid 0.2vh white;
+        border: solid 0.01vh white;
         border-radius: 0.6vh;
         height: 5vh;
         padding-inline: 1vh;
-        color: white;
-        font-size: 1.7vh;
+        color: #00eaff;
+        font-size: 1.8vh;
         caret-color: var(--cor-principal);
         resize: none;
-        font-family: arial;
+        font-family: "Nunito", sans-serif;
       }
 
       textarea {
         padding-top: 1.2vh;
+        font-family: "Nunito", sans-serif;
       }
 
       input::placeholder,
       textarea::placeholder {
         text-align: start;
         color: #ccc;
-        font-family: arial;
+        font-family: "Nunito", sans-serif;
       }
 
       .divs-input {
@@ -461,7 +458,7 @@ header {
     }
 
     button {
-      padding: 1.8vh 10vh;
+      padding: 1.5vh 10vh;
       background-color: var(--cor-principal);
       border: none;
       border-radius: 0.7vh;
@@ -479,19 +476,13 @@ header {
 .entre-contato {
   font-family: var(--fonte-principal);
   position: relative;
-  right: 7vh;
-  text-align: center;
 
   h1 {
     color: var(--cor-principal);
-    font-size: 3.2vh;
+    font-size: 3.5vh;
   }
 
   .div-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.4vh;
-
     .links {
       margin-top: 1.4vh;
       width: 8vh;
@@ -501,6 +492,12 @@ header {
       text-decoration: none;
       color: inherit;
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .entre-contato{
+    margin-right: 12vw;
   }
 }
 
