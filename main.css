@@ -120,12 +120,13 @@ header {
     gap: 1vh;
 
     .circulo {
-      background-color: #ccc;
       height: 6vh;
       width: 6vh;
       max-width: 10vw;
       max-height: 10vw;
       border-radius: 1vh;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -141,7 +142,6 @@ header {
     border: solid 0.15rem var(--cor-principal);
 
     .circulo-GG {
-      background-color: #ccc;
       width: 98%;
       height: 98%;
       border-radius: 50%;
