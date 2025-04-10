@@ -487,10 +487,14 @@ header {
       margin-top: 1.4vh;
       width: 8vh;
       height: 8vh;
-      background: #ccc;
       border-radius: 0.8vh;
       text-decoration: none;
       color: inherit;
+      display: flex;
+      
+      img{
+        border-radius: 10px;
+      }
     }
   }
 }
