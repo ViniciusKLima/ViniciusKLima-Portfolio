@@ -204,12 +204,12 @@
         </section>
         <a class="button-vermais" href="cursos.html">Ver mais</a>
       </section>
-      <section id="section5" class="contato">
-        <div class="mensagem">
-          <h1>Envie uma mensagem</h1>
-          <form id="mensagem" action="" method="post">
-            <div class="div-nome-email">
-              <div class="div-nome divs-input">
+      <section id="section5" class="contato container d-flex justify-content-center align-items-center justify-content-md-around ">
+        <div class="mensagem w-75 container d-flex align-items-center flex-column justify-content-center w-100 w-sm-25">
+          <h1 class="text-center">Envie uma mensagem</h1>
+          <form id="mensagem" class="w-75 d-flex flex-wrap justify-content-center align-items-center p-0" action="" method="post">
+            <div class="div-nome-email gap-3 d-flex flex-column flex-sm-row w-100">
+              <div class="div-nome divs-input w-100 w-sm-50">
                 <label for="username">Nome</label>
                 <input
                   class="nome-email"
@@ -220,7 +220,7 @@
                   required
                 />
               </div>
-              <div class="div-email divs-input">
+              <div class="div-email divs-input w-100 w-sm-50">
                 <label for="email">Email</label>
                 <input
                   class="nome-email"
@@ -231,7 +231,7 @@
                 />
               </div>
             </div>
-            <div class="div-assunto divs-input">
+            <div class="div-assunto divs-input w-100">
               <label for="assunto">Assunto</label>
               <input
                 class="assunto"
@@ -242,7 +242,7 @@
                 required
               />
             </div>
-            <div class="div-mensagem divs-input">
+            <div class="div-mensagem divs-input w-100">
               <label for="mensagem">Mensagem</label>
               <textarea
                 class="texto-msg"
@@ -255,7 +255,7 @@
             <button type="submit">Enviar</button>
           </form>
         </div>
-        <div class="entre-contato">
+        <div class="entre-contato d-none d-md-inline-block">
           <h1>Me siga nas redes</h1>
           <div class="div-links">
             <a href="google.com" class="links"></a>

@@ -392,31 +392,23 @@ header {
 }
 
 .contato {
-  display: flex;
-  justify-content: space-around;
-  background-color: purple;
+
   height: 79vh;
   font-family: var(--fonte-principal);
 
   .mensagem {
     position: relative;
-    left: -8vh;
+
+    padding: 0;
+    margin: auto;
 
     h1 {
       font-size: 3vh;
       color: var(--cor-principal);
-      text-align: center;
       margin-bottom: 2.5vh;
     }
 
     form {
-      width: 40vw;
-      height: auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-content: center;
-
       label {
         position: relative;
         color: white;
@@ -443,25 +435,6 @@ header {
         padding-top: 1.2vh;
       }
 
-      textarea::-webkit-scrollbar {
-        width: 0.5vh;
-      }
-
-      textarea::-webkit-scrollbar-thumb {
-        /* Cor*/
-        background-color: var(--cor-principal);
-        border-radius: 0.4vh;
-      }
-
-      textarea::-webkit-scrollbar-thumb:hover {
-        background-color: #02aebd;
-      }
-
-      textarea::-webkit-scrollbar-track {
-        /* Cor fundo */
-        background: none;
-      }
-
       input::placeholder,
       textarea::placeholder {
         text-align: start;
@@ -480,69 +453,54 @@ header {
         margin-top: 2.4vh;
       }
 
-      .div-nome-email {
-        display: flex;
-        justify-content: space-between;
-        width: 94%;
-
-        .div-nome,
-        .div-email {
-          width: 45%;
-        }
-      }
-
       .div-assunto {
         width: 94%;
       }
 
-      .div-mensagem {
-        width: 94%;
-
-        .texto-msg {
-          height: 20vh;
-        }
+      .texto-msg {
+        height: 20vh;
       }
+    }
 
-      button {
-        padding: 1.8vh 10vh;
-        background-color: var(--cor-principal);
-        border: none;
-        border-radius: 0.7vh;
-        cursor: pointer;
-        font-size: 2vh;
-      }
+    button {
+      padding: 1.8vh 10vh;
+      background-color: var(--cor-principal);
+      border: none;
+      border-radius: 0.7vh;
+      cursor: pointer;
+      font-size: 2vh;
+    }
 
-      button:hover {
-        background-color: #02aebd;
-      }
+    button:hover {
+      background-color: #02aebd;
     }
   }
+}
 
-  .entre-contato {
-    font-family: var(--fonte-principal);
-    position: relative;
-    right: 7vh;
-    text-align: center;
+.entre-contato {
+  font-family: var(--fonte-principal);
+  position: relative;
+  right: 7vh;
+  text-align: center;
 
-    h1 {
-      color: var(--cor-principal);
-      font-size: 3.2vh;
-    }
+  h1 {
+    color: var(--cor-principal);
+    font-size: 3.2vh;
+  }
 
-    .div-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.4vh;
+  .div-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.4vh;
 
-      .links {
-        margin-top: 1.4vh;
-        width: 8vh;
-        height: 8vh;
-        background: #ccc;
-        border-radius: 0.8vh;
-        text-decoration: none;
-        color: inherit;
-      }
+    .links {
+      margin-top: 1.4vh;
+      width: 8vh;
+      height: 8vh;
+      background: #ccc;
+      border-radius: 0.8vh;
+      text-decoration: none;
+      color: inherit;
     }
   }
 }
