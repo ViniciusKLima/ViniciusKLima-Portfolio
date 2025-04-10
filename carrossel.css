@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 :root {
-  --cor-principal: white; /*#00eaff*/
+  --cor-principal: #00eaff; /*#00eaff*/
   --fonte-principal: "Inter", sans serif;
 }
 
@@ -9,7 +9,6 @@ section {
   display: flex;
   align-items: center;
   width: 100vw;
-  height: 360px;
 }
 section::-webkit-scrollbar {
   display: none;
@@ -24,14 +23,14 @@ section::-webkit-scrollbar {
 }
 
 .gradient-left {
-  background: linear-gradient(to right, grey 5%, transparent);
+  background: linear-gradient(to right, #04022a 5%, transparent);
   z-index: 100;
 }
 
 .gradient-right {
   position: absolute;
   right: 0;
-  background: linear-gradient(to left, grey 5%, transparent);
+  background: linear-gradient(to left, #040145 5%, transparent);
   z-index: 100;
 }
 
@@ -44,17 +43,12 @@ section::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
-.slide:hover {
-  animation-play-state: paused;
-}
-
 .itens:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
 
 .itens {
-  background-color: #ccc;
   border: solid 0.5vh var(--cor-principal);
   width: 50vh;
   height: 55vh;
@@ -65,12 +59,13 @@ section::-webkit-scrollbar {
   transition: transform 0.5s ease;
   color: var(--cor-principal);
 
-  h4{
+  h4 {
     font-size: 3vh;
   }
 }
 .foto {
-  background-color: #3e3d3d;
+  background-color: #4848483e;
+  backdrop-filter: blur(100px);
   width: 100%;
   height: 60%;
   border-radius: 2vh 2vh 0 0;

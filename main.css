@@ -1,13 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
+::-webkit-scrollbar {
+  width: 10px; /* largura da barra */
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+  background: none; /* fundo da barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #0d0140, #010e56);
+  border-radius: 4px;
+}
+
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --cor-principal: white; /*#00eaff*/
+  --cor-principal: #00eaff; /*#00eaff*/
   --fonte-principal: "Inter", sans serif;
 }
 
@@ -29,28 +41,21 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: rgb(255, 123, 123);
+  backdrop-filter: blur(30px);
   height: 11vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
 
   h1 {
     font-family: var(--fonte-principal);
     color: white;
     font-size: 1.4rem;
-  }
-
-  nav {
-    display: flex;
+    margin: 0;
   }
 
   ul {
     display: flex;
     gap: 4vw;
     list-style: none;
+    margin: 0;
   }
 
   button {
@@ -67,80 +72,33 @@ header {
   button:hover {
     color: var(--cor-principal);
   }
-
-  /* MENU RESPONSIVO */
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-
-  .menu-toggle div {
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 5px;
-    transition: 0.3s;
-  }
-}
-
-@media (max-width: 668px) {
-  header {
-    padding: 0 3%;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 9vh;
-    right: 0;
-    background: rgb(255, 123, 123);
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .menu-open nav {
-    display: flex;
-  }
 }
 
 .home {
-  background-color: rgb(137, 202, 137);
   height: 89vh;
   display: flex;
   margin-top: 11vh;
-  justify-content: space-around;
   align-items: center;
+  padding: 0;
 
   .nome {
-    background-color: red;
     position: relative;
     display: inline-block;
     font-family: var(--fonte-principal);
     width: auto;
-    left: 5vh;
 
     h2 {
       color: white;
       font-weight: 600;
-      font-size: 4vh;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0;
     }
 
     h3 {
       color: var(--cor-principal);
       font-weight: 300;
-      font-size: 3.9vh;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0;
     }
   }
 
@@ -152,74 +110,57 @@ header {
       background-color: #ccc;
       height: 6vh;
       width: 6vh;
+      max-width: 10vw;
+      max-height: 10vw;
       border-radius: 1vh;
     }
   }
 
   .foto {
     background: none;
-    height: 60vh;
-    width: 60vh;
+    width: clamp(300px, 35vw, 450px);
+    height: clamp(300px, 35vw, 450px);
+    border-radius: 50%;
+    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
     border: solid 0.6vh var(--cor-principal);
 
     .circulo-GG {
       background-color: #ccc;
       width: 98%;
       height: 98%;
-      border-radius: 100%;
-    }
-  }
-}
-
-@media (max-width: 668px) {
-  .home {
-    flex-direction: column-reverse;
-    justify-content: center;
-    gap: 3vh;
-
-    .nome {
-      left: 0;
+      border-radius: 50%;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      overflow: hidden;
     }
   }
 }
 
 .sobre {
-  background-color: rgb(246, 246, 121);
   height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  padding-inline: 30px;
   font-family: var(--fonte-principal);
-  overflow: hidden;
-
-  .texto-sobre {
-    background-color: blue;
-    width: 27%;
-    height: 70vh;
-  }
+  justify-content: space-around;
 
   h1 {
-    font-size: 3vh;
     color: var(--cor-principal);
     margin-bottom: 0.6vh;
   }
 
   p {
     color: white;
-    font-size: 1vw;
+    font-size: clamp(0.7em, 1.5vw, 1em);
+    margin: 0;
   }
 
   .formacao {
     display: flex;
     justify-content: center;
+
     gap: 7vh;
+    width: 80%;
   }
 
   .linha-circ {
@@ -250,42 +191,42 @@ header {
   }
 
   .content-formacao {
-    display: flex;
-    flex-direction: column;
-    gap: 2.2vh;
     align-items: end;
 
     h1 {
-      color: var(--cor-principal);
-      margin-bottom: -0.5vh;
-      margin-right: 3vh;
+      margin-bottom: -10px;
+      margin-right: 20px;
     }
   }
 
   .div-faculdade,
   .div-cursos {
-    background-color: #ccc;
-    width: 70vh;
-    height: 15vh;
+    display: flex;
+    background-color: #4848483e;
+    backdrop-filter: blur(100px);
+    height: 20vh;
     border-radius: 1.5vh;
     border: solid 0.5vh var(--cor-principal);
-    padding: 1.4vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-inline: 1.4vh;
     gap: 1vh;
+    font-size: clamp(0.7em, 1vw, 0.8em);
+    margin: 0;
 
-    h1 {
-      font-size: 2.8vh;
+    h1{
+      margin: 0;
     }
 
     h3 {
-      font-size: 2vh;
-      color: var(--cor-principal);
+      margin: 0;
+      color: #00ffaa;
     }
 
     p {
-      font-size: 1.8vh;
+      font-size: clamp(0.7em, 1vw, 0.8em);
+    }
+
+    .div-faculdade:hover {
+      border: solid 0.5vh white;
     }
   }
 
@@ -304,30 +245,14 @@ header {
     top: -4.9vh;
     right: 4.5vh;
   }
-}
 
-@media (max-width: 668px) { 
-  .sobre {
-    flex-direction: column;
-
-    .texto-sobre {
-      width: 50%;
-      height: 40vh;
-    }
-
-    .linha-circ{
-      display: none;
-    }
+  a:hover {
+    background-color: #02aebd;
   }
 }
 
 .skills {
-  background-color: rgb(107, 140, 240);
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: var(--fonte-principal);
   color: var(--cor-principal);
 
@@ -342,10 +267,8 @@ header {
   }
 
   .tecs {
-    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12%;
   }
 
   .divs-tec {
@@ -354,16 +277,77 @@ header {
   }
 
   .sub-divs-tec {
-    border: solid 0.4vh var(--cor-principal);
-    background-color: #ccc;
-    width: 18vw;
     height: 60vh;
+    border: solid 0.4vh var(--cor-principal);
+    background-color: #4848483e;
+    backdrop-filter: blur(100px);
+    width: clamp(200px, 23vw, 600px);
     border-radius: 2vh;
   }
 }
 
+@media (max-width: 660px) {
+  .sobre {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+
+    .formacao {
+      width: 80vw;
+    }
+  }
+
+  .content-formacao {
+    align-items: center;
+
+    h1 {
+      color: var(--cor-principal);
+      margin-bottom: -0.5vh;
+      margin-right: 3vh;
+    }
+  }
+
+  .div-faculdade,
+  .div-cursos {
+    height: 20vh;
+
+    h3 {
+      color: var(--cor-principal);
+    }
+
+    p {
+      font-size: 1.8vh;
+    }
+  }
+
+  a {
+    top: -4.9vh;
+    right: 4.5vh;
+  }
+
+  .skills {
+    h1 {
+      margin-bottom: 2.5vh;
+    }
+
+    .tecs {
+      width: 80%;
+      flex-direction: column;
+    }
+
+    .divs-tec {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .sub-divs-tec {
+      width: 100%;
+      height: 20vh;
+    }
+  }
+}
+
 .projetos {
-  background-color: grey;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -385,9 +369,12 @@ header {
     background-color: var(--cor-principal);
     cursor: pointer;
     font-size: 2vh;
+    font-family: arial;
+    color: rgb(1, 1, 43);
+    text-decoration: none;
   }
   .button-vermais:hover {
-    background-color: var(--cor-principal);
+    background-color: #02aebd;
   }
 }
 
@@ -548,7 +535,6 @@ header {
 }
 
 footer {
-  background-color: orange;
   height: 11vh;
   display: flex;
   justify-content: center;
