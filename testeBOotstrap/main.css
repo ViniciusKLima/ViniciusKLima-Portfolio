@@ -61,7 +61,7 @@ header {
 }
 
 .home {
-  height: 89dvh;
+  height: 89vh;
   display: flex;
   margin-top: 11vh;
   align-items: center;
@@ -109,7 +109,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 0.6dvh var(--cor-principal);
+    border: solid 0.6vh89vh var(--cor-principal);
 
     .circulo-GG {
       background-color: #ccc;
@@ -123,7 +123,7 @@ header {
 }
 
 .sobre {
-  height: 100dvh;
+  height: 100vh89vh;
   padding-inline: 30px;
   font-family: var(--fonte-principal);
   justify-content: space-around;
@@ -135,7 +135,7 @@ header {
 
   p {
     color: white;
-    font-size: clamp(0.7em, 1.5vw, 2em);
+    font-size: clamp(0.7em, 1.5vw, 1em);
     margin: 0;
   }
 
@@ -162,7 +162,7 @@ header {
       var(--cor-principal) 84%,
       transparent
     );
-    margin: 7dvh auto;
+    margin: 7vh89vh auto;
     gap: 18vh;
 
     .bola1,
@@ -186,7 +186,8 @@ header {
   .div-faculdade,
   .div-cursos {
     display: flex;
-    background-color: #ccc;
+    background-color: #4848483e;
+    backdrop-filter: blur(100px);
     height: 20vh;
     border-radius: 1.5vh;
     border: solid 0.5vh var(--cor-principal);
@@ -199,7 +200,7 @@ header {
     }
 
     p {
-      font-size: clamp(0.7em, 1vw, 1.5em);
+      font-size: clamp(0.7em, 1vw, 0.9em);
     }
   }
 
@@ -247,7 +248,8 @@ header {
 
   .sub-divs-tec {
     border: solid 0.4vh var(--cor-principal);
-    background-color: #ccc;
+    background-color: #4848483e;
+    backdrop-filter: blur(100px);
     width: clamp(200px, 23vw, 600px);
     height: 60vh;
     border-radius: 2vh;
@@ -270,8 +272,8 @@ header {
 
     h1 {
       color: var(--cor-principal);
-      margin-bottom: -0.5dvh;
-      margin-right: 3dvh;
+      margin-bottom: -0.5vh89vh;
+      margin-right: 3vh89vh;
     }
   }
 
@@ -284,24 +286,24 @@ header {
     }
 
     p {
-      font-size: 1.8dvh;
+      font-size: 1.8vh89vh;
     }
   }
 
   a {
     position: relative;
     background-color: var(--cor-principal);
-    font-size: 1.6dvh;
-    width: 12dvh;
-    height: 5dvh;
+    font-size: 1.6vh89vh;
+    width: 12vh89vh;
+    height: 5vh89vh;
     display: flex;
     text-decoration: none;
     color: inherit;
     justify-content: center;
     align-items: center;
-    border-radius: 1.2dvh;
-    top: -4.9dvh;
-    right: 4.5dvh;
+    border-radius: 1.2vh89vh;
+    top: -4.9vh89vh;
+    right: 4.5vh89vh;
   }
 }
 
