@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
 
 ::-webkit-scrollbar {
   width: 10px; /* largura da barra */
@@ -45,10 +47,21 @@ header {
   height: 11vh;
 
   h1 {
-    font-family: var(--fonte-principal);
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+
+    .dev {
+      background-color: #00eaff;
+      color: #0d0140;
+      font-size: 1.25rem;
+      font-family: "Jura", sans-serif;
+      padding: 1px 3.5px 3.3px 5px;
+      border-radius: 0 6px 6px 17px;
+      font-weight: 700;
+    }
   }
 
   ul {
@@ -125,7 +138,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 0.6vh var(--cor-principal);
+    border: solid 0.15rem var(--cor-principal);
 
     .circulo-GG {
       background-color: #ccc;
@@ -206,13 +219,13 @@ header {
     backdrop-filter: blur(100px);
     height: 20vh;
     border-radius: 1.5vh;
-    border: solid 0.5vh var(--cor-principal);
+    border: solid 0.14rem var(--cor-principal);
     padding-inline: 1.4vh;
     gap: 1vh;
     font-size: clamp(0.7em, 1vw, 0.8em);
     margin: 0;
 
-    h1{
+    h1 {
       margin: 0;
     }
 
@@ -278,7 +291,7 @@ header {
 
   .sub-divs-tec {
     height: 60vh;
-    border: solid 0.4vh var(--cor-principal);
+    border: solid 0.14rem var(--cor-principal);
     background-color: #4848483e;
     backdrop-filter: blur(100px);
     width: clamp(200px, 23vw, 600px);
