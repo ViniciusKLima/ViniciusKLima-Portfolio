@@ -392,13 +392,11 @@ header {
 }
 
 .contato {
-
   height: 79vh;
   font-family: var(--fonte-principal);
 
   .mensagem {
     position: relative;
-
     padding: 0;
     margin: auto;
 
@@ -420,7 +418,7 @@ header {
       input,
       textarea {
         background: none;
-        border: solid 0.3vh white;
+        border: solid 0.2vh white;
         border-radius: 0.6vh;
         height: 5vh;
         padding-inline: 1vh;
@@ -469,6 +467,7 @@ header {
       border-radius: 0.7vh;
       cursor: pointer;
       font-size: 2vh;
+      color: #0d0140;
     }
 
     button:hover {
