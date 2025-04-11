@@ -13,6 +13,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="img/minhalogo.png">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
@@ -20,7 +21,7 @@
     <link rel="stylesheet" href="css/bolha-body.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/carrossel.css" />
-    <link rel="stylesheet" href="css/cursus.css" />
+    <link rel="stylesheet" href="css/cursos.css" />
   </head>
   <body id="section1">
     <div class="bolhas-container">
@@ -60,22 +61,32 @@
           <h2>Vinícius K. Lima</h2>
           <h3>Desenvolvedor FullStack</h3>
           <div
-            class="logo-tec-home justify-content-center justify-content-md-start"
+            class="logo-tec-home mt-2 justify-content-center justify-content-md-start"
           >
-            <div class="circulo"><img src="img/html.png" alt="" /></div>
-            <div class="circulo"><img src="img/css.png" alt="" /></div>
             <div class="circulo">
-              <img style="border-radius: 5px" src="img/javascript.png" alt="" />
+              <img src="img/html.png" alt="logo-html" />
+            </div>
+            <div class="circulo"><img src="img/css.png" alt="logo-css" /></div>
+            <div class="circulo">
+              <img
+                style="border-radius: 5px"
+                src="img/javascript.png"
+                alt="logo-javascript"
+              />
             </div>
             <div class="circulo">
               <img
                 style="background-color: white; border-radius: 5px"
                 src="img/typescript.webp"
-                alt=""
+                alt="logo-typescript"
               />
             </div>
-            <div class="circulo"><img src="img/python.webp" alt="" /></div>
-            <div class="circulo"><img src="img/figma.png" alt="" /></div>
+            <div class="circulo">
+              <img src="img/python.webp" alt="logo-python" />
+            </div>
+            <div class="circulo">
+              <img src="img/figma.png" alt="logo-figma" />
+            </div>
           </div>
         </div>
         <div class="foto">
@@ -89,7 +100,7 @@
         class="sobre container-lg d-flex flex-md-row gap-5"
       >
         <div class="texto-sobre w-75">
-          <h1 class="fs-md-3 fs-2">Quem sou eu?</h1>
+          <h1 class="fs-2">Quem sou eu?</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
             velit quia culpa. Culpa, tenetur ea. Excepturi animi rerum
@@ -113,11 +124,13 @@
             <div class="bola2"></div>
           </div>
           <div class="content-formacao d-flex flex-column gap-3">
-            <h1 class="fs-md-3 fs-2">Formação</h1>
+            <h1 class="fs-2">Formação</h1>
             <div
               class="div-faculdade d-flex flex-column justify-content-center"
             >
-              <h1 class="fs-5">Ciência da Computação</h1>
+              <h1 class="fs-6" style="font-family: var(--kufam)">
+                Ciência da Computação
+              </h1>
               <h3 class="fs-6">Estácio</h3>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -126,7 +139,9 @@
               </p>
             </div>
             <div class="div-cursos d-flex flex-column justify-content-center">
-              <h1 class="fs-5">Cursos Certificados</h1>
+              <h1 class="fs-6" style="font-family: var(--kufam)">
+                Cursos Certificados
+              </h1>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
                 in accusamus minus totam fugit exercitationem unde iusto magni
@@ -146,15 +161,160 @@
         <div class="tecs d-flex flex-md-row gap-4 gp-md-5">
           <div class="frontend divs-tec">
             <h2>Front-end</h2>
-            <div class="tecs-front sub-divs-tec"></div>
+            <div class="tecs-front sub-divs-tec">
+              <div class="content-tecs d-flex align-items-center flex-wrap">
+                <div class="linhas-tec col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/html.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>HTML</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec l1 col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/css.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>CSS</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec l1 col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/bootstrap.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>Bootstrap</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec l1 col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/tailwind.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>Tailwind</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/react.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>React</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/angular.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>Angular</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img
+                      style="border-radius: 3px"
+                      src="img/javascript.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>JavaScript</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="backend divs-tec">
             <h2>Back-end</h2>
-            <div class="tecs-back sub-divs-tec"></div>
+            <div class="tecs-back sub-divs-tec">
+              <div class="content-tecs d-flex align-items-center flex-wrap">
+                <div class="linhas-tec col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/python.webp" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>Python</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec l1 col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img
+                      style="background-color: #fff"
+                      src="img/typescript.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>TypeScript</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec l1 col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/node.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>NodeJS</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec l1 col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/c.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>C</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/java.webp" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>Java</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="ferramentas divs-tec">
             <h2>Ferramentas</h2>
-            <div class="tecs-ferramentas sub-divs-tec"></div>
+            <div class="tecs-ferramentas sub-divs-tec">
+              <div class="content-tecs d-flex align-items-center flex-wrap">
+                <div class="linhas-tec col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/vscode.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>VS Code</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec l1 col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/git.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>Git</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec l1 col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/github.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>Github</h4>
+                  </div>
+                </div>
+                <div class="linhas-tec l1 col-4 col-md-12 w-md-100 row-4">
+                  <div class="div-img col-2">
+                    <img src="img/figma.png" alt="" />
+                  </div>
+                  <div class="div-titulo-tec text-start">
+                    <h4>Figma</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -166,58 +326,142 @@
             <div class="itens">
               <div class="foto"></div>
               <h4>Item 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 2.5s">
               <div class="foto"></div>
               <h4>Item 2</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 5s">
               <div class="foto"></div>
               <h4>Item 3</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 7.5s">
               <div class="foto"></div>
               <h4>Item 4</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 10s">
               <div class="foto"></div>
               <h4>Item 5</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 12.5s">
               <div class="foto"></div>
               <h4>Item 6</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 15s">
               <div class="foto"></div>
               <h4>Item 7</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens">
               <div class="foto"></div>
               <h4>Item 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 2.5s">
               <div class="foto"></div>
               <h4>Item 2</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 5s">
               <div class="foto"></div>
               <h4>Item 3</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 7.5s">
               <div class="foto"></div>
               <h4>Item 4</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 10s">
               <div class="foto"></div>
               <h4>Item 5</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 12.5s">
               <div class="foto"></div>
               <h4>Item 6</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
             <div class="itens" style="--delay: 15s">
               <div class="foto"></div>
               <h4>Item 7</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                autem. Harum asperiores animi tempore sint molestias beatae
+                dicta similique consequatur repellat, aperiam dolorem veritatis
+                aspernatur? Dicta doloribus quisquam amet voluptas!
+              </p>
             </div>
           </div>
           <div class="gradient-right gradient"></div>
@@ -312,77 +556,48 @@
         </div>
       </section>
     </main>
-    <div
-      id="sectionCursos"
-      style="
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(8px);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-      "
-    >
-      <!-- Conteúdo do Modal -->
-      <div
-        style="
-          background: white;
-          width: 90%;
-          max-width: 600px;
-          max-height: 80vh;
-          padding: 20px;
-          border-radius: 12px;
-          overflow-y: auto;
-          position: relative;
-        "
-      >
-        <!-- Botão de Fechar -->
-        <button
-          id="fecharCursos"
-          style="
-            position: absolute;
-            top: 10px;
-            right: 14px;
-            font-size: 24px;
-            background: none;
-            border: none;
-            cursor: pointer;
-          "
-        >
-          &times;
-        </button>
 
+    <div id="sectionCursos" class="sectionCursos">
+      <!-- Conteúdo do Modal -->
+      <div class="content-cursos">
+        <!-- Botão de Fechar -->
+        <div class="header-cursos">
+          <h2 class="tt-h2">Meus Certificados</h2>
+          <button id="fecharCursos">&times;</button>
+        </div>
         <!-- Conteúdo dos Certificados -->
-        <h2 style="margin-top: 0">Meus Certificados</h2>
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 20px;
-          "
-        >
-          <div style="padding: 10px; background: #f2f2f2; border-radius: 8px">
-            <h4>Curso de HTML e CSS</h4>
+        <div>
+          <div class="div-certificados">
+            <h4>Curso #1</h4>
             <p>Certificado de 20h, pela plataforma X</p>
           </div>
-          <div style="padding: 10px; background: #f2f2f2; border-radius: 8px">
-            <h4>Curso de JavaScript</h4>
-            <p>Certificado de 30h, pela plataforma Y</p>
+          <div class="div-certificados">
+            <h4>Curso #2</h4>
+            <p>Certificado de 30h, pela plataforma</p>
           </div>
-          <div style="padding: 10px; background: #f2f2f2; border-radius: 8px">
-            <h4>Curso de JavaScript</h4>
-            <p>Certificado de 30h, pela plataforma Y</p>
+          <div class="div-certificados">
+            <h4>Curso #3</h4>
+            <p>Certificado de 30h, pela plataforma</p>
           </div>
-          <div style="padding: 10px; background: #f2f2f2; border-radius: 8px">
-            <h4>Curso de JavaScript</h4>
-            <p>Certificado de 30h, pela plataforma Y</p>
+          <div class="div-certificados">
+            <h4>Curso #4</h4>
+            <p>Certificado de 30h, pela plataforma</p>
           </div>
-          <div style="padding: 10px; background: #f2f2f2; border-radius: 8px">
-            <h4>Curso de JavaScript</h4>
-            <p>Certificado de 30h, pela plataforma Y</p>
+          <div class="div-certificados">
+            <h4>Curso #5</h4>
+            <p>Certificado de 30h, pela plataforma</p>
+          </div>
+          <div class="div-certificados">
+            <h4>Curso #6</h4>
+            <p>Certificado de 30h, pela plataforma</p>
+          </div>
+          <div class="div-certificados">
+            <h4>Curso #7</h4>
+            <p>Certificado de 30h, pela plataforma</p>
+          </div>
+          <div class="div-certificados">
+            <h4>Curso #8</h4>
+            <p>Certificado de 30h, pela plataforma</p>
           </div>
           <!-- Adicione mais certificados aqui -->
         </div>

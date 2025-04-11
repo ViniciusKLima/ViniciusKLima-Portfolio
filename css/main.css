@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+@import url('variaveis.css');
+
 
 ::-webkit-scrollbar {
   width: 10px; /* largura da barra */
   position: absolute;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-track {
@@ -12,17 +12,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #0d0140, #010e56);
+  background: linear-gradient(to bottom, var(--cor-principal), #010e56);
   border-radius: 4px;
 }
 
 * {
   box-sizing: border-box;
-}
-
-:root {
-  --cor-principal: #00eaff; /*#00eaff*/
-  --fonte-principal: "Inter", sans serif;
 }
 
 html,
@@ -47,17 +42,17 @@ header {
   height: 11vh;
 
   h1 {
-    color: white;
+    color:var(--cor-terciaria);
     font-size: 1.2rem;
     margin: 0;
-    font-family: "Nunito", sans-serif;
+    font-family: var(--nunito);
     font-weight: 500;
 
     .dev {
-      background-color: #00eaff;
-      color: #0d0140;
+      background-color: var(--cor-secundaria);
+      color: var(--cor-principal);
       font-size: 1.25rem;
-      font-family: "Jura", sans-serif;
+      font-family: var(--jura);
       padding: 1px 3.5px 3.3px 5px;
       border-radius: 0 6px 6px 17px;
       font-weight: 700;
@@ -75,7 +70,9 @@ header {
     padding: 10px 15px;
     border: none;
     background: none;
-    color: white;
+    color:var(--cor-terciaria);
+    font-family: var(--inter);
+    font-weight: 300;
     cursor: pointer;
     font-size: 1rem;
     border-radius: 5px;
@@ -83,7 +80,7 @@ header {
   }
 
   button:hover {
-    color: var(--cor-principal);
+    color: var(--cor-secundaria);
   }
 }
 
@@ -97,18 +94,18 @@ header {
   .nome {
     position: relative;
     display: inline-block;
-    font-family: var(--fonte-principal);
+    font-family: var(--inter);
     width: auto;
 
     h2 {
-      color: white;
+      color:var(--cor-terciaria);
       font-weight: 600;
       font-size: clamp(1.4rem, 2.5vw, 2rem);
       margin: 0;
     }
 
     h3 {
-      color: var(--cor-principal);
+      color: var(--cor-secundaria);
       font-weight: 300;
       font-size: clamp(1.4rem, 2.5vw, 2rem);
       margin: 0;
@@ -139,7 +136,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 0.15rem var(--cor-principal);
+    border: solid 0.15rem var(--cor-secundaria);
 
     .circulo-GG {
       width: 98%;
@@ -154,18 +151,21 @@ header {
 .sobre {
   height: 100vh;
   padding-inline: 30px;
-  font-family: var(--fonte-principal);
+  font-family: var(--inter);
   justify-content: space-around;
 
   h1 {
-    color: var(--cor-principal);
+    color: var(--cor-secundaria);
     margin-bottom: 0.6vh;
+    font-family: var(--jura);
   }
 
   p {
-    color: white;
+    color:var(--cor-terciaria);
     font-size: clamp(0.7em, 1.5vw, 1em);
     margin: 0;
+    font-weight:200;
+    font-family: var(--inter);
   }
 
   .formacao {
@@ -187,8 +187,8 @@ header {
     background: linear-gradient(
       to bottom,
       transparent 0%,
-      var(--cor-principal) 16%,
-      var(--cor-principal) 84%,
+      var(--cor-secundaria) 16%,
+      var(--cor-secundaria) 84%,
       transparent
     );
     margin: 7vh auto;
@@ -198,7 +198,7 @@ header {
     .bola2 {
       width: 3vh;
       height: 3vh;
-      background-color: var(--cor-principal);
+      background-color: var(--cor-secundaria);
       border-radius: 100%;
     }
   }
@@ -219,7 +219,7 @@ header {
     backdrop-filter: blur(100px);
     height: 20vh;
     border-radius: 1.5vh;
-    border: solid 0.14rem var(--cor-principal);
+    border: solid 0.14rem var(--cor-secundaria);
     padding-inline: 1.4vh;
     gap: 1vh;
     font-size: clamp(0.7em, 1vw, 0.8em);
@@ -239,13 +239,13 @@ header {
     }
 
     .div-faculdade:hover {
-      border: solid 0.5vh white;
+      border: solid 0.5vhvar(--cor-terciaria);
     }
   }
 
   a {
     position: relative;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-secundaria);
     font-size: 1.6vh;
     width: 12vh;
     height: 5vh;
@@ -266,12 +266,13 @@ header {
 
 .skills {
   height: 100vh;
-  font-family: var(--fonte-principal);
-  color: var(--cor-principal);
+  font-family: var(--inter);
+  color: var(--cor-secundaria);
 
   h1 {
     margin-bottom: 6vh;
     font-size: 3.5vh;
+    font-family: var(--jura);
   }
 
   h2 {
@@ -282,6 +283,7 @@ header {
   .tecs {
     justify-content: center;
     align-items: center;
+    font-family: var(--inter);
   }
 
   .divs-tec {
@@ -291,13 +293,66 @@ header {
 
   .sub-divs-tec {
     height: 60vh;
-    border: solid 0.14rem var(--cor-principal);
+    border: solid 0.14rem var(--cor-secundaria);
     background-color: #4848483e;
     backdrop-filter: blur(100px);
     width: clamp(200px, 23vw, 600px);
     border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    color: var(--cor-terciaria);
+  }
+
+  .content-tecs{
+    width: 100%;
+  }
+
+  .linhas-tec{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    .div-img{
+      object-fit: cover;
+      width: 20px;
+      display: flex;
+      flex: 1 1;
+      justify-content: end;
+    }
+
+    .div-titulo-tec{
+      width: 45%;
+      display: flex;
+      align-items: center;
+      flex: 3 1;
+      
+    }
+
+    h4{
+      font-family: var(--inter);
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-size: clamp(1rem, 2vh, 3rem);
+    }
   }
 }
+
+@media (min-width: 660px) {
+  .content-tecs{
+    flex-direction: column;
+    gap: 17px;
+    padding-top: 15px;
+  }
+
+  .linhas-tec{
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 660px) {
   .sobre {
@@ -314,7 +369,7 @@ header {
     align-items: center;
 
     h1 {
-      color: var(--cor-principal);
+      color: var(--cor-secundaria);
       margin-bottom: -0.5vh;
       margin-right: 3vh;
     }
@@ -325,7 +380,7 @@ header {
     height: 20vh;
 
     h3 {
-      color: var(--cor-principal);
+      color: var(--cor-secundaria);
     }
 
     p {
@@ -357,6 +412,14 @@ header {
       width: 100%;
       height: 20vh;
     }
+
+    .linhas-tec{
+      margin-top: 6px;
+    }
+
+    .l1{
+      margin-top: 0;
+    }
   }
 }
 
@@ -370,16 +433,23 @@ header {
   gap: 2vh;
 
   h1 {
-    font-family: var(--fonte-principal);
-    color: var(--cor-principal);
+    font-family: var(--jura);
+    color: var(--cor-secundaria);
     font-size: 4vh;
+  }
+  
+  p{
+    font-family: var(--inter);
+    color: var(--cor-terciaria);
+    font-weight: 200;
+    font-size: 0.6em;
   }
 
   .button-vermais {
     padding: 2vh 5vh;
     border-radius: 2vh;
     border: none;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-secundaria);
     cursor: pointer;
     font-size: 2vh;
     font-family: arial;
@@ -398,14 +468,15 @@ header {
 
     h1 {
       font-size: 3vh;
-      color: var(--cor-principal);
+      color: var(--cor-secundaria);
       margin-bottom: 2.7vh;
+      font-family: var(--kufam);
     }
 
     form {
       label {
         position: relative;
-        color: white;
+        color:var(--cor-terciaria);
         left: 1vh;
         font-size: 2vh;
         margin-bottom: 0.5vh;
@@ -414,27 +485,33 @@ header {
       input,
       textarea {
         background: none;
-        border: solid 0.01vh white;
+        border: solid 0.01vh var(--cor-terciaria);
         border-radius: 0.6vh;
         height: 5vh;
         padding-inline: 1vh;
         color: #00eaff;
         font-size: 1.8vh;
-        caret-color: var(--cor-principal);
+        caret-color: var(--cor-secundaria);
         resize: none;
-        font-family: "Nunito", sans-serif;
+        font-family: var(--nunito);
+      }
+
+      input:focus, textarea:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 238, 255, 0.223); /* efeito glow bonito */
+        border-radius: 6px; /* opcional */
       }
 
       textarea {
         padding-top: 1.2vh;
-        font-family: "Nunito", sans-serif;
+        font-family: var(--nunito);
       }
 
       input::placeholder,
       textarea::placeholder {
         text-align: start;
         color: #ccc;
-        font-family: "Nunito", sans-serif;
+        font-family: var(--nunito);
       }
 
       .divs-input {
@@ -459,12 +536,12 @@ header {
 
     button {
       padding: 1.5vh 10vh;
-      background-color: var(--cor-principal);
+      background-color: var(--cor-secundaria);
       border: none;
       border-radius: 0.7vh;
       cursor: pointer;
       font-size: 2vh;
-      color: #0d0140;
+      color: var(--cor-principal);
     }
 
     button:hover {
@@ -474,11 +551,11 @@ header {
 }
 
 .entre-contato {
-  font-family: var(--fonte-principal);
+  font-family: var(--kufam);
   position: relative;
 
   h1 {
-    color: var(--cor-principal);
+    color: var(--cor-secundaria);
     font-size: 3.5vh;
   }
 
@@ -512,5 +589,5 @@ footer {
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6vh;
-  color: var(--cor-principal);
+  color: var(--cor-secundaria);
 }
