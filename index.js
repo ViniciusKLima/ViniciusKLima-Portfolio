@@ -15,3 +15,31 @@ function scrollToId(id) {
 function toggleMenu() {
   document.body.classList.toggle("menu-open");
 }
+
+const verCurso = document.getElementById('opensectionCursosBtn');
+const fecharCurso = document.getElementById('closeModalBtn');
+const sectionCursos = document.getElementById('sectionCursos');
+const conteudoGeral = document.getElementById('page-content');
+
+let scrollY = 0;
+
+verCursos.onclick = () => {
+  scrollY = window.scrollY;
+  conteudoGeral.style.position = 'fixed';
+  conteudoGeral.style.top = `-${scrollY}px`;
+  conteudoGeral.style.left = '0';
+  conteudoGeral.style.right = '0';
+  sectionCursos.style.display = 'flex';
+};
+
+fecharCursos.onclick = () => {
+  conteudoGeral.style.position = '';
+  conteudoGeral.style.top = '';
+  conteudoGeral.style.left = '';
+  conteudoGeral.style.right = '';
+  sectionCursos.style.display = 'none';
+  // volta pro scroll anterior sem puxar visualmente
+  window.scrollTo({ top: scrollY, behavior: 'instant' });
+};
+
+

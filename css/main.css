@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+
+::-webkit-scrollbar {
+  width: 10px; /* largura da barra */
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+  background: none; /* fundo da barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #0d0140, #010e56);
+  border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-principal: #00eaff; /*#00eaff*/
+  --fonte-principal: "Inter", sans serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  cursor: default;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(30px);
+  height: 11vh;
+
+  h1 {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+
+    .dev {
+      background-color: #00eaff;
+      color: #0d0140;
+      font-size: 1.25rem;
+      font-family: "Jura", sans-serif;
+      padding: 1px 3.5px 3.3px 5px;
+      border-radius: 0 6px 6px 17px;
+      font-weight: 700;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 4vw;
+    list-style: none;
+    margin: 0;
+  }
+
+  button {
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    color: var(--cor-principal);
+  }
+}
+
+.home {
+  height: 89vh;
+  display: flex;
+  margin-top: 11vh;
+  align-items: center;
+  padding: 0;
+
+  .nome {
+    position: relative;
+    display: inline-block;
+    font-family: var(--fonte-principal);
+    width: auto;
+
+    h2 {
+      color: white;
+      font-weight: 600;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0;
+    }
+
+    h3 {
+      color: var(--cor-principal);
+      font-weight: 300;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0;
+    }
+  }
+
+  .logo-tec-home {
+    display: flex;
+    gap: 1vh;
+
+    .circulo {
+      height: 6vh;
+      width: 6vh;
+      max-width: 10vw;
+      max-height: 10vw;
+      border-radius: 1vh;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .foto {
+    background: none;
+    width: clamp(300px, 35vw, 450px);
+    height: clamp(300px, 35vw, 450px);
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 0.15rem var(--cor-principal);
+
+    .circulo-GG {
+      width: 98%;
+      height: 98%;
+      border-radius: 50%;
+      display: flex;
+      overflow: hidden;
+    }
+  }
+}
+
+.sobre {
+  height: 100vh;
+  padding-inline: 30px;
+  font-family: var(--fonte-principal);
+  justify-content: space-around;
+
+  h1 {
+    color: var(--cor-principal);
+    margin-bottom: 0.6vh;
+  }
+
+  p {
+    color: white;
+    font-size: clamp(0.7em, 1.5vw, 1em);
+    margin: 0;
+  }
+
+  .formacao {
+    display: flex;
+    justify-content: center;
+
+    gap: 7vh;
+    width: 80%;
+  }
+
+  .linha-circ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 0.35vh;
+    height: 36vh;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--cor-principal) 16%,
+      var(--cor-principal) 84%,
+      transparent
+    );
+    margin: 7vh auto;
+    gap: 18vh;
+
+    .bola1,
+    .bola2 {
+      width: 3vh;
+      height: 3vh;
+      background-color: var(--cor-principal);
+      border-radius: 100%;
+    }
+  }
+
+  .content-formacao {
+    align-items: end;
+
+    h1 {
+      margin-bottom: -10px;
+      margin-right: 20px;
+    }
+  }
+
+  .div-faculdade,
+  .div-cursos {
+    display: flex;
+    background-color: #4848483e;
+    backdrop-filter: blur(100px);
+    height: 20vh;
+    border-radius: 1.5vh;
+    border: solid 0.14rem var(--cor-principal);
+    padding-inline: 1.4vh;
+    gap: 1vh;
+    font-size: clamp(0.7em, 1vw, 0.8em);
+    margin: 0;
+
+    h1 {
+      margin: 0;
+    }
+
+    h3 {
+      margin: 0;
+      color: #00ffaa;
+    }
+
+    p {
+      font-size: 0.9em;
+    }
+
+    .div-faculdade:hover {
+      border: solid 0.5vh white;
+    }
+  }
+
+  a {
+    position: relative;
+    background-color: var(--cor-principal);
+    font-size: 1.6vh;
+    width: 12vh;
+    height: 5vh;
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.2vh;
+    top: -4.9vh;
+    right: 4.5vh;
+  }
+
+  a:hover {
+    background-color: #02aebd;
+  }
+}
+
+.skills {
+  height: 100vh;
+  font-family: var(--fonte-principal);
+  color: var(--cor-principal);
+
+  h1 {
+    margin-bottom: 6vh;
+    font-size: 3.5vh;
+  }
+
+  h2 {
+    font-size: 2.7vh;
+    margin-bottom: 0.6vh;
+  }
+
+  .tecs {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .divs-tec {
+    text-align: center;
+    gap: 10px;
+  }
+
+  .sub-divs-tec {
+    height: 60vh;
+    border: solid 0.14rem var(--cor-principal);
+    background-color: #4848483e;
+    backdrop-filter: blur(100px);
+    width: clamp(200px, 23vw, 600px);
+    border-radius: 2vh;
+  }
+}
+
+@media (max-width: 660px) {
+  .sobre {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+
+    .formacao {
+      width: 80vw;
+    }
+  }
+
+  .content-formacao {
+    align-items: center;
+
+    h1 {
+      color: var(--cor-principal);
+      margin-bottom: -0.5vh;
+      margin-right: 3vh;
+    }
+  }
+
+  .div-faculdade,
+  .div-cursos {
+    height: 20vh;
+
+    h3 {
+      color: var(--cor-principal);
+    }
+
+    p {
+      font-size: 1.8vh;
+    }
+  }
+
+  a {
+    top: -4.9vh;
+    right: 4.5vh;
+  }
+
+  .skills {
+    h1 {
+      margin-bottom: 2.5vh;
+    }
+
+    .tecs {
+      width: 80%;
+      flex-direction: column;
+    }
+
+    .divs-tec {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .sub-divs-tec {
+      width: 100%;
+      height: 20vh;
+    }
+  }
+}
+
+.projetos {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-block: 60px;
+  overflow-x: hidden;
+  gap: 2vh;
+
+  h1 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-principal);
+    font-size: 4vh;
+  }
+
+  .button-vermais {
+    padding: 2vh 5vh;
+    border-radius: 2vh;
+    border: none;
+    background-color: var(--cor-principal);
+    cursor: pointer;
+    font-size: 2vh;
+    font-family: arial;
+    color: rgb(1, 1, 43);
+    text-decoration: none;
+  }
+  .button-vermais:hover {
+    background-color: #02aebd;
+  }
+}
+
+.contato {
+  height: 79vh;
+
+  .mensagem {
+
+    h1 {
+      font-size: 3vh;
+      color: var(--cor-principal);
+      margin-bottom: 2.7vh;
+    }
+
+    form {
+      label {
+        position: relative;
+        color: white;
+        left: 1vh;
+        font-size: 2vh;
+        margin-bottom: 0.5vh;
+      }
+
+      input,
+      textarea {
+        background: none;
+        border: solid 0.01vh white;
+        border-radius: 0.6vh;
+        height: 5vh;
+        padding-inline: 1vh;
+        color: #00eaff;
+        font-size: 1.8vh;
+        caret-color: var(--cor-principal);
+        resize: none;
+        font-family: "Nunito", sans-serif;
+      }
+
+      textarea {
+        padding-top: 1.2vh;
+        font-family: "Nunito", sans-serif;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        text-align: start;
+        color: #ccc;
+        font-family: "Nunito", sans-serif;
+      }
+
+      .divs-input {
+        display: flex;
+        flex-direction: column;
+      }
+
+      button,
+      .div-assunto,
+      .div-mensagem {
+        margin-top: 2.4vh;
+      }
+
+      .div-assunto {
+        width: 94%;
+      }
+
+      .texto-msg {
+        height: 20vh;
+      }
+    }
+
+    button {
+      padding: 1.5vh 10vh;
+      background-color: var(--cor-principal);
+      border: none;
+      border-radius: 0.7vh;
+      cursor: pointer;
+      font-size: 2vh;
+      color: #0d0140;
+    }
+
+    button:hover {
+      background-color: #02aebd;
+    }
+  }
+}
+
+.entre-contato {
+  font-family: var(--fonte-principal);
+  position: relative;
+
+  h1 {
+    color: var(--cor-principal);
+    font-size: 3.5vh;
+  }
+
+  .div-links {
+    .links {
+      margin-top: 1.4vh;
+      width: 8vh;
+      height: 8vh;
+      border-radius: 0.8vh;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      
+      img{
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .entre-contato{
+    margin-right: 12vw;
+  }
+}
+
+footer {
+  height: 11vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6vh;
+  color: var(--cor-principal);
+}
