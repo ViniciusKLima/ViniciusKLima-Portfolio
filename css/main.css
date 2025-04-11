@@ -319,11 +319,7 @@ header {
       display: flex;
       flex: 1 1;
       justify-content: end;
-    }
-
-    img{
-      height: 100%;
-      width: 120%;
+      object-fit: cover;
     }
 
     .div-titulo-tec {
