@@ -314,11 +314,16 @@ header {
 
     .div-img {
       object-fit: cover;
-      max-width: 20px;
-      max-height: 20px;
+      max-width: 4vh;
+      max-height: 4vh;
       display: flex;
       flex: 1 1;
       justify-content: end;
+    }
+
+    img{
+      height: 100%;
+      width: 120%;
     }
 
     .div-titulo-tec {
