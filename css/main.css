@@ -315,8 +315,8 @@ header {
 
     .div-img {
       object-fit: cover;
-      width: 20px;
-      height: clamp(0.1rem, 2rem, 3rem);
+      max-width: 20px;
+      max-height: 20px;
       display: flex;
       flex: 1 1;
       justify-content: end;
