@@ -1,5 +1,4 @@
-@import url('variaveis.css');
-
+@import url("variaveis.css");
 
 ::-webkit-scrollbar {
   width: 10px; /* largura da barra */
@@ -42,7 +41,7 @@ header {
   height: 11vh;
 
   h1 {
-    color:var(--cor-terciaria);
+    color: var(--cor-terciaria);
     font-size: 1.2rem;
     margin: 0;
     font-family: var(--nunito);
@@ -70,7 +69,7 @@ header {
     padding: 10px 15px;
     border: none;
     background: none;
-    color:var(--cor-terciaria);
+    color: var(--cor-terciaria);
     font-family: var(--inter);
     font-weight: 300;
     cursor: pointer;
@@ -98,7 +97,7 @@ header {
     width: auto;
 
     h2 {
-      color:var(--cor-terciaria);
+      color: var(--cor-terciaria);
       font-weight: 600;
       font-size: clamp(1.4rem, 2.5vw, 2rem);
       margin: 0;
@@ -161,10 +160,10 @@ header {
   }
 
   p {
-    color:var(--cor-terciaria);
+    color: var(--cor-terciaria);
     font-size: clamp(0.7em, 1.5vw, 1em);
     margin: 0;
-    font-weight:200;
+    font-weight: 200;
     font-family: var(--inter);
   }
 
@@ -239,7 +238,7 @@ header {
     }
 
     .div-faculdade:hover {
-      border: solid 0.5vhvar(--cor-terciaria);
+      border: solid 0.5vhvar (--cor-terciaria);
     }
   }
 
@@ -304,55 +303,54 @@ header {
     color: var(--cor-terciaria);
   }
 
-  .content-tecs{
+  .content-tecs {
     width: 100%;
   }
 
-  .linhas-tec{
+  .linhas-tec {
     height: 30px;
     display: flex;
     justify-content: center;
     gap: 5px;
 
-    .div-img{
+    .div-img {
       object-fit: cover;
       width: 20px;
+      height: clamp(0.1rem, 2rem, 3rem);
       display: flex;
       flex: 1 1;
       justify-content: end;
     }
 
-    .div-titulo-tec{
+    .div-titulo-tec {
       width: 45%;
       display: flex;
       align-items: center;
       flex: 3 1;
-      
     }
 
-    h4{
+    h4 {
       font-family: var(--inter);
       font-weight: 400;
       display: flex;
       align-items: center;
       margin: 0;
-      font-size: clamp(1rem, 2vh, 3rem);
+      font-size: clamp(0.5rem, 2vh, 3rem);
     }
   }
 }
 
 @media (min-width: 660px) {
-  .content-tecs{
+  .content-tecs {
     flex-direction: column;
     gap: 17px;
     padding-top: 15px;
   }
 
-  .linhas-tec{
+  .linhas-tec {
     width: 100%;
   }
 }
-
 
 @media (max-width: 660px) {
   .sobre {
@@ -413,11 +411,11 @@ header {
       height: 20vh;
     }
 
-    .linhas-tec{
+    .linhas-tec {
       margin-top: 6px;
     }
 
-    .l1{
+    .l1 {
       margin-top: 0;
     }
   }
@@ -437,8 +435,8 @@ header {
     color: var(--cor-secundaria);
     font-size: 4vh;
   }
-  
-  p{
+
+  p {
     font-family: var(--inter);
     color: var(--cor-terciaria);
     font-weight: 200;
@@ -465,7 +463,6 @@ header {
   height: 79vh;
 
   .mensagem {
-
     h1 {
       font-size: 3vh;
       color: var(--cor-secundaria);
@@ -476,7 +473,7 @@ header {
     form {
       label {
         position: relative;
-        color:var(--cor-terciaria);
+        color: var(--cor-terciaria);
         left: 1vh;
         font-size: 2vh;
         margin-bottom: 0.5vh;
@@ -496,7 +493,8 @@ header {
         font-family: var(--nunito);
       }
 
-      input:focus, textarea:focus {
+      input:focus,
+      textarea:focus {
         outline: none;
         box-shadow: 0 0 0 3px rgba(0, 238, 255, 0.223); /* efeito glow bonito */
         border-radius: 6px; /* opcional */
@@ -568,8 +566,8 @@ header {
       text-decoration: none;
       color: inherit;
       display: flex;
-      
-      img{
+
+      img {
         border-radius: 10px;
       }
     }
@@ -577,7 +575,7 @@ header {
 }
 
 @media (min-width: 992px) {
-  .entre-contato{
+  .entre-contato {
     margin-right: 12vw;
   }
 }
