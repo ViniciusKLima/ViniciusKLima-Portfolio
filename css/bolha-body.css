@@ -6,7 +6,7 @@
 
 body {
     position: relative;
-    background-color: rgb(1, 1, 43);
+    background-color: #01012b;
 }
 
 .bolhas-container {
@@ -31,28 +31,28 @@ body {
 }
 
 .bolha:nth-child(2) {
-    background: radial-gradient(circle, rgba(2, 78, 120, 0.767), rgba(0, 255, 255, 0));
+    background: radial-gradient(circle, #024e78c4, rgba(0, 255, 255, 0));
     width: 250px;
     height: 250px;
     animation-duration: 12s;
 }
 
 .bolha:nth-child(3) {
-    background: radial-gradient(circle, rgba(2, 106, 71, 0.997), rgba(255, 255, 0, 0));
+    background: radial-gradient(circle, #026a47fe, rgba(255, 255, 0, 0));
     width: 350px;
     height: 350px;
     animation-duration: 15s;
 }
 
 .bolha:nth-child(4) {
-    background: radial-gradient(circle, rgb(3, 15, 102), rgba(0, 255, 0, 0));
+    background: radial-gradient(circle, #030f66, rgba(0, 255, 0, 0));
     width: 280px;
     height: 280px;
     animation-duration: 18s;
 }
 
 .bolha:nth-child(5) {
-    background: radial-gradient(circle, rgba(98, 3, 107, 0.6), rgba(0, 255, 255, 0));
+    background: radial-gradient(circle, #62036b99, rgba(0, 255, 255, 0));
     width: 450px;
     height: 450px;
     animation-duration: 21s;
