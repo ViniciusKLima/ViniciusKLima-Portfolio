@@ -1,15 +1,16 @@
-@import url('variaveis.css');
+@import url("variaveis.css");
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .sectionCursos {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
   display: none;
   justify-content: center;
   align-items: center;
@@ -17,48 +18,72 @@
 }
 
 .content-cursos {
-  background: rgba(106, 106, 106, 0.355);
-  backdrop-filter: blur(1000px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   width: 75vw;
   max-height: 80vh;
   padding: 20px;
   border-radius: 8px;
   overflow-y: auto;
   position: relative;
-  gap: 5vh;
 }
 
-.content-cursos::-webkit-scrollbar-thumb{
-  border-radius: 10px;
-  background: aqua;
-
+.header-cursos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 #fecharCursos {
-  position: absolute;
-  top: 10px;
-  right: 14px;
   font-size: 24px;
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--cor-secundaria);
+  color: #fff;
 }
 
 .tt-h2 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 20px;
-  margin-top: 0;
-  color: var(--cor-secundaria);
+  color: #fff;
 }
 
-.div-certificados {
-  padding: 10px;
-  margin-block: 10px;
-  color: aliceblue;
-  background: #7a7a7a;
+.grade-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card-curso {
+  background: #f1f1f1;
   border-radius: 8px;
-  cursor: pointer;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-curso img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card-curso h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.barra {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.progresso {
+  height: 100%;
+  background: #00c3ff;
+  border-radius: 5px;
+  transition: width 0.4s ease;
 }
