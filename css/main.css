@@ -295,7 +295,7 @@ header {
     border: solid 0.14rem var(--cor-secundaria);
     background-color: #4848483e;
     backdrop-filter: blur(100px);
-    width: clamp(200px, 23vw, 600px);
+    width: clamp(200px, 21vw, 500px);
     border-radius: 2vh;
     display: flex;
     justify-content: center;
@@ -315,24 +315,26 @@ header {
 
     .div-img {
       object-fit: cover;
+      width: 100%;
       max-width: 4vh;
       max-height: 4vh;
-      display: flex;
+      display: flex !important;
+      align-items: center !important;
       flex: 1 1;
-      justify-content: end;
+      justify-content: center;
       object-fit: cover;
 
       img{
-        width: 100%;
+        width: auto;
         height: 100%;
         object-fit: cover;
       }
     }
 
     .div-titulo-tec {
-      width: 45%;
-      display: flex;
-      align-items: center;
+      display: flex !important;
+      align-items: center !important;
+      text-align: center;
       flex: 3 1;
     }
 
@@ -582,6 +584,7 @@ header {
 }
 
 @media (min-width: 992px) {
+
   .contato {
     justify-content: space-around
   }
