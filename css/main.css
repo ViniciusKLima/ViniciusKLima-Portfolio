@@ -332,8 +332,8 @@ header {
     }
 
     .div-titulo-tec {
-      display: flex !important;
-      align-items: center !important;
+      display: flex;
+      align-items: center;
       text-align: center;
       flex: 3 1;
     }

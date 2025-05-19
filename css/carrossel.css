@@ -1,4 +1,4 @@
-@import url('variaveis.css');
+@import url("variaveis.css");
 
 section {
   display: flex;
@@ -30,50 +30,25 @@ section::-webkit-scrollbar {
 
 .slide {
   display: flex;
-  padding: 10px;
-  padding-left: 170px;
   gap: 3.5vh;
-  animation: slide 40s linear infinite;
   box-sizing: border-box;
+  overflow: hidden;
+  max-width: 100vw;
 }
 
-.itens:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.itens {
-  border: solid 0.5vh var(--cor-secundaria);
-  width: 50vh;
-  height: 55vh;
-  border-radius: 3vh;
-  display: flex;
-  flex-direction: column;
-  padding: 1.3vh;
-  transition: transform 0.5s ease;
-  color: var(--cor-secundaria);
-
-  h4 {
-    font-size: 1.2rem;
-    margin-top: 8px;
-  }
-}
 .foto {
   background-color: #87858529;
-  backdrop-filter: blur(70px);
   width: 100%;
   height: 60%;
   border-radius: 2vh 2vh 0 0;
-}
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
+  object-fit: cover;
+  overflow: hidden;
 
+  img{
+    background-color: #fff;
+    width: 100%;
+  }
+}
 
 @media (max-width: 576px) {
   .gradient {
@@ -81,19 +56,88 @@ section::-webkit-scrollbar {
     width: 6vh;
   }
 
-  .itens {
-    width: 40vh;
-    height: 45vh;
-    border-radius: 3vh;
-    display: flex;
-    flex-direction: column;
-    padding: 1.3vh;
-    transition: transform 0.5s ease;
-    color: var(--cor-secundaria);
-  
-    h4 {
-      font-size: 3vh;
-    }
+  .projeto {
+    width: 20rem;
+    height: 20rem;
+    max-height: 50vh;
   }
+}
 
+.slide-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: scrollAnim 40s linear infinite;
+}
+
+/*Div individual de cada projeto*/
+.projeto {
+  padding: 1rem;
+  width:27rem;
+  height: 27rem;
+  max-height: 63vh;
+  border: 2px solid var(--cor-secundaria);
+  color: var(--cor-secundaria);
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/*Divs de dentro do porjeto q alternam*/
+.apresentacao,
+.detalhes {
+  padding: 0.8rem;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  
+  h4{
+    margin-top: 0.8rem;
+  }
+}
+
+.detalhes {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  
+  .links{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.detalhes a {
+  color: var(--cor-terciaria);
+  text-decoration: none;
+  margin-top: 8px;
+  background-color: #494949;
+  box-shadow: inset 0 0 5px #636363;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.detalhes button.voltar {
+  margin-top: 15px;
+  background-color: var(--cor-secundaria);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+}
+
+@keyframes scrollAnim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.carrossel.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
 }
