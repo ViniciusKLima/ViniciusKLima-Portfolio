@@ -337,18 +337,16 @@
           <form
             id="mensagem"
             class="w-75 d-flex flex-wrap justify-content-center align-items-center p-0"
-            action=""
-            method="post"
           >
             <div
               class="div-nome-email gap-3 d-flex flex-column flex-sm-row flex-md-column flex-lg-row w-100"
             >
               <div class="div-nome divs-input w-100">
-                <label for="username">Nome</label>
+                <label for="name">Nome</label>
                 <input
                   class="nome-email"
                   type="text"
-                  name="username"
+                  name="name"
                   placeholder="Digite seu nome"
                   autocomplete="off"
                   required
@@ -365,27 +363,31 @@
                 />
               </div>
             </div>
+
             <div class="div-assunto divs-input w-100">
-              <label for="assunto">Assunto</label>
+              <label for="subject">Assunto</label>
               <input
                 class="assunto"
                 type="text"
-                name="assunto"
+                name="subject"
                 placeholder="Qual o assunto da mensagem?"
                 autocomplete="off"
                 required
               />
             </div>
+
             <div class="div-mensagem divs-input w-100">
-              <label for="mensagem">Mensagem</label>
+              <label for="message">Mensagem</label>
               <textarea
                 class="texto-msg"
-                type="text"
-                name="mensagem"
+                name="message"
                 autocomplete="off"
+                required
                 placeholder="Escreva a sua mensagem aqui..."
               ></textarea>
             </div>
+            <input type="hidden" name="_captcha" value="false" />
+
             <button type="submit">Enviar</button>
           </form>
         </div>
@@ -423,7 +425,45 @@
 
     <footer>© 2025 ViniciusKaua. Todos os direitos reservados.</footer>
 
+    <div id="notification">Enviado com sucesso!</div>
+
     <script src="index.js"></script>
     <script src="carrossel.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("mensagem");
+        const notification = document.getElementById("notification");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // Impede o recarregamento
+
+          const formData = new FormData(form); // Cria os dados do formulário
+
+          fetch("https://formsubmit.co/viniciuskls2006@gmail.com", {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          })
+            .then((response) => {
+              if (response.ok) {
+                form.reset(); // Limpa os campos
+
+                // Mostra o popup
+                notification.classList.add("show");
+                setTimeout(() => {
+                  notification.classList.remove("show");
+                }, 3000);
+              } else {
+                alert("Erro ao enviar. Verifique seu email.");
+              }
+            })
+            .catch((error) => {
+              alert("Erro de conexão.");
+            });
+        });
+      });
+    </script>
   </body>
 </html>
