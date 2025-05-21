@@ -40,13 +40,13 @@ class Curso {
 }
 
 const cursos = [
-  new Curso("HTML", "https://via.placeholder.com/300x200?text=HTML", 100),
-  new Curso("JavaScript", "https://via.placeholder.com/300x200?text=JS", 70),
-  new Curso("React", "https://via.placeholder.com/300x200?text=React", 45),
-  new Curso("React", "https://via.placeholder.com/300x200?text=React", 45),
-  new Curso("2React", "https://via.placeholder.com/300x200?text=React", 45),
-  new Curso("3React", "https://via.placeholder.com/300x200?text=React", 45),
-  new Curso("4React", "https://via.placeholder.com/300x200?text=React", 45),
+  new Curso("Programação para Internet - Estácio", "img/certificado-estacio.jpg", 100),
+  new Curso("JavaScript", "img/certificado-estacio.jpg", 70),
+  new Curso("React", "img/certificado-estacio.jpg", 45),
+  new Curso("React", "img/certificado-estacio.jpg", 45),
+  new Curso("2React", "img/certificado-estacio.jpg", 45),
+  new Curso("3React", "img/certificado-estacio.jpg", 45),
+  new Curso("4React", "img/certificado-estacio.jpg", 45),
 ];
 
 function mostrarCursos() {
