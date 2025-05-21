@@ -22,8 +22,14 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/carrossel.css" />
     <link rel="stylesheet" href="css/cursos.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
+
   <body id="section1">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <div class="bolhas-container">
       <div class="bolha" style="top: 10%; left: 20%"></div>
       <div class="bolha" style="top: 40%; left: 60%"></div>
@@ -34,6 +40,7 @@
     </div>
     <header
       class="container-fluid d-flex align-items-center justify-content-between px-md-5 px-sm-3"
+      data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"
     >
       <h1 class="d-flex align-items-center gap-1">
         <div class="dev text-center">Dev.</div>
@@ -54,7 +61,7 @@
       <section
         class="home container flex-md-row flex-column-reverse justify-content-center justify-content-lg-around gap-5"
       >
-        <div class="nome text-center text-md-start">
+        <div class="nome text-center text-md-start" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
           <h2>Vinícius K. Lima</h2>
           <h3>Desenvolvedor FullStack</h3>
           <div
@@ -86,7 +93,7 @@
             </div>
           </div>
         </div>
-        <div class="foto">
+        <div class="foto" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
           <div class="circulo-GG">
             <img src="img/foto.jpg" alt="" />
           </div>
@@ -96,7 +103,7 @@
         id="section2"
         class="sobre container-lg d-flex flex-md-row gap-5"
       >
-        <div class="texto-sobre w-75">
+        <div class="texto-sobre w-75" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
           <h1 class="fs-2">Quem sou eu?</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
@@ -115,15 +122,15 @@
             dolor.
           </p>
         </div>
-        <div class="formacao">
-          <div class="linha-circ d-md-flex d-none">
+        <div class="formacao" >
+          <div class="linha-circ d-md-flex d-none" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             <div class="bola1"></div>
             <div class="bola2"></div>
           </div>
           <div class="content-formacao d-flex flex-column gap-3">
-            <h1 class="fs-2">Formação</h1>
+            <h1 class="fs-2 tt-f" data-aos="flip-right" data-aos-delay="500" data-aos-duration="1000">Formação</h1>
             <div
-              class="div-faculdade d-flex flex-column justify-content-center"
+              class="div-faculdade d-flex flex-column justify-content-center" data-aos="flip-right" data-aos-delay="500" data-aos-duration="1000"
             >
               <h1 class="fs-6" style="font-family: var(--kufam)">
                 Ciência da Computação
@@ -135,7 +142,7 @@
                 placeat at iste quasi sit dolorum obcaecati rerum fuga.
               </p>
             </div>
-            <div class="div-cursos d-flex flex-column justify-content-center">
+            <div class="div-cursos d-flex flex-column justify-content-center" data-aos="flip-left" data-aos-delay="700" data-aos-duration="1000">
               <h1 class="fs-6" style="font-family: var(--kufam)">
                 Cursos Certificados
               </h1>
@@ -146,7 +153,7 @@
                 deleniti et adipisci, unde doloribus.
               </p>
             </div>
-            <button id="verCursos" class="certificados">Ver cursos</button>
+            <button id="verCursos" class="certificados" data-aos="flip-right" data-aos-delay="700" data-aos-duration="1000">Ver cursos</button>
           </div>
         </div>
       </section>
@@ -154,9 +161,9 @@
         id="section3"
         class="skills d-flex flex-column justify-content-center align-items-center"
       >
-        <h1>SKILLS</h1>
+        <h1 data-aos="flip-down" data-aos-delay="100" data-aos-duration="1000">SKILLS</h1>
         <div class="tecs d-flex flex-md-row gap-4 gp-md-5">
-          <div class="frontend divs-tec">
+          <div class="frontend divs-tec" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             <h2>Front-end</h2>
             <div class="tecs-front sub-divs-tec">
               <div class="content-tecs d-flex align-items-center flex-wrap">
@@ -223,7 +230,7 @@
               </div>
             </div>
           </div>
-          <div class="backend divs-tec">
+          <div class="backend divs-tec" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1500">
             <h2>Back-end</h2>
             <div class="tecs-back sub-divs-tec">
               <div class="content-tecs d-flex align-items-center flex-wrap">
@@ -274,7 +281,7 @@
               </div>
             </div>
           </div>
-          <div class="ferramentas divs-tec">
+          <div class="ferramentas divs-tec" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="2000">
             <h2>Ferramentas</h2>
             <div class="tecs-ferramentas sub-divs-tec">
               <div class="content-tecs d-flex align-items-center flex-wrap">
@@ -316,22 +323,22 @@
         </div>
       </section>
       <section id="section4" class="projetos">
-        <h1>PROJETOS</h1>
+        <h1 data-aos="flip-down" data-aos-delay="100" data-aos-duration="1000">PROJETOS</h1>
         <section class="area-carrossel" style="overflow: hidden">
           <div class="gradient-left gradient"></div>
-          <div class="carrossel slide" id="carrosselProjetos">
+          <div class="carrossel slide" id="carrosselProjetos" data-aos="fade-left" data-aos-delay="0" data-aos-duration="1000">
             <div class="slide-track" id="slideTrack"></div>
           </div>
           <div class="gradient-right gradient"></div>
         </section>
-        <a class="button-vermais" href="cursos.html">Ver mais</a>
+        <a class="button-vermais" href="cursos.html" data-aos="flip-up" data-aos-delay="100" data-aos-duration="500">Ver mais</a>
       </section>
       <section
         id="section5"
         class="contato container d-flex justify-content-center align-items-center justify-content-md-between"
       >
         <div
-          class="mensagem col-12 col-md-6 container-md-fluid d-flex align-items-center flex-column justify-content-center"
+          class="mensagem col-12 col-md-6 container-md-fluid d-flex align-items-center flex-column justify-content-center" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"
         >
           <h1 class="text-center">Envie uma mensagem</h1>
           <form
@@ -391,7 +398,7 @@
             <button type="submit">Enviar</button>
           </form>
         </div>
-        <div class="entre-contato d-none d-md-inline-block text-center">
+        <div class="entre-contato d-none d-md-inline-block text-center" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
           <h1>Me siga nas redes</h1>
           <div class="div-links d-flex justify-content-center gap-3">
             <a
@@ -428,6 +435,7 @@
     <div id="notification">Enviado com sucesso!</div>
 
     <script src="index.js"></script>
+    <script src="animacoes.js"></script>
     <script src="carrossel.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
