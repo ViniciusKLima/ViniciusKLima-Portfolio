@@ -22,29 +22,37 @@
   backdrop-filter: blur(10px);
   width: 75vw;
   max-height: 80vh;
-  padding: 20px;
   border-radius: 8px;
-  overflow-y: auto;
   position: relative;
+  border: 2px solid var(--cor-secundaria);
+  overflow: hidden;
 }
 
 .header-cursos {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  background-color: var(--cor-secundaria);
+  height: 60px;
+  padding-inline: 20px;
 }
 
 #fecharCursos {
-  font-size: 24px;
+  font-size: 40px;
   background: none;
   border: none;
   cursor: pointer;
   color: #fff;
+  margin-bottom: 5px;
+  padding: 10px;
 }
 
 .tt-h2 {
   color: #fff;
+  margin: 0;
 }
 
 .grade-cursos {
@@ -52,7 +60,12 @@
   grid-template-columns: repeat(auto-fill, 300px);
   justify-content: center;
   gap: 1.5rem;
+  padding-inline: 20px;
+  padding-top: 20px;
+  overflow-y: auto; /* ou scroll */
+  max-height: 80vh; /* ou height: 500px; */
 }
+
 
 .card-curso {
   background: #f1f1f1;

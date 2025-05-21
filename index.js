@@ -44,9 +44,9 @@ const cursos = [
   new Curso("JavaScript", "https://via.placeholder.com/300x200?text=JS", 70),
   new Curso("React", "https://via.placeholder.com/300x200?text=React", 45),
   new Curso("React", "https://via.placeholder.com/300x200?text=React", 45),
-  new Curso("React", "https://via.placeholder.com/300x200?text=React", 45),
-  new Curso("React", "https://via.placeholder.com/300x200?text=React", 45),
-  new Curso("React", "https://via.placeholder.com/300x200?text=React", 45),
+  new Curso("2React", "https://via.placeholder.com/300x200?text=React", 45),
+  new Curso("3React", "https://via.placeholder.com/300x200?text=React", 45),
+  new Curso("4React", "https://via.placeholder.com/300x200?text=React", 45),
 ];
 
 function mostrarCursos() {

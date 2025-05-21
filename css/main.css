@@ -434,15 +434,17 @@ header {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   padding-block: 60px;
   overflow-x: hidden;
-  gap: 2vh;
+  margin: 0;
+  gap: 1rem;
 
   h1 {
     font-family: var(--jura);
     color: var(--cor-secundaria);
     font-size: 4vh;
+    margin: 0;
   }
 
   p {
