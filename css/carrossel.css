@@ -91,13 +91,13 @@ section::-webkit-scrollbar {
   flex-direction: column;
   background-color: #aaaaaa2d;
 
-  h4{
+  h4 {
     color: var(--cor-secundaria);
     font-size: 1.5rem;
     margin-top: 0.5rem;
   }
 
-  p{
+  p {
     color: var(--cor-terciaria);
     font-family: "Inter", sans-serif;
     font-size: 0.7rem;
@@ -127,7 +127,7 @@ section::-webkit-scrollbar {
   justify-content: center;
   background-color: #1e1e1e91;
 
-  h3{
+  h3 {
     color: var(--cor-secundaria);
     font-size: 1.5rem;
     margin-top: 0.5rem;
@@ -157,5 +157,29 @@ section::-webkit-scrollbar {
   .gradient {
     height: 55vh;
     width: 6vh;
+  }
+
+  .card-front .foto {
+    height: 12rem;
+  }
+
+  .projeto {
+    width: 19rem;
+    height: 24rem;
+    max-height: 63vh;
+  }
+
+  .card-front {
+    h4 {
+      color: var(--cor-secundaria);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    p {
+      color: var(--cor-terciaria);
+      font-family: "Inter", sans-serif;
+      font-size: 0.7rem;
+    }
   }
 }
