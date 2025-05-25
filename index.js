@@ -41,7 +41,7 @@ class Curso {
 
 const cursos = [
   new Curso(
-    "Programação para Internet - <span style='color:#a7103d'>Dio</span>",
+    "Desenvolvimento Frontend com Angular - <span style='color:#a7103d'>Dio</span>",
     "img/certificado-frontend-angular-dio.jpg",
     100
   ),
