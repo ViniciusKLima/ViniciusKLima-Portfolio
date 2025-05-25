@@ -40,13 +40,36 @@ class Curso {
 }
 
 const cursos = [
-  new Curso("Programação para Internet - Estácio", "img/certificado-estacio.jpg", 100),
-  new Curso("JavaScript", "img/certificado-estacio.jpg", 70),
-  new Curso("React", "img/certificado-estacio.jpg", 45),
-  new Curso("React", "img/certificado-estacio.jpg", 45),
-  new Curso("2React", "img/certificado-estacio.jpg", 45),
-  new Curso("3React", "img/certificado-estacio.jpg", 45),
-  new Curso("4React", "img/certificado-estacio.jpg", 45),
+  new Curso(
+    "Programação para Internet - <span style='color:#a7103d'>Dio</span>",
+    "img/certificado-frontend-angular-dio.jpg",
+    100
+  ),
+  new Curso(
+    "Programação para Internet - <span style='color:#1090a7'>Estácio</span>",
+    "img/certificado-estacio.jpg",
+    100
+  ),
+  new Curso(
+    "Aplicativo GetMestres - Ionic 5, TypeScript, NodeJS, MySql, Angular - <span style='color: #8810a7'>Udemy</span>",
+    "https://img-c.udemycdn.com/course/750x422/1996798_0808_4.jpg",
+    35
+  ),
+  new Curso(
+    "Projeto Completo NodeJS, React, React Native, TypeScript - <span style='color: #8810a7'>Udemy</span>",
+    "https://img-c.udemycdn.com/course/750x422/4627320_9daf_2.jpg",
+    18
+  ),
+  new Curso(
+    "Curso de JavaScript e TypeScript do básico ao avançado JS/TS - <span style='color: #8810a7'>Udemy</span>",
+    "https://img-c.udemycdn.com/course/750x422/2575266_c184_4.jpg",
+    0
+  ),
+  new Curso(
+    "Curso de Python 3 do básico ao avançado - <span style='color: #8810a7'>Udemy</span>",
+    "https://img-c.udemycdn.com/course/750x422/2411816_3802_4.jpg",
+    0
+  ),
 ];
 
 function mostrarCursos() {
