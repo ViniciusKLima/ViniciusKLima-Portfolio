@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kufam&display=swap");
+
+:root {
+  --cor-principal: #0d0140;
+  --cor-secundaria: #00eaff;
+  --cor-terciaria: #f8f8ff;
+  --inter: "Inter", sans-serif;
+  --nunito: "Nunito", sans-serif;
+  --jura: "Jura", sans-serif;
+  --kufam: "Kufam", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #01012b; // Background exato do seu projeto
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  cursor: default;
+}
+
+// Scrollbar personalizada
+::-webkit-scrollbar {
+  width: 10px;
+  position: absolute;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--cor-principal), #010e56);
+  border-radius: 4px;
+}

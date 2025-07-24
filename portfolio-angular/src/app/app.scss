@@ -1,0 +1,663 @@
+.bolhas-container {
+  position: fixed;
+  z-index: -99999;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.bolha {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(35, 1, 169, 0.6),
+    rgba(15, 122, 216, 0.499)
+  );
+  filter: blur(80px);
+  border-radius: 50%;
+  animation: mover1 15s infinite ease-in-out;
+  top: 10%;
+  left: 20%;
+}
+
+.bolha:nth-child(2) {
+  background: radial-gradient(circle, #024e78c4, rgba(0, 255, 255, 0));
+  width: 250px;
+  height: 250px;
+  animation: mover2 18s infinite ease-in-out reverse;
+  animation-delay: -2s;
+  top: 40%;
+  left: 60%;
+}
+
+.bolha:nth-child(3) {
+  background: radial-gradient(circle, #026a47fe, rgba(255, 255, 0, 0));
+  width: 350px;
+  height: 350px;
+  animation: mover3 20s infinite ease-in-out;
+  animation-delay: -5s;
+  top: 70%;
+  left: 30%;
+}
+
+.bolha:nth-child(4) {
+  background: radial-gradient(circle, #030f66, rgba(0, 255, 0, 0));
+  width: 280px;
+  height: 280px;
+  animation: mover4 22s infinite ease-in-out reverse;
+  animation-delay: -8s;
+  top: 20%;
+  left: 80%;
+}
+
+.bolha:nth-child(5) {
+  background: radial-gradient(circle, #62036b99, rgba(0, 255, 255, 0));
+  width: 450px;
+  height: 450px;
+  animation: mover5 25s infinite ease-in-out;
+  animation-delay: -12s;
+  top: 40%;
+  left: 10%;
+}
+
+.bolha:nth-child(6) {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.2)
+  );
+  width: 8px;
+  height: 8px;
+  filter: blur(2px);
+  animation: vagalume1 30s infinite ease-in-out;
+  animation-delay: 0s;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  // Sem posição fixa - começa no top left
+}
+
+.bolha:nth-child(7) {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.1)
+  );
+  width: 6px;
+  height: 6px;
+  filter: blur(1.5px);
+  animation: vagalume2 30s infinite ease-in-out;
+  animation-delay: 0s; // Começam juntos
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+  // Sem posição fixa - começa no bottom right
+}
+
+// Animações mais complexas e fluidas:
+@keyframes flutuar1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    filter: blur(80px) hue-rotate(0deg);
+  }
+  25% {
+    transform: translate(200px, -150px) rotate(45deg) scale(1.2);
+    filter: blur(60px) hue-rotate(90deg);
+  }
+  50% {
+    transform: translate(-180px, 100px) rotate(180deg) scale(0.8);
+    filter: blur(100px) hue-rotate(180deg);
+  }
+  75% {
+    transform: translate(150px, 200px) rotate(270deg) scale(1.1);
+    filter: blur(70px) hue-rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+    filter: blur(80px) hue-rotate(360deg);
+  }
+}
+
+@keyframes ondular {
+  0% {
+    transform: translate(0, 0) skew(0deg, 0deg);
+  }
+  20% {
+    transform: translate(-100px, 50px) skew(15deg, 5deg);
+  }
+  40% {
+    transform: translate(150px, -80px) skew(-10deg, 10deg);
+  }
+  60% {
+    transform: translate(-200px, -100px) skew(20deg, -8deg);
+  }
+  80% {
+    transform: translate(120px, 180px) skew(-15deg, 12deg);
+  }
+  100% {
+    transform: translate(0, 0) skew(0deg, 0deg);
+  }
+}
+
+@keyframes pulsar {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translate(180px, 100px) scale(1.5);
+    opacity: 0.9;
+  }
+  66% {
+    transform: translate(-120px, -150px) scale(0.5);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes vaga {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(10vw, 3vh);
+  }
+  20% {
+    transform: translate(3vw, 60vh);
+  }
+  30% {
+    transform: translate(10vw, 100vh);
+  }
+  50% {
+    transform: translate(100px, 150px);
+  }
+  100% {
+    transform: translate(-100px, -150px);
+  }
+}
+
+@keyframes mover1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(150px, -100px) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-80px, 200px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translate(200px, 100px) rotate(270deg) scale(1.2);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes mover2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-120px, 80px) rotate(45deg);
+  }
+  40% {
+    transform: translate(180px, -50px) rotate(135deg);
+  }
+  60% {
+    transform: translate(-200px, -120px) rotate(225deg);
+  }
+  80% {
+    transform: translate(100px, 150px) rotate(315deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes mover3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(250px, 80px) scale(0.8);
+  }
+  66% {
+    transform: translate(-150px, -200px) scale(1.3);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes mover4 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  30% {
+    transform: translate(-180px, -150px) rotate(-90deg);
+  }
+  60% {
+    transform: translate(220px, 120px) rotate(-180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-360deg);
+  }
+}
+
+@keyframes mover5 {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  20% {
+    transform: translate(100px, -200px) scale(0.7) rotate(60deg);
+  }
+  40% {
+    transform: translate(-250px, -100px) scale(1.4) rotate(120deg);
+  }
+  60% {
+    transform: translate(300px, 180px) scale(0.9) rotate(240deg);
+  }
+  80% {
+    transform: translate(-100px, 250px) scale(1.2) rotate(300deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(360deg);
+  }
+}
+
+@keyframes estrela {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0.3;
+  }
+  10% {
+    transform: translate(20vw, 10vh) scale(1.5);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(60vw, 30vh) scale(0.8);
+    opacity: 0.6;
+  }
+  40% {
+    transform: translate(80vw, 60vh) scale(2);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translate(30vw, 80vh) scale(0.3);
+    opacity: 0.4;
+  }
+  80% {
+    transform: translate(70vw, 20vh) scale(1.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0.3;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(30px);
+  height: 11vh;
+  width: 100%;
+
+  h1 {
+    color: var(--cor-terciaria);
+    font-size: 1.2rem;
+    margin: 0;
+    font-family: var(--nunito);
+    font-weight: 500;
+
+    .dev {
+      background-color: var(--cor-secundaria);
+      color: var(--cor-principal);
+      font-size: 1.25rem;
+      font-family: var(--jura);
+      padding: 1px 3.5px 3.3px 5px;
+      border-radius: 0 6px 6px 17px;
+      font-weight: 700;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 4vw;
+    list-style: none;
+    margin: 0;
+  }
+
+  button {
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    color: var(--cor-terciaria);
+    font-family: var(--inter);
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    color: var(--cor-secundaria);
+  }
+}
+
+.home {
+  height: 89vh;
+  display: flex;
+  margin-top: 11vh;
+  align-items: center;
+  padding: 0;
+
+  .nome {
+    position: relative;
+    display: inline-block;
+    font-family: var(--inter);
+    width: auto;
+
+    h2 {
+      color: var(--cor-terciaria);
+      font-weight: 600;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0;
+    }
+
+    h3 {
+      color: var(--cor-secundaria);
+      font-weight: 300;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0;
+    }
+  }
+
+  .logo-tec-home {
+    display: flex;
+    gap: 1vh;
+
+    .circulo {
+      height: 6vh;
+      width: 6vh;
+      max-width: 10vw;
+      max-height: 10vw;
+      border-radius: 1vh;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .foto {
+    background: none;
+    width: clamp(300px, 35vw, 450px);
+    height: clamp(300px, 35vw, 450px);
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 0.15rem var(--cor-secundaria);
+
+    .circulo-GG {
+      width: 98%;
+      height: 98%;
+      border-radius: 50%;
+      display: flex;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+footer {
+  height: 11vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6vh;
+  color: var(--cor-secundaria);
+}
+
+#notification {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: top 0.5s ease;
+}
+
+#notification.show {
+  top: 11.5vh;
+}
+
+// História de amor dos vagalumes:
+@keyframes vagalume1 {
+  // Começa no canto superior esquerdo
+  0% {
+    transform: translate(5vw, 15vh) scale(0.8);
+    opacity: 0.6;
+  }
+  // Movimento em curva pelo lado esquerdo
+  8% {
+    transform: translate(10vw, 25vh) scale(1);
+    opacity: 0.7;
+  }
+  15% {
+    transform: translate(20vw, 35vh) scale(1.1);
+    opacity: 0.8;
+  }
+  // Curva em direção ao centro - movimento circular
+  22% {
+    transform: translate(35vw, 30vh) scale(1.3) rotate(45deg);
+    opacity: 0.9;
+  }
+  30% {
+    transform: translate(45vw, 40vh) scale(1.4) rotate(90deg);
+    opacity: 1;
+  }
+  // ENCONTRO FRONTAL no centro
+  35% {
+    transform: translate(48vw, 50vh) scale(1.8) rotate(180deg);
+    opacity: 1;
+  }
+  // Dança inicial - movimento em S
+  40% {
+    transform: translate(55vw, 40vh) scale(1.5) rotate(270deg);
+    opacity: 1;
+  }
+  45% {
+    transform: translate(65vw, 55vh) scale(1.2) rotate(360deg);
+    opacity: 0.9;
+  }
+  // Percorre toda a tela - movimento em oito
+  50% {
+    transform: translate(75vw, 30vh) scale(1.6) rotate(450deg);
+    opacity: 1;
+  }
+  55% {
+    transform: translate(80vw, 70vh) scale(1.1) rotate(540deg);
+    opacity: 0.8;
+  }
+  // Volta pela parte inferior
+  60% {
+    transform: translate(60vw, 80vh) scale(1.4) rotate(630deg);
+    opacity: 1;
+  }
+  65% {
+    transform: translate(30vw, 75vh) scale(1.3) rotate(720deg);
+    opacity: 0.9;
+  }
+  // Sobe pela lateral esquerda
+  70% {
+    transform: translate(15vw, 60vh) scale(1.5) rotate(810deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(25vw, 40vh) scale(1.2) rotate(900deg);
+    opacity: 0.8;
+  }
+  // Movimento final em espiral para o centro
+  80% {
+    transform: translate(40vw, 45vh) scale(1.7) rotate(990deg);
+    opacity: 1;
+  }
+  85% {
+    transform: translate(52vw, 50vh) scale(2) rotate(1080deg);
+    opacity: 1;
+  }
+  // Retorna ao ponto inicial em curva
+  92% {
+    transform: translate(20vw, 25vh) scale(1) rotate(1170deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(5vw, 15vh) scale(0.8) rotate(1260deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes vagalume2 {
+  // Começa no canto inferior direito
+  0% {
+    transform: translate(85vw, 75vh) scale(0.9);
+    opacity: 0.5;
+  }
+  // Movimento em curva pelo lado direito
+  8% {
+    transform: translate(80vw, 65vh) scale(0.8);
+    opacity: 0.7;
+  }
+  15% {
+    transform: translate(70vw, 55vh) scale(1.1);
+    opacity: 0.8;
+  }
+  // Curva em direção ao centro - movimento circular oposto
+  22% {
+    transform: translate(60vw, 60vh) scale(1.2) rotate(-45deg);
+    opacity: 0.9;
+  }
+  30% {
+    transform: translate(55vw, 50vh) scale(1.3) rotate(-90deg);
+    opacity: 1;
+  }
+  // ENCONTRO FRONTAL no centro - do lado oposto
+  35% {
+    transform: translate(52vw, 50vh) scale(1.8) rotate(-180deg);
+    opacity: 1;
+  }
+  // Dança inicial - movimento em S invertido
+  40% {
+    transform: translate(45vw, 60vh) scale(1.5) rotate(-270deg);
+    opacity: 1;
+  }
+  45% {
+    transform: translate(35vw, 45vh) scale(1.2) rotate(-360deg);
+    opacity: 0.9;
+  }
+  // Percorre toda a tela - movimento em oito invertido
+  50% {
+    transform: translate(20vw, 70vh) scale(1.6) rotate(-450deg);
+    opacity: 1;
+  }
+  55% {
+    transform: translate(15vw, 30vh) scale(1.1) rotate(-540deg);
+    opacity: 0.8;
+  }
+  // Vai para o topo
+  60% {
+    transform: translate(40vw, 20vh) scale(1.4) rotate(-630deg);
+    opacity: 1;
+  }
+  65% {
+    transform: translate(70vw, 25vh) scale(1.3) rotate(-720deg);
+    opacity: 0.9;
+  }
+  // Desce pela lateral direita
+  70% {
+    transform: translate(85vw, 40vh) scale(1.5) rotate(-810deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(75vw, 60vh) scale(1.2) rotate(-900deg);
+    opacity: 0.8;
+  }
+  // Movimento final em espiral para o centro
+  80% {
+    transform: translate(60vw, 55vh) scale(1.7) rotate(-990deg);
+    opacity: 1;
+  }
+  85% {
+    transform: translate(48vw, 50vh) scale(2) rotate(-1080deg);
+    opacity: 1;
+  }
+  // Retorna ao ponto inicial em curva
+  92% {
+    transform: translate(75vw, 70vh) scale(1) rotate(-1170deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(85vw, 75vh) scale(0.9) rotate(-1260deg);
+    opacity: 0.5;
+  }
+}
+
+// Scroll suave para toda a página
+html {
+  scroll-behavior: smooth;
+}
+
+// Estilos para os botões de navegação
+header nav ul li button {
+  background: none;
+  border: none;
+  color: var(--cor-terciaria);
+  font-family: var(--inter);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--cor-secundaria);
+  }
+
+  &.active {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+  }
+}
+
+// Ajuste para compensar o header fixo (se necessário)
+section {
+  scroll-margin-top: 80px; // Ajuste conforme a altura do seu header
+}
+
+// Resto dos seus estilos...

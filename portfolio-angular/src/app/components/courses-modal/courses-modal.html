@@ -1,0 +1,43 @@
+<div class="sectionCursos" [style.display]="isVisible ? 'flex' : 'none'">
+  <div class="content-cursos" id="content-cursos">
+    <div class="header-cursos">
+      <h2 class="tt-h2">Meus Certificados</h2>
+      <button id="fecharCursos" (click)="fecharModal()">&times;</button>
+    </div>
+    <div class="grade-cursos" id="grade-cursos">
+      <div
+        *ngFor="let curso of cursos"
+        class="card-curso"
+        (click)="abrirImagem(curso.imagem)"
+      >
+        <img [src]="curso.imagem" [alt]="curso.titulo" />
+        <h3>
+          {{ curso.titulo }}
+          <span
+            *ngIf="curso.destaque"
+            [ngStyle]="{ color: curso.corDestaque, 'font-weight': 700 }"
+          >
+            - {{ curso.destaque }}
+          </span>
+        </h3>
+        <div class="tecnologias-curso" *ngIf="curso.tecnologias">
+          <img
+            *ngFor="let tech of curso.tecnologias"
+            [src]="tech"
+            alt="tecnologia"
+            class="icone-tec"
+          />
+        </div>
+        <div class="barra">
+          <div class="progresso" [style.width.%]="curso.progresso"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal da imagem -->
+<div class="modal-imagem" *ngIf="selectedImage" (click)="fecharImagem()">
+  <img [src]="selectedImage" alt="Certificado do curso" />
+  <span class="fechar-modal">✕</span>
+</div>

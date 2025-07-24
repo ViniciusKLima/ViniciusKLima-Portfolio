@@ -1,0 +1,186 @@
+.sobre {
+  height: 100vh;
+  padding-inline: 30px;
+  font-family: var(--inter);
+  justify-content: space-around;
+  align-items: center;
+
+  h1 {
+    color: var(--cor-secundaria);
+    margin-bottom: 0.6vh;
+    font-family: var(--jura);
+  }
+
+  p {
+    color: var(--cor-terciaria);
+    font-size: clamp(0.7em, 1.5vw, 1em);
+    margin: 0;
+    font-family: var(--inter);
+  }
+
+  .formacao {
+    display: flex;
+    justify-content: center;
+
+    gap: 7vh;
+    width: 80%;
+  }
+
+  .linha-circ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 0.35vh;
+    height: 36vh;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--cor-secundaria) 16%,
+      var(--cor-secundaria) 84%,
+      transparent
+    );
+    margin: 7vh auto;
+    gap: 18vh;
+
+    .bola1,
+    .bola2 {
+      width: 3vh;
+      height: 3vh;
+      background-color: var(--cor-secundaria);
+      border-radius: 100%;
+    }
+  }
+
+  .content-formacao {
+    align-items: end;
+
+    h1 {
+      margin-bottom: -10px;
+      margin-right: 20px;
+    }
+  }
+
+  .div-faculdade,
+  .div-cursos {
+    display: flex;
+    background-color: #4848483e;
+    backdrop-filter: blur(100px);
+    height: 20vh;
+    border-radius: 1.5vh;
+    border: solid 0.14rem var(--cor-secundaria);
+    padding-inline: 1.4vh;
+    gap: 1vh;
+    font-size: clamp(0.7em, 1vw, 0.8em);
+    margin: 0;
+
+    h1 {
+      margin: 0;
+    }
+
+    h3 {
+      margin: 0;
+      color: #00ffaa;
+    }
+
+    p {
+      font-size: 0.9em;
+    }
+
+    .div-faculdade:hover {
+      border: solid 0.5vhvar (--cor-terciaria);
+    }
+  }
+
+  button {
+    position: relative;
+    background-color: var(--cor-secundaria);
+    font-size: 1.6vh;
+    width: 12vh;
+    height: 5vh;
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 1.2vh;
+    top: -4.9vh;
+    right: 4.5vh;
+  }
+
+  button:hover {
+    background-color: #02aebd;
+  }
+}
+
+@media (max-width: 660px) {
+  .sobre {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    align-items: center;
+
+    .formacao {
+      width: 80vw;
+    }
+  }
+
+  .content-formacao {
+    align-items: center;
+
+    h1 {
+      color: var(--cor-secundaria);
+      margin-bottom: -0.5vh;
+      margin-right: 3vh;
+    }
+  }
+
+  .div-faculdade,
+  .div-cursos {
+    height: 20vh;
+
+    h3 {
+      color: var(--cor-secundaria);
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  a {
+    top: -4.9vh;
+    right: 4.5vh;
+  }
+
+  .skills {
+    h1 {
+      margin-bottom: 2.5vh;
+    }
+
+    .tecs {
+      width: 80%;
+      flex-direction: column;
+    }
+
+    .divs-tec {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .sub-divs-tec {
+      width: 100%;
+      height: 20vh;
+    }
+
+    .linhas-tec {
+      margin-top: 6px;
+    }
+
+    .l1 {
+      margin-top: 0;
+    }
+  }
+}

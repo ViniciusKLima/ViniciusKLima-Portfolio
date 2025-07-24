@@ -1,0 +1,105 @@
+<section
+  id="section5"
+  class="contato container d-flex flex-column flex-md-row justify-content-center align-items-center justify-content-md-between"
+>
+  <div
+    class="mensagem col-12 col-md-6 container-md-fluid d-flex align-items-center flex-column justify-content-center"
+    data-aos="fade-up"
+    data-aos-delay="500"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <h1 class="text-center">Envie uma mensagem</h1>
+    <form
+      #mensagemForm="ngForm"
+      (ngSubmit)="onSubmit(mensagemForm)"
+      class="w-75 d-flex flex-wrap justify-content-center align-items-center p-0"
+    >
+      <div
+        class="div-nome-email gap-3 d-flex flex-column flex-sm-row flex-md-column flex-lg-row w-100"
+      >
+        <div class="div-nome divs-input w-100">
+          <label for="name">Nome</label>
+          <input
+            class="nome-email"
+            type="text"
+            name="name"
+            [(ngModel)]="formData.name"
+            placeholder="Digite seu nome"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="div-email divs-input w-100">
+          <label for="email">Email</label>
+          <input
+            class="nome-email"
+            type="email"
+            name="email"
+            [(ngModel)]="formData.email"
+            placeholder="Digite seu email"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="div-assunto divs-input w-100">
+        <label for="subject">Assunto</label>
+        <input
+          class="assunto"
+          type="text"
+          name="subject"
+          [(ngModel)]="formData.subject"
+          placeholder="Qual o assunto da mensagem?"
+          autocomplete="off"
+          required
+        />
+      </div>
+
+      <div class="div-mensagem divs-input w-100">
+        <label for="message">Mensagem</label>
+        <textarea
+          class="texto-msg"
+          name="message"
+          [(ngModel)]="formData.message"
+          autocomplete="off"
+          required
+          placeholder="Escreva a sua mensagem aqui..."
+        ></textarea>
+      </div>
+
+      <button type="submit" [disabled]="isSubmitting">
+        {{ isSubmitting ? "Enviando..." : "Enviar" }}
+      </button>
+    </form>
+  </div>
+
+  <div
+    class="entre-contato d-md-inline-block text-center"
+    data-aos="fade-up"
+    data-aos-delay="500"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <h1>Me siga nas redes</h1>
+    <div class="div-links d-flex justify-content-center gap-3">
+      <a
+        href="https://www.instagram.com/viniciusk._/"
+        target="_blank"
+        class="links"
+      >
+        <img src="images/instagram.png" alt="Instagram" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/viniciusklima/"
+        target="_blank"
+        class="links"
+      >
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/ViniciusKLima" target="_blank" class="links">
+        <img src="images/github.png" alt="GitHub" />
+      </a>
+    </div>
+  </div>
+</section>

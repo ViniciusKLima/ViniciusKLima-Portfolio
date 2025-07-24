@@ -1,0 +1,126 @@
+<section id="section4" class="projetos">
+  <h1
+    data-aos="flip-down"
+    data-aos-delay="100"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    PROJETOS
+  </h1>
+
+  <section class="area-carrossel" style="overflow: hidden">
+    <div class="gradient-left gradient"></div>
+
+    <!-- Seta Esquerda -->
+    <button
+      class="nav-arrow nav-arrow-left"
+      (click)="scrollLeft()"
+      [disabled]="!canScrollLeft"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15 18L9 12L15 6"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <div
+      class="carrossel slide"
+      id="carrosselProjetos"
+      #carrosselRef
+      (scroll)="onScroll()"
+      data-aos="fade-left"
+      data-aos-delay="0"
+      data-aos-duration="1000"
+      data-aos-once="true"
+    >
+      <div class="slide-track" id="slideTrack">
+        <!-- Projetos gerados dinamicamente -->
+        <div
+          *ngFor="let projeto of projetos"
+          class="projeto"
+          (click)="abrirModalProjeto(projeto)"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="foto">
+                <img [src]="projeto.imagem" [alt]="projeto.nome" />
+              </div>
+              <h4>{{ projeto.nome }}</h4>
+              <div class="tecnologias-projeto" *ngIf="projeto.tecnologias">
+                <img
+                  *ngFor="let tech of projeto.tecnologias"
+                  [src]="tech"
+                  alt="tecnologia"
+                  class="icone-tec"
+                />
+              </div>
+              <p>{{ projeto.descricao }}</p>
+            </div>
+            <div class="card-back">
+              <h3>{{ projeto.nome }}</h3>
+              <div class="links">
+                <a [href]="projeto.github" target="_blank">🔗 GitHub</a>
+                <a *ngIf="projeto.site" [href]="projeto.site" target="_blank"
+                  >🌐 Ver Site</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seta Direita -->
+    <button
+      class="nav-arrow nav-arrow-right"
+      (click)="scrollRight()"
+      [disabled]="!canScrollRight"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9 18L15 12L9 6"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <div class="gradient-right gradient"></div>
+  </section>
+
+  <a
+    class="button-vermais"
+    href="/projetos"
+    data-aos="flip-up"
+    data-aos-delay="100"
+    data-aos-duration="500"
+    data-aos-once="true"
+  >
+    Ver mais
+  </a>
+
+  <app-project-modal
+    [projeto]="selectedProjeto"
+    [visible]="modalProjetoAberto"
+    (close)="fecharModalProjeto()"
+  ></app-project-modal>
+</section>

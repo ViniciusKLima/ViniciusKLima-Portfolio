@@ -1,0 +1,441 @@
+.projetos {
+  /* height: 100vh; */ // REMOVIDO para evitar corte
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px; // Mais espaço inferior
+  overflow-x: hidden;
+  margin: 0;
+  gap: 1rem; // Espaço maior entre título, carrossel e botão
+  scroll-margin-top: 80px;
+  position: relative;
+
+  h1 {
+    font-family: var(--jura);
+    color: var(--cor-secundaria);
+    font-size: 4vh;
+    margin: 0;
+    text-align: center;
+    margin-top: 2vh;
+    padding-top: 2vh;
+    margin-bottom: 2.5rem; // Mais espaço abaixo do título
+  }
+
+  p {
+    font-family: var(--inter);
+    color: var(--cor-terciaria);
+    font-weight: 200;
+    font-size: 0.6em;
+  }
+
+  .button-vermais {
+    padding: 2vh 5vh;
+    border-radius: 2vh;
+    border: none;
+    background-color: var(--cor-secundaria);
+    cursor: pointer;
+    font-size: 2vh;
+    font-family: arial;
+    color: rgb(1, 1, 43);
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 2vh;
+    margin-top: 2.5rem; // Mais espaço acima do botão
+
+    &:hover {
+      background-color: #02aebd;
+    }
+  }
+}
+
+// ← ADICIONADO: Classe específica para melhor controle da section
+#section4 {
+  scroll-margin-top: 80px; // Ajusta para o navbar fixo
+  padding-top: 80px; // Espaço extra para o navbar
+}
+
+// Estilos das setas de navegação - CENTRALIZAÇÂO CORRIGIDA
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 170, 0.9),
+    rgba(0, 200, 150, 0.8)
+  );
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 255, 170, 0.3);
+  padding: 0;
+  margin: 0;
+
+  // Ícone SVG - CENTRALIZAÇÃO PERFEITA
+  svg {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: auto;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, var(--cor-secundaria), #02aebd);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 255, 170, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+
+    svg {
+      transform: scale(1.1);
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    }
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  &:disabled {
+    background: linear-gradient(
+      135deg,
+      rgba(128, 128, 128, 0.4),
+      rgba(100, 100, 100, 0.3)
+    );
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      transform: translateY(-50%);
+      background: linear-gradient(
+        135deg,
+        rgba(128, 128, 128, 0.4),
+        rgba(100, 100, 100, 0.3)
+      );
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      svg {
+        transform: scale(1);
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+      }
+    }
+
+    svg {
+      opacity: 0.5;
+    }
+  }
+}
+
+.nav-arrow-left {
+  left: 20px;
+}
+
+.nav-arrow-right {
+  right: 20px;
+}
+
+// Estilos do carrossel - IGUAL AO ORIGINAL
+.area-carrossel {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+  margin: 2vh 0;
+  z-index: 20; // Garante que o carrossel fique por cima
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.gradient {
+  height: 65vh;
+  width: 10vh;
+  position: absolute;
+  z-index: 1000;
+}
+
+.gradient-left {
+  background: linear-gradient(to right, #04022a 5%, transparent);
+  z-index: 100;
+}
+
+.gradient-right {
+  position: absolute;
+  right: 0;
+  background: linear-gradient(to left, #040145 5%, transparent);
+  z-index: 100;
+}
+
+.slide {
+  display: flex;
+  gap: 3.5vh;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.slide-track {
+  display: flex;
+  gap: 1.5rem;
+  height: 100%;
+  padding-inline: 8vw;
+  padding-block: 20px; // Mais espaço acima/abaixo dos cards
+  z-index: 21; // Garante que os projetos fiquem por cima
+}
+
+.projeto {
+  perspective: 1000px;
+  width: 400px;
+  height: 27rem;
+  max-height: 63vh;
+  flex: 0 0 auto;
+  cursor: pointer;
+  overflow: visible;
+  margin: 0 10px;
+  scroll-snap-align: center;
+  z-index: 22; // Projetos sempre por cima
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  overflow: visible;
+}
+
+.projeto.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 1rem;
+  box-sizing: border-box;
+  border: 2px solid var(--cor-secundaria);
+  overflow: visible;
+}
+
+.card-front {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #aaaaaa2d;
+
+  h4 {
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  p {
+    color: var(--cor-terciaria);
+    font-family: "Inter", sans-serif;
+    font-size: 0.6em;
+    line-height: 1.4;
+  }
+}
+
+.card-front .foto {
+  height: 60%;
+  overflow: hidden;
+  border-radius: 1vh 1vh 0 0;
+  background-color: #87858529;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #fff;
+  }
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e91;
+  backdrop-filter: blur(10px);
+
+  h3 {
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+.card-back .links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  a {
+    color: var(--cor-terciaria);
+    background-color: #494949;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: var(--inter);
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #02aebd;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Novos estilos para as tecnologias dos projetos
+.tecnologias-projeto {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0rem 0 0.2rem 0;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .icone-tec {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    vertical-align: middle;
+
+    &:hover {
+      transform: scale(1.13) rotate(-7deg);
+      box-shadow: 0 2px 8px #00c3ff44;
+    }
+  }
+}
+
+// Responsivo
+@media (max-width: 576px) {
+  .projetos {
+    // ← ADICIONADO: Ajustes específicos para mobile
+    scroll-margin-top: 70px;
+    padding-top: 70px;
+
+    h1 {
+      font-size: 3vh; // Título menor no mobile
+      margin-top: 1vh;
+      padding-top: 1vh;
+    }
+  }
+
+  #section4 {
+    scroll-margin-top: 70px;
+    padding-top: 70px;
+  }
+
+  .nav-arrow {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .nav-arrow-left {
+    left: 15px;
+  }
+
+  .nav-arrow-right {
+    right: 15px;
+  }
+
+  .gradient {
+    height: 55vh;
+    width: 6vh;
+  }
+
+  .card-front .foto {
+    height: 12rem;
+  }
+
+  .projeto {
+    width: 19rem;
+    height: 24rem;
+    max-height: 63vh;
+    scroll-snap-align: center;
+  }
+
+  .card-front {
+    h4 {
+      color: var(--cor-secundaria);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    p {
+      color: var(--cor-terciaria);
+      font-family: "Inter", sans-serif;
+      font-size: 0.6em;
+    }
+  }
+
+  .projetos .button-vermais {
+    padding: 1.5vh 4vh;
+    font-size: 1.8vh;
+    margin-bottom: 1vh; // Menor margem no mobile
+  }
+
+  .area-carrossel {
+    margin: 1vh 0; // Menor margem no mobile
+  }
+}
+
+// ← ADICIONADO: Media query específica para tablets
+@media (min-width: 577px) and (max-width: 768px) {
+  .projetos {
+    scroll-margin-top: 75px;
+    padding-top: 75px;
+
+    h1 {
+      margin-top: 1.5vh;
+      padding-top: 1.5vh;
+    }
+  }
+
+  #section4 {
+    scroll-margin-top: 75px;
+    padding-top: 75px;
+  }
+}

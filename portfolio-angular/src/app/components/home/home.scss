@@ -1,0 +1,96 @@
+// Copie todos os estilos relacionados à seção .home do seu main.css
+.home {
+  height: 89vh;
+  display: flex;
+  margin-top: 11vh;
+  align-items: center;
+  padding: 0;
+
+  .nome {
+    position: relative;
+    display: inline-block;
+    font-family: var(--inter);
+    width: auto;
+
+    h2 {
+      color: var(--cor-terciaria);
+      font-weight: 600;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0;
+    }
+
+    h3 {
+      color: var(--cor-secundaria);
+      font-weight: 300;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0;
+    }
+  }
+
+  .logo-tec-home {
+    display: flex;
+    gap: 1vh;
+
+    .circulo {
+      height: 6vh;
+      width: 6vh;
+      max-width: 10vw;
+      max-height: 10vw;
+      border-radius: 1vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .foto {
+    background: none;
+    width: clamp(300px, 35vw, 450px);
+    height: clamp(300px, 35vw, 450px);
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 0.15rem var(--cor-secundaria);
+
+    .circulo-GG {
+      width: 98%;
+      height: 98%;
+      border-radius: 50%;
+      display: flex;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // Estilo do botão
+  .btn-primary {
+    background-color: var(--cor-secundaria);
+    border: none;
+    color: var(--cor-principal);
+    font-family: var(--inter);
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--cor-terciaria);
+      color: var(--cor-principal);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 234, 255, 0.3);
+    }
+  }
+}

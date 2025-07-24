@@ -1,0 +1,129 @@
+.skills {
+  height: 100vh;
+  font-family: var(--inter);
+  color: var(--cor-secundaria);
+
+  h1 {
+    margin-bottom: 6vh;
+    font-size: 3.5vh;
+    font-family: var(--jura);
+  }
+
+  h2 {
+    font-size: 2.7vh;
+    margin-bottom: 0.6vh;
+  }
+
+  .tecs {
+    justify-content: center;
+    align-items: center;
+    font-family: var(--inter);
+  }
+
+  .divs-tec {
+    text-align: center;
+    gap: 10px;
+  }
+
+  .sub-divs-tec {
+    height: 60vh;
+    border: solid 0.14rem var(--cor-secundaria);
+    background-color: #4848483e;
+    backdrop-filter: blur(100px);
+    width: clamp(200px, 21vw, 500px);
+    border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    color: var(--cor-terciaria);
+  }
+
+  .content-tecs {
+    width: 100%;
+  }
+
+  .linhas-tec {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    .div-img {
+      object-fit: cover;
+      width: 100%;
+      max-width: 4vh;
+      max-height: 4vh;
+      display: flex !important;
+      align-items: center !important;
+      flex: 1 1;
+      justify-content: center;
+      object-fit: cover;
+
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .div-titulo-tec {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex: 3 1;
+    }
+
+    h4 {
+      font-family: var(--inter);
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-size: clamp(0.5rem, 2vh, 3rem);
+    }
+  }
+}
+
+// Media queries idênticas ao original
+@media (min-width: 660px) {
+  .content-tecs {
+    flex-direction: column;
+    gap: 17px;
+    padding-top: 15px;
+  }
+
+  .linhas-tec {
+    width: 100%;
+  }
+}
+
+@media (max-width: 660px) {
+  .skills {
+    h1 {
+      margin-bottom: 2.5vh;
+    }
+
+    .tecs {
+      width: 80%;
+      flex-direction: column;
+    }
+
+    .divs-tec {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .sub-divs-tec {
+      width: 100%;
+      height: 20vh;
+    }
+
+    .linhas-tec {
+      margin-top: 6px;
+    }
+
+    .l1 {
+      margin-top: 0;
+    }
+  }
+}

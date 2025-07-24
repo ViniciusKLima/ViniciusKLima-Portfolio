@@ -1,0 +1,49 @@
+<div class="modal-projeto" *ngIf="visible && projeto" (click)="fechar()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="fechar-modal" (click)="fechar()">✕</span>
+    <div class="carousel-fotos">
+      <button
+        class="btn-slide left"
+        *ngIf="projeto.imagens?.length > 1"
+        (click)="fotoAnterior($event)"
+      >
+        ‹
+      </button>
+      <img
+        [src]="projeto.imagens?.[slideIndex] || projeto.imagem"
+        [alt]="projeto.nome"
+      />
+      <button
+        class="btn-slide right"
+        *ngIf="projeto.imagens?.length > 1"
+        (click)="proximaFoto($event)"
+      >
+        ›
+      </button>
+      <div class="indicadores" *ngIf="projeto.imagens?.length > 1">
+        <span
+          *ngFor="let img of projeto.imagens; let i = index"
+          [class.ativo]="i === slideIndex"
+        ></span>
+      </div>
+    </div>
+    <div class="conteudo-modal">
+      <h2>{{ projeto.nome }}</h2>
+      <div class="tecnologias-projeto" *ngIf="projeto.tecnologias">
+        <img
+          *ngFor="let tech of projeto.tecnologias"
+          [src]="tech"
+          alt="tecnologia"
+          class="icone-tec"
+        />
+      </div>
+      <p class="descricao">{{ projeto.descricao }}</p>
+    </div>
+    <div class="botoes-modal">
+      <a [href]="projeto.github" target="_blank">🔗 GitHub</a>
+      <a *ngIf="projeto.site" [href]="projeto.site" target="_blank"
+        >🌐 Ver site</a
+      >
+    </div>
+  </div>
+</div>

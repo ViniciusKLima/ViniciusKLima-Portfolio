@@ -1,0 +1,108 @@
+<section
+  id="section3"
+  class="skills d-flex flex-column justify-content-center align-items-center"
+>
+  <h1
+    data-aos="flip-down"
+    data-aos-delay="100"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    SKILLS
+  </h1>
+
+  <div class="tecs d-flex flex-md-row gap-4 gp-md-5">
+    <!-- Frontend -->
+    <div
+      class="frontend divs-tec"
+      data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-duration="1000"
+      data-aos-once="true"
+    >
+      <h2>Front-end</h2>
+      <div class="tecs-front sub-divs-tec">
+        <div class="content-tecs d-flex align-items-center flex-wrap">
+          <div
+            *ngFor="let skill of frontendSkills; let i = index"
+            class="linhas-tec col-4 col-md-12 w-md-100 row-4"
+            [class.l1]="i > 0"
+          >
+            <div class="div-img col-2">
+              <img
+                [src]="skill.imagem"
+                [alt]="skill.alt"
+                [style.border-radius]="
+                  skill.nome === 'JavaScript' ? '3px' : null
+                "
+              />
+            </div>
+            <div class="div-titulo-tec d-none d-sm-block">
+              <h4>{{ skill.nome }}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div
+      class="backend divs-tec"
+      data-aos="fade-up"
+      data-aos-delay="800"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    >
+      <h2>Back-end</h2>
+      <div class="tecs-back sub-divs-tec">
+        <div class="content-tecs d-flex align-items-center flex-wrap">
+          <div
+            *ngFor="let skill of backendSkills; let i = index"
+            class="linhas-tec col-4 col-md-12 w-md-100 row-4"
+            [class.l1]="i > 0"
+          >
+            <div class="div-img col-2">
+              <img
+                [src]="skill.imagem"
+                [alt]="skill.alt"
+                [style.background-color]="
+                  skill.nome === 'TypeScript' ? '#fff' : null
+                "
+              />
+            </div>
+            <div class="div-titulo-tec text-start d-sm-block d-none">
+              <h4>{{ skill.nome }}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ferramentas -->
+    <div
+      class="ferramentas divs-tec"
+      data-aos="fade-up"
+      data-aos-delay="1300"
+      data-aos-duration="2000"
+      data-aos-once="true"
+    >
+      <h2>Ferramentas</h2>
+      <div class="tecs-ferramentas sub-divs-tec">
+        <div class="content-tecs d-flex align-items-center flex-wrap">
+          <div
+            *ngFor="let skill of ferramentasSkills; let i = index"
+            class="linhas-tec col-4 col-md-12 w-md-100 row-4"
+            [class.l1]="i > 0"
+          >
+            <div class="div-img col-2">
+              <img [src]="skill.imagem" [alt]="skill.alt" />
+            </div>
+            <div class="div-titulo-tec text-start d-sm-block d-none">
+              <h4>{{ skill.nome }}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

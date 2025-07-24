@@ -1,0 +1,62 @@
+<!-- Bolhas decorativas -->
+<div class="bolhas-container" id="section1">
+  <div class="bolha"></div>
+  <div class="bolha"></div>
+  <div class="bolha"></div>
+  <div class="bolha"></div>
+  <div class="bolha"></div>
+  <div class="bolha"></div>
+  <div class="bolha"></div>
+</div>
+
+<!-- Header -->
+<header
+  class="container-fluid d-flex align-items-center justify-content-between px-md-5 px-sm-3"
+>
+  <h1 class="d-flex align-items-center gap-1">
+    <div class="dev text-center">Dev.</div>
+    ViníciusKLima
+  </h1>
+  <nav>
+    <ul class="d-md-flex d-none">
+      <li><button (click)="scrollToSection('section1')">Home</button></li>
+      <li><button (click)="scrollToSection('section2')">Sobre</button></li>
+      <li><button (click)="scrollToSection('section3')">Skills</button></li>
+      <li><button (click)="scrollToSection('section4')">Projetos</button></li>
+      <li><button (click)="scrollToSection('section5')">Contato</button></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main id="page-content">
+  <!-- Componente Home -->
+  <app-home (openCourses)="openCoursesModal()"></app-home>
+
+  <!-- Componente Sobre -->
+  <app-sobre (abrirModalCursos)="openCoursesModal()"></app-sobre>
+
+  <!-- Componente Skills -->
+  <app-skills></app-skills>
+
+  <!-- Componente Projetos -->
+  <app-projetos></app-projetos>
+
+  <!-- Componente Contato -->
+  <app-contato (showNotification)="showSuccessNotification()"></app-contato>
+</main>
+
+<!-- Footer -->
+<footer>© 2025 ViniciusKaua. Todos os direitos reservados.</footer>
+
+<!-- Modal de Cursos -->
+<app-courses-modal
+  [isVisible]="showCoursesModal"
+  (closeModal)="closeCoursesModal()"
+>
+</app-courses-modal>
+
+<!-- Notificação -->
+<div id="notification" [class.show]="showNotification">
+  Enviado com sucesso!
+</div>

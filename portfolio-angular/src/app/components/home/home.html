@@ -1,0 +1,33 @@
+<section
+  class="home container flex-md-row flex-column-reverse justify-content-center justify-content-lg-around gap-5"
+>
+  <div
+    class="nome text-center text-md-start"
+    data-aos="fade-right"
+    data-aos-delay="500"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <h2>Vinícius K. Lima</h2>
+    <h3>Desenvolvedor FullStack</h3>
+    <div
+      class="logo-tec-home mt-2 d-flex justify-content-center justify-content-md-start"
+    >
+      <div *ngFor="let tech of tecnologias" class="circulo">
+        <img [src]="tech.imagem" [alt]="tech.alt" [ngStyle]="tech.estilos" />
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="foto"
+    data-aos="fade-left"
+    data-aos-delay="500"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <div class="circulo-GG">
+      <img src="images/foto.jpg" alt="Foto Vinícius" />
+    </div>
+  </div>
+</section>
