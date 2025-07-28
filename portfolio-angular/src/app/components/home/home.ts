@@ -54,7 +54,13 @@ export class Home {
     },
   ];
 
+  showCoursesModal = false;
+
   onOpenCourses() {
     this.openCourses.emit();
+  }
+
+  openCoursesModal() {
+    this.showCoursesModal = true;
   }
 }

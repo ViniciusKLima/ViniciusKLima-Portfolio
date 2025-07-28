@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app';
 import { Home } from './components/home/home';
@@ -9,8 +10,11 @@ import { Sobre } from './components/sobre/sobre';
 import { Skills } from './components/skills/skills';
 import { Projetos } from './components/projetos/projetos';
 import { Contato } from './components/contato/contato';
-import { CoursesModal } from './components/courses-modal/courses-modal'; // ADICIONE
-import { ProjectModal } from './components/project-modal/project-modal'; // ADICIONE
+import { CoursesModal } from './components/courses-modal/courses-modal';
+import { ProjectModal } from './components/project-modal/project-modal';
+import { ListaProjetos } from './components/listaProjetos/listaProjetos';
+
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -20,11 +24,16 @@ import { ProjectModal } from './components/project-modal/project-modal'; // ADIC
     Skills,
     Projetos,
     Contato,
-    CoursesModal, // ADICIONE
-    ProjectModal, // ADICIONE
+    CoursesModal,
+    ProjectModal,
+    ListaProjetos,
   ],
-  imports: [BrowserModule, CommonModule, FormsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

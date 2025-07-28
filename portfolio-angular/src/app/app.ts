@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,10 @@ export class AppComponent implements OnInit {
   showCoursesModal = false;
   showNotification = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public router: Router
+  ) {}
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -62,5 +66,13 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.showNotification = false;
     }, 3000);
+  }
+
+  voltarParaHome() {
+    this.router.navigate(['/']);
+  }
+
+  estaNaListaProjetos(): boolean {
+    return this.router.url === '/projetos';
   }
 }

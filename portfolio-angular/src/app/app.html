@@ -18,33 +18,51 @@
     ViníciusKLima
   </h1>
   <nav>
-    <ul class="d-md-flex d-none">
+    <ul *ngIf="!estaNaListaProjetos()" class="d-md-flex d-none">
       <li><button (click)="scrollToSection('section1')">Home</button></li>
       <li><button (click)="scrollToSection('section2')">Sobre</button></li>
       <li><button (click)="scrollToSection('section3')">Skills</button></li>
       <li><button (click)="scrollToSection('section4')">Projetos</button></li>
       <li><button (click)="scrollToSection('section5')">Contato</button></li>
     </ul>
+    <button
+      *ngIf="estaNaListaProjetos()"
+      class="btn-voltar"
+      (click)="voltarParaHome()"
+      title="Voltar para início"
+    >
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M15 6L9 12L15 18"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M3 11L12 4L21 11"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M5 11V20H19V11"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span class="d-none d-md-inline">Voltar para início</span>
+    </button>
   </nav>
 </header>
 
-<!-- Main Content -->
-<main id="page-content">
-  <!-- Componente Home -->
-  <app-home (openCourses)="openCoursesModal()"></app-home>
-
-  <!-- Componente Sobre -->
-  <app-sobre (abrirModalCursos)="openCoursesModal()"></app-sobre>
-
-  <!-- Componente Skills -->
-  <app-skills></app-skills>
-
-  <!-- Componente Projetos -->
-  <app-projetos></app-projetos>
-
-  <!-- Componente Contato -->
-  <app-contato (showNotification)="showSuccessNotification()"></app-contato>
-</main>
+<!-- Conteúdo principal controlado pelo Angular Router -->
+<router-outlet></router-outlet>
 
 <!-- Footer -->
 <footer>© 2025 ViniciusKaua. Todos os direitos reservados.</footer>
@@ -52,9 +70,8 @@
 <!-- Modal de Cursos -->
 <app-courses-modal
   [isVisible]="showCoursesModal"
-  (closeModal)="closeCoursesModal()"
->
-</app-courses-modal>
+  (closeModal)="showCoursesModal = false"
+></app-courses-modal>
 
 <!-- Notificação -->
 <div id="notification" [class.show]="showNotification">

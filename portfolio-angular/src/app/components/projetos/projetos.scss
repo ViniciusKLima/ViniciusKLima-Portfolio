@@ -247,7 +247,7 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  background-color: #aaaaaa2d;
+  background-color: #aaaaaa3d;
 
   h4 {
     color: var(--cor-secundaria);
@@ -256,24 +256,36 @@
   }
 
   p {
-    color: var(--cor-terciaria);
-    font-family: "Inter", sans-serif;
-    font-size: 0.6em;
-    line-height: 1.4;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-weight: 500;
+    color: #eaf6ff;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
   }
 }
 
 .card-front .foto {
-  height: 60%;
+  width: 100%;
+  height: 220px; // Tamanho fixo para desktop
+  max-height: 40vh;
+  min-height: 120px;
   overflow: hidden;
   border-radius: 1vh 1vh 0 0;
   background-color: #87858529;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; // Não corta a imagem, sempre inteira
     background-color: #fff;
+    border-radius: 1vh 1vh 0 0;
+    display: block;
   }
 }
 

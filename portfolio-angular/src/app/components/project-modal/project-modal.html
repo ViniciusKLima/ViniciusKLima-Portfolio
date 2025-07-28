@@ -1,49 +1,102 @@
 <div class="modal-projeto" *ngIf="visible && projeto" (click)="fechar()">
   <div class="modal-content" (click)="$event.stopPropagation()">
-    <span class="fechar-modal" (click)="fechar()">✕</span>
-    <div class="carousel-fotos">
-      <button
-        class="btn-slide left"
-        *ngIf="projeto.imagens?.length > 1"
-        (click)="fotoAnterior($event)"
-      >
-        ‹
-      </button>
-      <img
-        [src]="projeto.imagens?.[slideIndex] || projeto.imagem"
-        [alt]="projeto.nome"
-      />
-      <button
-        class="btn-slide right"
-        *ngIf="projeto.imagens?.length > 1"
-        (click)="proximaFoto($event)"
-      >
-        ›
-      </button>
-      <div class="indicadores" *ngIf="projeto.imagens?.length > 1">
-        <span
-          *ngFor="let img of projeto.imagens; let i = index"
-          [class.ativo]="i === slideIndex"
-        ></span>
+    <span class="fechar-modal" *ngIf="!assistirVideo" (click)="fechar()"
+      >✕</span
+    >
+
+    <!-- Conteúdo principal do modal só aparece se NÃO estiver assistindo vídeo -->
+    <ng-container *ngIf="!assistirVideo">
+      <div class="carousel-fotos">
+        <button
+          class="btn-slide left"
+          *ngIf="projeto.imagens?.length > 1"
+          (click)="fotoAnterior($event)"
+          aria-label="Foto anterior"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img [src]="projeto.imagens[slideIndex]" [alt]="projeto.nome" />
+          </div>
+        </div>
+        <button
+          class="btn-slide right"
+          *ngIf="projeto.imagens?.length > 1"
+          (click)="proximaFoto($event)"
+          aria-label="Próxima foto"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M9 6L15 12L9 18"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="indicadores" *ngIf="projeto.imagens?.length > 1">
+          <span
+            *ngFor="let img of projeto.imagens; let i = index"
+            [class.ativo]="i === slideIndex"
+          ></span>
+        </div>
       </div>
-    </div>
-    <div class="conteudo-modal">
-      <h2>{{ projeto.nome }}</h2>
-      <div class="tecnologias-projeto" *ngIf="projeto.tecnologias">
-        <img
-          *ngFor="let tech of projeto.tecnologias"
-          [src]="tech"
-          alt="tecnologia"
-          class="icone-tec"
-        />
+      <div class="conteudo-modal">
+        <h2>{{ projeto.nome }}</h2>
+        <div class="tecnologias-projeto" *ngIf="projeto.tecnologias">
+          <img
+            *ngFor="let tech of projeto.tecnologias"
+            [src]="tech"
+            alt="tecnologia"
+            class="icone-tec"
+          />
+        </div>
+        <div class="descricao-scroll">
+          <p class="descricao">{{ projeto.descricao }}</p>
+        </div>
       </div>
-      <p class="descricao">{{ projeto.descricao }}</p>
-    </div>
-    <div class="botoes-modal">
-      <a [href]="projeto.github" target="_blank">🔗 GitHub</a>
-      <a *ngIf="projeto.site" [href]="projeto.site" target="_blank"
-        >🌐 Ver site</a
-      >
+      <div class="botoes-modal">
+        <a [href]="projeto.github" target="_blank">🔗 GitHub</a>
+        <a *ngIf="projeto.site" [href]="projeto.site" target="_blank"
+          >🌐 Ver site</a
+        >
+        <a *ngIf="projeto.video" (click)="assistirVideo = true">
+          🎬 Ver vídeo
+        </a>
+      </div>
+    </ng-container>
+
+    <!-- Modal do vídeo: aparece só se assistirVideo for true -->
+    <div
+      class="video-modal"
+      *ngIf="assistirVideo"
+      (click)="assistirVideo = false"
+    >
+      <div class="video-content" (click)="$event.stopPropagation()">
+        <video
+          *ngIf="projeto.video"
+          [src]="projeto.video"
+          controls
+          playsinline
+          style="
+            width: 100%;
+            aspect-ratio: 9/19.5;
+            border-radius: 16px;
+            background: #000;
+          "
+        ></video>
+        <button class="fechar-video" (click)="assistirVideo = false">✕</button>
+      </div>
     </div>
   </div>
 </div>

@@ -9,7 +9,6 @@
   </h1>
 
   <section class="area-carrossel" style="overflow: hidden">
-    <div class="gradient-left gradient"></div>
 
     <!-- Seta Esquerda -->
     <button
@@ -49,12 +48,12 @@
         <div
           *ngFor="let projeto of projetos"
           class="projeto"
-          (click)="abrirModalProjeto(projeto)"
+          (click)="flipCard($event)"
         >
           <div class="card-inner">
             <div class="card-front">
               <div class="foto">
-                <img [src]="projeto.imagem" [alt]="projeto.nome" />
+                <img [src]="projeto.imagens[0]" [alt]="projeto.nome" />
               </div>
               <h4>{{ projeto.nome }}</h4>
               <div class="tecnologias-projeto" *ngIf="projeto.tecnologias">
@@ -65,14 +64,20 @@
                   class="icone-tec"
                 />
               </div>
-              <p>{{ projeto.descricao }}</p>
+              <p>{{ projeto.descricaoCurta }}</p>
             </div>
             <div class="card-back">
               <h3>{{ projeto.nome }}</h3>
               <div class="links">
-                <a [href]="projeto.github" target="_blank">🔗 GitHub</a>
-                <a *ngIf="projeto.site" [href]="projeto.site" target="_blank"
-                  >🌐 Ver Site</a
+                <a
+                  [href]="projeto.github"
+                  target="_blank"
+                  (click)="$event.stopPropagation()"
+                  >🔗 GitHub</a
+                >
+                <a
+                  (click)="abrirModalProjeto(projeto); $event.stopPropagation()"
+                  >📄 Ver mais</a
                 >
               </div>
             </div>
@@ -104,12 +109,11 @@
       </svg>
     </button>
 
-    <div class="gradient-right gradient"></div>
   </section>
 
   <a
     class="button-vermais"
-    href="/projetos"
+    routerLink="/projetos"
     data-aos="flip-up"
     data-aos-delay="100"
     data-aos-duration="500"

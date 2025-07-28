@@ -1,0 +1,53 @@
+<section class="projetos-page">
+  <h1>Projetos</h1>
+  <h2 class="subtitulo-projetos">
+    Clique no projeto para mais detalhes
+    <span class="info-icone" title="Informação">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" stroke="#adadad" stroke-width="2" />
+        <text
+          x="12"
+          y="16"
+          text-anchor="middle"
+          font-size="13"
+          fill="#adadad"
+          font-family="Arial"
+          font-weight="bold"
+        >
+          i
+        </text>
+      </svg>
+    </span>
+  </h2>
+  <div class="grid-projetos">
+    <div
+      *ngFor="let projeto of projetos"
+      class="projeto"
+      (click)="abrirModalProjeto(projeto)"
+    >
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="foto">
+            <img [src]="projeto.imagens[0]" [alt]="projeto.nome" />
+          </div>
+          <h4>{{ projeto.nome }}</h4>
+          <div class="tecnologias-projeto" *ngIf="projeto.tecnologias">
+            <img
+              *ngFor="let tech of projeto.tecnologias"
+              [src]="tech"
+              alt="tecnologia"
+              class="icone-tec"
+            />
+          </div>
+          <p>{{ projeto.descricaoCurta }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-project-modal
+    [projeto]="selectedProjeto"
+    [visible]="modalProjetoAberto"
+    (close)="fecharModalProjeto()"
+  ></app-project-modal>
+</section>

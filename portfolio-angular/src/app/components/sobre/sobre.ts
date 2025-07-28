@@ -11,6 +11,5 @@ export class Sobre {
 
   abrirCursos() {
     this.abrirModalCursos.emit();
-    console.log('Abrir modal de cursos');
   }
 }

@@ -29,7 +29,13 @@
           />
         </div>
         <div class="barra">
-          <div class="progresso" [style.width.%]="curso.progresso"></div>
+          <div
+            class="progresso"
+            [ngStyle]="{
+              width: curso.progresso + '%',
+              background: curso.progresso === 100 ? '#01ad74e6' : '#00c3ff'
+            }"
+          ></div>
         </div>
       </div>
     </div>

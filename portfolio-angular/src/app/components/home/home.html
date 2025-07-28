@@ -31,3 +31,12 @@
     </div>
   </div>
 </section>
+<app-sobre (abrirModalCursos)="openCoursesModal()"></app-sobre>
+<app-skills></app-skills>
+<app-projetos></app-projetos>
+<app-contato (showNotification)="showSuccessNotification()"></app-contato>
+
+<app-courses-modal
+  [isVisible]="showCoursesModal"
+  (closeModal)="showCoursesModal = false"
+></app-courses-modal>

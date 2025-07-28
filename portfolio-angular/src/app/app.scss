@@ -660,4 +660,51 @@ section {
   scroll-margin-top: 80px; // Ajuste conforme a altura do seu header
 }
 
-// Resto dos seus estilos...
+// Estilos para o botão de voltar
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.08rem;
+  background: none;
+  border: none;
+  color: var(--cor-secundaria, #00eaff);
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  box-shadow: none;
+  outline: none;
+
+  svg {
+    display: inline-block;
+    height: 1.25em;
+    width: 1.25em;
+    margin: 0;
+    position: relative;
+    transition: transform 0.2s;
+  }
+
+  svg:first-child {
+      transform: translateY(1.2px);
+    }
+
+  span{
+    transform: translate(3px, 1.3px);
+  }
+
+  &:hover {
+    color: #0099cc;
+    background: rgba(0, 234, 255, 0.08);
+
+    svg:first-child {
+      transform: translateX(-3px);
+    }
+    svg:last-child {
+      transform: scale(1.08);
+    }
+  }
+}
+
+
