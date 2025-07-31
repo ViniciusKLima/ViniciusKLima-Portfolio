@@ -1,0 +1,12 @@
+<div *ngIf="acessoLiberado">
+  <div class="preview-demo">
+    <input type="file" accept="image/*" (change)="onFileChange($event)" />
+    <img
+      *ngIf="previewUrl"
+      [src]="previewUrl"
+      alt="Preview da imagem"
+      width="300"
+    />
+  </div>
+  <!-- ...restante do conteúdo... -->
+</div>

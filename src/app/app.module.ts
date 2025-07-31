@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app';
 import { Home } from './components/home/home';
@@ -31,8 +35,13 @@ import { routes } from './app.routes';
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule,
+    FormsModule, // <-- Certifique-se que está aqui!
     RouterModule.forRoot(routes),
+  ],
+  providers: [
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
   ],
   bootstrap: [AppComponent],
 })

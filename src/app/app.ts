@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import * as AOS from 'aos';
+import AOS from 'aos';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   showNotification = false;
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: Object,
+    private platformId: any,
     public router: Router
   ) {}
 

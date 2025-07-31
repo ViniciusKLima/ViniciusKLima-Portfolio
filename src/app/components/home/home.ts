@@ -63,4 +63,9 @@ export class Home {
   openCoursesModal() {
     this.showCoursesModal = true;
   }
+
+  showSuccessNotification() {
+    // Exemplo: pode chamar um serviço ou mostrar uma mensagem
+    alert('Enviado com sucesso!');
+  }
 }
