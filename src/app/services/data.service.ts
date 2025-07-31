@@ -69,110 +69,12 @@ export class DataService {
       ], // Alterado para array
       github: 'https://github.com/ViniciusKLima/nutrifacil-app',
       site: '',
-      video: 'https://www.youtube.com/watch?v=SEU_VIDEO_ID', // Adicione o link do vídeo
+      video: 'images/video1.mp4', // Adicione o link do vídeo
       tecnologias: [
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg',
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
         'https://cdn.simpleicons.org/sass/CC6699', // Sass
-      ],
-    },
-    {
-      nome: 'TaskFlow',
-      descricaoCurta:
-        'Gerenciador de tarefas com Angular e TypeScript, com interface drag-and-drop.',
-      descricao:
-        'Sistema de gerenciamento de tarefas desenvolvido com Angular e TypeScript. Permite criar, editar e organizar tarefas por prioridade, com interface drag-and-drop e sistema de notificações. Implementei autenticação JWT, dashboard analytics e tema dark/light. Projeto focado em produtividade e UX moderna.',
-      imagens: ['images/html.png'], // Alterado para array
-      github: 'https://github.com/ViniciusKLima/taskflow',
-      site: 'https://taskflow-demo.vercel.app',
-      video: '', // Adicione este campo em todos
-      tecnologias: [
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-      ],
-    },
-    {
-      nome: 'WeatherNow',
-      descricaoCurta:
-        'Aplicação de previsão do tempo com geolocalização e gráficos interativos.',
-      descricao:
-        'Aplicação de previsão do tempo que consome APIs externas e exibe dados meteorológicos em tempo real. Desenvolvida com React e styled-components, inclui geolocalização automática, favoritos de cidades e gráficos interativos. Interface responsiva com animações suaves e design minimalista.',
-      imagens: ['images/css.png'], // Alterado para array
-      github: 'https://github.com/ViniciusKLima/weather-now',
-      site: 'https://weather-now-demo.vercel.app',
-      video: '', // Adicione este campo em todos
-      tecnologias: [
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-      ],
-    },
-    {
-      nome: 'EcommerceJS',
-      descricaoCurta:
-        'Plataforma de e-commerce com carrinho, pagamento e painel administrativo.',
-      descricao:
-        'Plataforma de e-commerce completa com carrinho de compras, pagamento integrado e painel administrativo. Construída com Node.js, Express e MongoDB. Inclui sistema de avaliações, wishlist, cupons de desconto e relatórios de vendas. Arquitetura RESTful com documentação Swagger.',
-      imagens: ['images/javascript.png'], // Alterado para array
-      github: 'https://github.com/ViniciusKLima/ecommerce-js',
-      site: 'https://ecommerce-js-demo.vercel.app',
-      video: '', // Adicione este campo em todos
-      tecnologias: [
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-      ],
-    },
-    {
-      nome: 'ChatBot AI',
-      descricaoCurta:
-        'Chatbot inteligente com Python, utilizando processamento de linguagem natural.',
-      descricao:
-        'Chatbot inteligente desenvolvido com Python e machine learning. Utiliza processamento de linguagem natural para compreender e responder perguntas dos usuários. Interface web moderna com WebSocket para comunicação em tempo real. Integração com APIs de IA e banco de dados para aprendizado contínuo.',
-      imagens: ['images/python.webp'], // Alterado para array
-      github: 'https://github.com/ViniciusKLima/chatbot-ai',
-      site: 'https://chatbot-ai-demo.vercel.app',
-      video: '', // Adicione este campo em todos
-      tecnologias: [
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-      ],
-    },
-    {
-      nome: 'FinanceTracker',
-      descricaoCurta:
-        'App de controle financeiro com categorização automática de gastos.',
-      descricao:
-        'Aplicativo de controle financeiro pessoal com categorização automática de gastos e relatórios detalhados. Desenvolvido com React Native para iOS e Android. Inclui gráficos interativos, metas de economia, sincronização na nuvem e notificações push para lembretes de pagamento.',
-      imagens: ['images/react.png'], // Alterado para array
-      github: 'https://github.com/ViniciusKLima/finance-tracker',
-      site: 'https://finance-tracker-demo.vercel.app',
-      video: '', // Adicione este campo em todos
-      tecnologias: [
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactnative/reactnative-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-      ],
-    },
-    {
-      nome: 'DevPortfolio',
-      descricaoCurta:
-        'Template de portfólio responsivo para desenvolvedores, com design moderno.',
-      descricao:
-        'Template de portfólio responsivo para desenvolvedores, criado com HTML5, CSS3 e JavaScript vanilla. Design moderno com animações CSS, tema dark/light, seção de projetos dinâmica e formulário de contato funcional. Código limpo e bem documentado, ideal para personalização.',
-      imagens: ['images/figma.png'], // Alterado para array
-      github: 'https://github.com/ViniciusKLima/dev-portfolio',
-      site: 'https://dev-portfolio-demo.vercel.app',
-      video: '', // Adicione este campo em todos
-      tecnologias: [
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
       ],
     },
   ];

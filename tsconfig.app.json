@@ -6,6 +6,6 @@
     "outDir": "./out-tsc/app",
     "types": ["node"]
   },
-  "include": ["ViniciusKLima-Portifolio/portfolio-angular/src/**/*.ts"],
-  "exclude": ["ViniciusKLima-Portifolio/portfolio-angular/src/**/*.spec.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts"]
 }

@@ -19,23 +19,27 @@ export class Home {
   tecnologias: Tecnologia[] = [
     {
       nome: 'HTML',
-      imagem: 'images/html.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
       alt: 'logo-html',
     },
     {
       nome: 'CSS',
-      imagem: 'images/css.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
       alt: 'logo-css',
     },
     {
       nome: 'JavaScript',
-      imagem: 'images/javascript.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
       alt: 'logo-javascript',
       estilos: { 'border-radius': '5px' },
     },
     {
       nome: 'TypeScript',
-      imagem: 'images/typescript.webp',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
       alt: 'logo-typescript',
       estilos: {
         'background-color': 'white',
@@ -44,12 +48,14 @@ export class Home {
     },
     {
       nome: 'Python',
-      imagem: 'images/python.webp',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
       alt: 'logo-python',
     },
     {
       nome: 'Figma',
-      imagem: 'images/figma.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
       alt: 'logo-figma',
     },
   ];

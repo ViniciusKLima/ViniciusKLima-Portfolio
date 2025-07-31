@@ -236,16 +236,15 @@
       gap: 0.5rem;
       justify-content: center;
       align-items: center;
-      padding: 1rem 1.2rem;
-      background: #15181f;
+      padding: 1rem 0 0 0;
       position: relative; // Remova o absolute!
       left: 0;
       bottom: 0;
 
       a {
         flex: 1 1 0;
-        color: var(--cor-principal);
-        background: #00eaff;
+        color: white;
+        background: #4d4d4d;
         text-align: center;
         text-decoration: none;
         padding: 0.7rem 0;

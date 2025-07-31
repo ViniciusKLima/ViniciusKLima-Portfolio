@@ -16,89 +16,104 @@ export class Skills {
   frontendSkills: Skill[] = [
     {
       nome: 'HTML',
-      imagem: 'images/html.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
       alt: 'HTML',
     },
     {
       nome: 'CSS',
-      imagem: 'images/css.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
       alt: 'CSS',
     },
     {
       nome: 'JavaScript',
-      imagem: 'images/javascript.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
       alt: 'JavaScript',
     },
     {
       nome: 'Angular',
-      imagem: 'images/angular.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
       alt: 'Angular',
     },
     {
       nome: 'React',
-      imagem: 'images/react.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
       alt: 'React',
     },
     {
       nome: 'Bootstrap',
-      imagem: 'images/bootstrap.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
       alt: 'Bootstrap',
     },
     {
       nome: 'Tailwind CSS',
-      imagem: 'images/tailwind.png',
+      imagem: 'https://cdn.simpleicons.org/tailwindcss/06B6D4',
       alt: 'Tailwind CSS',
+    },
+    {
+      nome: 'Ionic',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg',
+      alt: 'Ionic',
     },
   ];
 
   backendSkills: Skill[] = [
     {
-      nome: 'TypeScript', // ← MOVIDO PARA BACKEND
-      imagem: 'images/typescript.webp',
+      nome: 'TypeScript',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
       alt: 'TypeScript',
     },
     {
-      nome: 'Python',
-      imagem: 'images/python.webp',
-      alt: 'Python',
-    },
-    {
       nome: 'Node.js',
-      imagem: 'images/node.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
       alt: 'Node.js',
     },
     {
-      nome: 'Java',
-      imagem: 'images/java.webp',
-      alt: 'Java',
-    },
-    {
-      nome: 'C',
-      imagem: 'images/c.png',
-      alt: 'C',
+      nome: 'Python',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+      alt: 'Python',
     },
   ];
 
   ferramentasSkills: Skill[] = [
     {
       nome: 'Git',
-      imagem: 'images/git.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
       alt: 'Git',
     },
     {
       nome: 'GitHub',
-      imagem: 'images/github.png',
+      imagem:
+        'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png',
       alt: 'GitHub',
     },
     {
       nome: 'VS Code',
-      imagem: 'images/vscode.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
       alt: 'VS Code',
     },
     {
       nome: 'Figma',
-      imagem: 'images/figma.png',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
       alt: 'Figma',
+    },
+    {
+      nome: 'Firebase',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+      alt: 'Firebase',
     },
   ];
 }

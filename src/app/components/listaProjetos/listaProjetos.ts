@@ -16,7 +16,7 @@ export class ListaProjetos implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.projetos = this.dataService.getProjetos();
+    this.projetos = this.dataService.getProjetos().slice().reverse();
   }
 
   abrirModalProjeto(projeto: Projeto) {

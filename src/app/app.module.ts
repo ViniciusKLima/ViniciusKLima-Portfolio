@@ -8,7 +8,7 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
-import { AppComponent } from './app';
+import { AppComponent } from './app.component';
 import { Home } from './components/home/home';
 import { Sobre } from './components/sobre/sobre';
 import { Skills } from './components/skills/skills';
