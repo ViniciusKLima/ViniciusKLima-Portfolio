@@ -1,5 +1,7 @@
 # Portfólio - Vinícius K. Lima
 
+Link para acessar o portfólio: <a href="viniciusklima-dev.vercel.app" target="_blank">Clique aqui!</a>
+
 Bem-vindo ao meu portfólio!  
 Aqui você encontra meus principais projetos, habilidades, experiências e informações de contato como desenvolvedor Fullstack.
 
