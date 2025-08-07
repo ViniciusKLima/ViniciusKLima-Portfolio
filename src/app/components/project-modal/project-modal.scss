@@ -1,17 +1,17 @@
 .modal-projeto {
   position: fixed;
   inset: 0;
-  background: rgba(10, 10, 20, 0.92);
+  background: #0a0a1494;
+  backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  cursor: zoom-out;
 
   .modal-content {
     position: relative;
     width: 90vw;
-    max-width: 370px;
+    max-width: 400px;
     aspect-ratio: 9 / 19.5;
     background: #181c23;
     border-radius: 16px;
@@ -250,7 +250,6 @@
         padding: 0.7rem 0;
         font-size: 1.08rem;
         transition: background 0.2s, color 0.2s;
-        box-shadow: 0 2px 8px #00eaff33;
         &:hover {
           background: #017c8a;
           color: #ffffff;
