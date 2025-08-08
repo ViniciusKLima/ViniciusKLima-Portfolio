@@ -29,9 +29,9 @@ export class DataService {
         'Descubra dietas, dicas e informações nutricionais em um site moderno, fácil de usar e totalmente responsivo.',
       descricao:
         'O NutriFácil Web é um projeto acadêmico que desenvolvi para facilitar o acesso a informações sobre alimentação saudável. Com uma interface intuitiva, o usuário pode explorar diferentes tipos de dietas, entender seus benefícios, acessar conteúdos exclusivos sobre nutrição e saúde, além de contar com recursos interativos e visual atraente. O site foi criado do zero, focando em acessibilidade, performance e experiência do usuário, sendo ideal para quem busca melhorar seus hábitos alimentares.',
-      imagens: ['images/nutrifacil-web.jpeg'],
-      github: 'https://github.com/ViniciusKLima/nutrifacil-web',
-      site: 'https://nutrifacil-web.vercel.app',
+      imagens: ['images/CapaNutriFacil-web.png'],
+      github: 'https://github.com/ViniciusKLima/NutriFacil',
+      site: 'https://viniciusklima.github.io/NutriFacil/',
       video: '', // Adicione este campo em todos
       tecnologias: [
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
@@ -40,12 +40,12 @@ export class DataService {
       ],
     },
     {
-      nome: 'AçaíLand',
+      nome: 'Açaí da Lane',
       descricaoCurta:
         'Site fictício de açaí com cardápio completo, personalização de pedidos e informações de contato para clientes.',
       descricao:
         'AçaíLândia é um projeto pessoal desenvolvido para aprimorar minhas habilidades em web. O site simula uma loja de açaí, trazendo cardápio detalhado, opções de personalização, área de contato e layout pensado para o público jovem. O projeto explora conceitos de UI/UX, responsividade, integração com redes sociais e uso de Tailwind CSS para estilização moderna. Ideal para quem deseja criar sites de comércio local com experiência realista.',
-      imagens: ['images/acailandia.png'],
+      imagens: ['images/CapaAcaiDaLane-web.png'],
       github: 'https://github.com/ViniciusKLima/acailandia',
       site: 'https://acailandia-demo.vercel.app',
       video: '', // Adicione este campo em todos
@@ -63,8 +63,7 @@ export class DataService {
       descricao:
         'Versão mobile mais atual do NutriFácil, este projeto acadêmico foi criado por mim com o objetivo de tornar o cuidado com a nutrição ainda mais acessível. O app permite que o usuário acompanhe sua rotina alimentar, registre refeições, metas e receba lembretes personalizados. Desenvolvido com foco em usabilidade e experiência do usuário, é o complemento perfeito da versão web.',
       imagens: [
-        'images/nutrifacil-app.png',
-        'images/acailandia.png',
+        'images/CapaNutriFacil-app.png',
         // ...outras imagens
       ], // Alterado para array
       github: 'https://github.com/ViniciusKLima/nutrifacil-app',
