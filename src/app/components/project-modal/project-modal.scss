@@ -221,7 +221,7 @@
       }
 
       .descricao {
-        color: #eee;
+        color: white;
         text-align: left;
         font-size: clamp(0.9rem, 1.2vw, 1.1rem);
         line-height: 1.5;
@@ -320,4 +320,8 @@
       z-index: 2;
     }
   }
+}
+
+:host ::ng-deep .destaque-vermelho {
+  color: red !important;
 }

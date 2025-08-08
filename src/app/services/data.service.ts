@@ -28,7 +28,7 @@ export class DataService {
       descricaoCurta:
         'Descubra dietas, dicas e informações nutricionais em um site moderno, fácil de usar e totalmente responsivo.',
       descricao:
-        'O NutriFácil Web é um projeto acadêmico que desenvolvi para facilitar o acesso a informações sobre alimentação saudável. Com uma interface intuitiva, o usuário pode explorar diferentes tipos de dietas, entender seus benefícios, acessar conteúdos exclusivos sobre nutrição e saúde, além de contar com recursos interativos e visual atraente. O site foi criado do zero, focando em acessibilidade, performance e experiência do usuário, sendo ideal para quem busca melhorar seus hábitos alimentares.',
+        '<strong class="destaque-vermelho" style="color: red;">Código em Manutenção!</strong><br> O NutriFácil Web é um projeto acadêmico que desenvolvi para facilitar o acesso a informações sobre alimentação saudável. Com uma interface intuitiva, o usuário pode explorar diferentes tipos de dietas, entender seus benefícios, acessar conteúdos exclusivos sobre nutrição e saúde, além de contar com recursos interativos e visual atraente. O site foi criado do zero, focando em acessibilidade, performance e experiência do usuário, sendo ideal para quem busca melhorar seus hábitos alimentares.',
       imagens: ['images/CapaNutriFacil-web.png'],
       github: 'https://github.com/ViniciusKLima/NutriFacil',
       site: 'https://viniciusklima.github.io/NutriFacil/',
@@ -44,7 +44,7 @@ export class DataService {
       descricaoCurta:
         'Site fictício de açaí com cardápio completo, personalização de pedidos e informações de contato para clientes.',
       descricao:
-        'AçaíLândia é um projeto pessoal desenvolvido para aprimorar minhas habilidades em web. O site simula uma loja de açaí, trazendo cardápio detalhado, opções de personalização, área de contato e layout pensado para o público jovem. O projeto explora conceitos de UI/UX, responsividade, integração com redes sociais e uso de Tailwind CSS para estilização moderna. Ideal para quem deseja criar sites de comércio local com experiência realista.',
+        '<strong class="destaque-vermelho" style="color: red;">Código em Manutenção!</strong><br> AçaíLândia é um projeto pessoal desenvolvido para aprimorar minhas habilidades em web. O site simula uma loja de açaí, trazendo cardápio detalhado, opções de personalização, área de contato e layout pensado para o público jovem. O projeto explora conceitos de UI/UX, responsividade, integração com redes sociais e uso de Tailwind CSS para estilização moderna. Ideal para quem deseja criar sites de comércio local com experiência realista.',
       imagens: ['images/CapaAcaiDaLane-web.png'],
       github: 'https://github.com/ViniciusKLima/acailandia',
       site: 'https://acailandia-demo.vercel.app',
@@ -74,6 +74,27 @@ export class DataService {
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
         'https://cdn.simpleicons.org/sass/CC6699', // Sass
+      ],
+    },
+    {
+      nome: 'Controle Financeiro App',
+      descricaoCurta:
+        'App mobile para controle financeiro pessoal, com organização de dívidas e cartões de crédito.',
+      descricao:
+        'Este aplicativo de controle financeiro pessoal foi desenvolvido por mim como parte de um projeto acadêmico e nasceu da ideia de oferecer uma maneira prática e intuitiva de acompanhar as finanças. Todo o sistema de autenticação é integrado ao Firebase, garantindo uma experiência segura e confiável para os usuários. <br> Após o login, o usuário acessa uma tela inicial que organiza automaticamente suas dívidas por data de vencimento, permitindo uma visualização clara e objetiva do que precisa ser pago. Além disso, conta com um painel principal que reúne informações resumidas das dívidas e oferece atalhos para as principais funcionalidades. <br> O app também possui uma seção dedicada às categorias de dívidas, onde o usuário pode criar e personalizar conforme sua rotina, facilitando ainda mais o controle. Um dos diferenciais do projeto é a área exclusiva para cartões de crédito, que permite adicionar múltiplos cartões, acompanhar as faturas separadamente e registrar todos os gastos realizados. <br> Desenvolvido com foco em praticidade, personalização e clareza visual, este app foi pensado para ajudar qualquer pessoa a retomar o controle das suas finanças de forma simples e eficaz.',
+      imagens: [
+        'images/CapaControleFinanceiro-app.png',
+        // ...outras imagens
+      ], // Alterado para array
+      github: 'https://github.com/ViniciusKLima/nutrifacil-app',
+      site: '',
+      //video: '',  Adicione o link do vídeo
+      tecnologias: [
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg',
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+        'https://cdn.simpleicons.org/sass/CC6699', // Sass
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
       ],
     },
   ];
