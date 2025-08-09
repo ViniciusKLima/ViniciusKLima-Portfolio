@@ -46,8 +46,8 @@ export class DataService {
       descricao:
         '<strong class="destaque-vermelho" style="color: red;">Código em Manutenção!</strong><br> AçaíLândia é um projeto pessoal desenvolvido para aprimorar minhas habilidades em web. O site simula uma loja de açaí, trazendo cardápio detalhado, opções de personalização, área de contato e layout pensado para o público jovem. O projeto explora conceitos de UI/UX, responsividade, integração com redes sociais e uso de Tailwind CSS para estilização moderna. Ideal para quem deseja criar sites de comércio local com experiência realista.',
       imagens: ['images/CapaAcaiDaLane-web.png'],
-      github: 'https://github.com/ViniciusKLima/acailandia',
-      site: 'https://acailandia-demo.vercel.app',
+      github: 'https://github.com/ViniciusKLima/AcaiDaLane-web',
+      site: 'https://viniciusklima.github.io/AcaiDaLane-web/',
       video: '', // Adicione este campo em todos
       tecnologias: [
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
