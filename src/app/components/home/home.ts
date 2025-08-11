@@ -18,31 +18,39 @@ export class Home {
 
   tecnologias: Tecnologia[] = [
     {
-      nome: 'HTML',
+      nome: 'Angular',
       imagem:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-      alt: 'logo-html',
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
+      alt: 'logo-angular',
     },
     {
-      nome: 'CSS',
+      nome: 'Sass',
       imagem:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-      alt: 'logo-css',
-    },
-    {
-      nome: 'JavaScript',
-      imagem:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-      alt: 'logo-javascript',
-      estilos: { 'border-radius': '5px' },
+        'https://cdn.simpleicons.org/sass/CC6699',
+      alt: 'logo-sass',
     },
     {
       nome: 'TypeScript',
       imagem:
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
       alt: 'logo-typescript',
+      estilos: { 'border-radius': '5px' },
+    },
+    {
+      nome: 'Ionic',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg',
+      alt: 'logo-ionic',
       estilos: {
-        'background-color': 'white',
+        'border-radius': '5px',
+      },
+    },
+    {
+      nome: 'Bootstrap',
+      imagem:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+      alt: 'logo-bootstrap',
+      estilos: {
         'border-radius': '5px',
       },
     },
