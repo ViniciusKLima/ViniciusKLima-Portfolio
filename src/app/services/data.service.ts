@@ -85,7 +85,7 @@ export class DataService {
       ], // Alterado para array
       github: 'https://github.com/ViniciusKLima/nutrifacil-app',
       site: '',
-      video: 'images/video1.mp4', // Adicione o link do vídeo
+      video: '', // Adicione o link do vídeo
       tecnologias: [
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg',
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
