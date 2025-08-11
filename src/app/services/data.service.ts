@@ -101,6 +101,20 @@ export class DataService {
 
   cursos: Curso[] = [
     {
+      titulo: 'Aplicativo GetMestres com Ionic',
+      imagem: 'images/CertificadoIonicUdemy.jpg',
+      progresso: 100,
+      destaque: 'Udemy',
+      corDestaque: '#8810a7',
+      tecnologias: [
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg',
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
+      ],
+    },
+    {
       titulo: 'Desenvolvimento Frontend com Angular',
       imagem: 'images/certificado-frontend-angular-dio.jpg',
       progresso: 100,
@@ -123,20 +137,6 @@ export class DataService {
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-      ],
-    },
-    {
-      titulo: 'Aplicativo GetMestres com Ionic',
-      imagem: 'https://img-c.udemycdn.com/course/750x422/1996798_0808_4.jpg',
-      progresso: 70,
-      destaque: 'Udemy',
-      corDestaque: '#8810a7',
-      tecnologias: [
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
       ],
     },
     {
