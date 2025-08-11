@@ -24,6 +24,23 @@ export interface Curso {
 export class DataService {
   projetos: Projeto[] = [
     {
+      nome: 'Meu Portfólio',
+      descricaoCurta:
+        'Website pessoal desenvolvido para apresentar minhas habilidades, projetos e trajetória profissional, com foco em design responsivo e experiência do usuário.',
+      descricao:
+        'Desenvolvi este portfólio como um projeto para centralizar minhas informações profissionais, exibir meus trabalhos e destacar minhas competências técnicas. O site foi construído com Angular, priorizando responsividade para diferentes dispositivos e uma navegação intuitiva. Durante o desenvolvimento, foquei na otimização de performance, boas práticas de código e recursos visuais atraentes, garantindo que o portfólio não fosse apenas uma vitrine, mas também um exemplo prático das minhas habilidades em desenvolvimento web.',
+      imagens: ['images/CapaPortfolio.png'],
+      github: 'https://github.com/ViniciusKLima/ViniciusKLima-Portfolio',
+      site: '',
+      video: '', 
+      tecnologias: [
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+        'https://cdn.simpleicons.org/sass/CC6699', // Sass
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'
+      ],
+    },
+    {
       nome: 'NutriFácil Web',
       descricaoCurta:
         'Descubra dietas, dicas e informações nutricionais em um site moderno, fácil de usar e totalmente responsivo.',
