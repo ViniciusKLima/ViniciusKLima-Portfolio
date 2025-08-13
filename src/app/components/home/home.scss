@@ -68,9 +68,8 @@
   .foto {
     background: none;
     width: 60vw;
-    height: width;
+    aspect-ratio: 1 / 1;
     max-width: 500px;
-    max-height: 500px;
     border-radius: 50%;
     object-fit: cover;
     display: flex;
@@ -79,8 +78,8 @@
     border: solid 0.15rem var(--cor-secundaria);
 
     .circulo-GG {
-      width: 98%;
-      height: 98%;
+      width: 97%;
+      height: 97%;
       border-radius: 50%;
       display: flex;
       overflow: hidden;
