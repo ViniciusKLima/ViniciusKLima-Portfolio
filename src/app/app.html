@@ -25,6 +25,7 @@
       <li><button (click)="scrollToSection('section4')">Projetos</button></li>
       <li><button (click)="scrollToSection('section5')">Contato</button></li>
     </ul>
+    <a *ngIf="!estaNaListaProjetos()" class="download-cv d-flex d-md-none" href="images/Curriculo-ViniciusKLima.pdf" download="Curriculo-Vinicius-K-Lima.pdf">CV<i class="bi bi-download"></i></a>
     <button
       *ngIf="estaNaListaProjetos()"
       class="btn-voltar"

@@ -327,6 +327,22 @@ header {
     }
   }
 
+  .download-cv {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1vw, 1.3rem);
+    padding: 3px 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    height: auto;
+    transition: all 100ms ease-in;
+  }
+  .download-cv:hover {
+    background-color: rgb(2, 190, 190);
+    transform: scale(1.05);
+  }
+
   ul {
     display: flex;
     gap: 4vw;
@@ -650,8 +666,7 @@ header nav ul li button {
   }
 
   &.active {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-principal);
+    color: var(--cor-secundaria);
   }
 }
 
@@ -687,10 +702,10 @@ section {
   }
 
   svg:first-child {
-      transform: translateY(1.2px);
-    }
+    transform: translateY(1.2px);
+  }
 
-  span{
+  span {
     transform: translate(3px, 1.3px);
   }
 
@@ -706,5 +721,3 @@ section {
     }
   }
 }
-
-
