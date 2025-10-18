@@ -80,7 +80,15 @@ export class DataService {
       descricao:
         'Versão mobile mais atual do NutriFácil, este projeto acadêmico foi criado por mim com o objetivo de tornar o cuidado com a nutrição ainda mais acessível. O app permite que o usuário acompanhe sua rotina alimentar, registre refeições, metas e receba lembretes personalizados. Desenvolvido com foco em usabilidade e experiência do usuário, é o complemento perfeito da versão web.',
       imagens: [
-        'images/CapaNutriFacil-app.png',
+        'images/img-nutrifacilAPP/1.png',
+        'images/img-nutrifacilAPP/2.png',
+        'images/img-nutrifacilAPP/3.png',
+        'images/img-nutrifacilAPP/4.png',
+        'images/img-nutrifacilAPP/5.png',
+        'images/img-nutrifacilAPP/6.png',
+        'images/img-nutrifacilAPP/7.png',
+        'images/img-nutrifacilAPP/8.png',
+        'images/img-nutrifacilAPP/9.png',
         // ...outras imagens
       ], // Alterado para array
       github: 'https://github.com/ViniciusKLima/nutrifacil-app',
@@ -173,7 +181,7 @@ export class DataService {
     {
       titulo: 'Curso de JavaScript e TypeScript do básico ao avançado',
       imagem: 'https://img-c.udemycdn.com/course/750x422/2575266_c184_4.jpg',
-      progresso: 0,
+      progresso: 30,
       destaque: 'Udemy',
       corDestaque: '#8810a7',
       tecnologias: [
