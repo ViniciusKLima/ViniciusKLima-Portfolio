@@ -108,7 +108,12 @@ export class DataService {
       descricao:
         'Este aplicativo de controle financeiro pessoal foi desenvolvido por mim como parte de um projeto acadêmico e nasceu da ideia de oferecer uma maneira prática e intuitiva de acompanhar as finanças. Todo o sistema de autenticação é integrado ao Firebase, garantindo uma experiência segura e confiável para os usuários. <br> Após o login, o usuário acessa uma tela inicial que organiza automaticamente suas dívidas por data de vencimento, permitindo uma visualização clara e objetiva do que precisa ser pago. Além disso, conta com um painel principal que reúne informações resumidas das dívidas e oferece atalhos para as principais funcionalidades. <br> O app também possui uma seção dedicada às categorias de dívidas, onde o usuário pode criar e personalizar conforme sua rotina, facilitando ainda mais o controle. Um dos diferenciais do projeto é a área exclusiva para cartões de crédito, que permite adicionar múltiplos cartões, acompanhar as faturas separadamente e registrar todos os gastos realizados. <br> Desenvolvido com foco em praticidade, personalização e clareza visual, este app foi pensado para ajudar qualquer pessoa a retomar o controle das suas finanças de forma simples e eficaz.',
       imagens: [
-        'images/CapaControleFinanceiro-app.png',
+        'images/img-ControleFinanceiro/Frame 7.png',
+        'images/img-ControleFinanceiro/Frame 8.png',
+        'images/img-ControleFinanceiro/Frame 9.png',
+        'images/img-ControleFinanceiro/Frame 10.png',
+        'images/img-ControleFinanceiro/Frame 11.png',
+        'images/img-ControleFinanceiro/IMG_3148.jpg',
         // ...outras imagens
       ], // Alterado para array
       github: 'https://github.com/ViniciusKLima/nutrifacil-app',
